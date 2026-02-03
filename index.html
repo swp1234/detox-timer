@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="디지털 디톡스 타이머 - 스마트폰 사용 시간을 줄이고 집중력을 높이세요">
+    <meta name="theme-color" content="#2d3436">
+    <title>디지털 디톡스 타이머</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="icon-192.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="icon-192.svg">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- 광고 영역 (상단 배너) -->
+        <div class="ad-banner ad-top" id="ad-top">
+            <span class="ad-placeholder">광고 영역</span>
+        </div>
+
+        <header>
+            <h1>🧘 디지털 디톡스</h1>
+            <p class="subtitle">스마트폰에서 잠시 벗어나세요</p>
+        </header>
+
+        <main>
+            <!-- 메인 화면: 타이머 설정 -->
+            <section id="setup-screen" class="screen active">
+                <div class="motivation-card">
+                    <p id="motivation-text">잠시 멈추고, 현재에 집중하세요.</p>
+                </div>
+
+                <div class="time-selector">
+                    <h2>디톡스 시간 선택</h2>
+                    <div class="time-buttons">
+                        <button class="time-btn" data-minutes="5">5분</button>
+                        <button class="time-btn" data-minutes="10">10분</button>
+                        <button class="time-btn" data-minutes="15">15분</button>
+                        <button class="time-btn selected" data-minutes="30">30분</button>
+                        <button class="time-btn" data-minutes="60">1시간</button>
+                        <button class="time-btn" data-minutes="120">2시간</button>
+                    </div>
+                    <div class="custom-time">
+                        <input type="number" id="custom-minutes" min="1" max="480" placeholder="직접 입력 (분)">
+                    </div>
+                </div>
+
+                <button id="start-btn" class="primary-btn">
+                    <span>🚀 디톡스 시작</span>
+                </button>
+
+                <div class="stats-preview">
+                    <div class="stat-item">
+                        <span class="stat-value" id="total-sessions">0</span>
+                        <span class="stat-label">총 세션</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value" id="success-rate">0%</span>
+                        <span class="stat-label">성공률</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value" id="total-time">0분</span>
+                        <span class="stat-label">총 디톡스</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 타이머 진행 화면 -->
+            <section id="timer-screen" class="screen">
+                <div class="timer-display">
+                    <div class="timer-ring">
+                        <svg class="progress-ring" width="280" height="280">
+                            <circle class="progress-ring-bg" cx="140" cy="140" r="130"/>
+                            <circle class="progress-ring-circle" cx="140" cy="140" r="130"/>
+                        </svg>
+                        <div class="timer-text">
+                            <span id="timer-minutes">30</span>
+                            <span class="timer-colon">:</span>
+                            <span id="timer-seconds">00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="timer-message" id="timer-message">집중하고 있어요! 잘하고 있습니다.</p>
+
+                <div class="breathing-guide" id="breathing-guide">
+                    <div class="breath-circle"></div>
+                    <p class="breath-text">숨을 깊게 들이쉬세요...</p>
+                </div>
+
+                <button id="give-up-btn" class="secondary-btn">
+                    <span>😢 포기하기</span>
+                </button>
+            </section>
+
+            <!-- 완료 화면 -->
+            <section id="complete-screen" class="screen">
+                <div class="complete-content">
+                    <div class="complete-icon" id="complete-icon">🎉</div>
+                    <h2 id="complete-title">축하합니다!</h2>
+                    <p id="complete-message">디지털 디톡스를 성공적으로 완료했습니다.</p>
+                    
+                    <div class="session-result">
+                        <div class="result-item">
+                            <span class="result-label">디톡스 시간</span>
+                            <span class="result-value" id="result-time">30분</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-label">연속 성공</span>
+                            <span class="result-value" id="result-streak">1회</span>
+                        </div>
+                    </div>
+                </div>
+
+                <button id="restart-btn" class="primary-btn">
+                    <span>🔄 다시 시작</span>
+                </button>
+
+                <button id="share-btn" class="secondary-btn">
+                    <span>📤 결과 공유</span>
+                </button>
+            </section>
+        </main>
+
+        <!-- 광고 영역 (하단 배너) -->
+        <div class="ad-banner ad-bottom" id="ad-bottom">
+            <span class="ad-placeholder">광고 영역</span>
+        </div>
+    </div>
+
+    <!-- 전면 광고 (포기 시 표시) -->
+    <div class="interstitial-ad" id="interstitial-ad">
+        <div class="interstitial-content">
+            <span class="ad-placeholder">전면 광고</span>
+            <button id="close-ad-btn">광고 닫기 (5초)</button>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,464 @@
+/* 디지털 디톡스 타이머 스타일 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #00b894;
+    --primary-dark: #00a885;
+    --secondary: #636e72;
+    --background: #2d3436;
+    --surface: #3d4448;
+    --text: #dfe6e9;
+    --text-muted: #b2bec3;
+    --success: #00b894;
+    --warning: #fdcb6e;
+    --danger: #e17055;
+    --ring-bg: #4a5568;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background: linear-gradient(135deg, var(--background) 0%, #1a1a2e 100%);
+    color: var(--text);
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+.app-container {
+    max-width: 480px;
+    margin: 0 auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 광고 영역 */
+.ad-banner {
+    background: var(--surface);
+    padding: 15px;
+    text-align: center;
+    border-radius: 8px;
+    margin: 10px;
+}
+
+.ad-placeholder {
+    color: var(--text-muted);
+    font-size: 12px;
+}
+
+.ad-top {
+    min-height: 50px;
+}
+
+.ad-bottom {
+    min-height: 60px;
+    margin-top: auto;
+}
+
+/* 헤더 */
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+/* 메인 */
+main {
+    flex: 1;
+    padding: 0 20px 20px;
+}
+
+.screen {
+    display: none;
+}
+
+.screen.active {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* 동기부여 카드 */
+.motivation-card {
+    background: linear-gradient(135deg, var(--primary) 0%, #00a885 100%);
+    padding: 20px;
+    border-radius: 16px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.motivation-card p {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+/* 시간 선택 */
+.time-selector {
+    margin-bottom: 25px;
+}
+
+.time-selector h2 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    text-align: center;
+    color: var(--text-muted);
+}
+
+.time-buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.time-btn {
+    background: var(--surface);
+    border: 2px solid transparent;
+    color: var(--text);
+    padding: 15px 10px;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.time-btn:hover {
+    background: #4a5568;
+}
+
+.time-btn.selected {
+    border-color: var(--primary);
+    background: rgba(0, 184, 148, 0.2);
+}
+
+.custom-time {
+    text-align: center;
+}
+
+.custom-time input {
+    background: var(--surface);
+    border: 2px solid var(--ring-bg);
+    color: var(--text);
+    padding: 12px 20px;
+    border-radius: 12px;
+    font-size: 1rem;
+    width: 100%;
+    max-width: 200px;
+    text-align: center;
+}
+
+.custom-time input:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+/* 버튼 */
+.primary-btn {
+    width: 100%;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    border: none;
+    color: white;
+    padding: 18px;
+    border-radius: 16px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    margin-bottom: 20px;
+}
+
+.primary-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 184, 148, 0.3);
+}
+
+.primary-btn:active {
+    transform: translateY(0);
+}
+
+.secondary-btn {
+    width: 100%;
+    background: transparent;
+    border: 2px solid var(--secondary);
+    color: var(--text-muted);
+    padding: 14px;
+    border-radius: 12px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.secondary-btn:hover {
+    border-color: var(--danger);
+    color: var(--danger);
+}
+
+/* 통계 미리보기 */
+.stats-preview {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    background: var(--surface);
+    padding: 20px;
+    border-radius: 16px;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-value {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.stat-label {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+/* 타이머 화면 */
+.timer-display {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.timer-ring {
+    position: relative;
+    width: 280px;
+    height: 280px;
+}
+
+.progress-ring {
+    transform: rotate(-90deg);
+}
+
+.progress-ring-bg {
+    fill: none;
+    stroke: var(--ring-bg);
+    stroke-width: 12;
+}
+
+.progress-ring-circle {
+    fill: none;
+    stroke: var(--primary);
+    stroke-width: 12;
+    stroke-linecap: round;
+    stroke-dasharray: 816.81;
+    stroke-dashoffset: 0;
+    transition: stroke-dashoffset 1s linear;
+}
+
+.timer-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4rem;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+    display: flex;
+    align-items: center;
+}
+
+.timer-colon {
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0.3; }
+}
+
+.timer-message {
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    margin-bottom: 30px;
+}
+
+/* 호흡 가이드 */
+.breathing-guide {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.breath-circle {
+    width: 60px;
+    height: 60px;
+    background: rgba(0, 184, 148, 0.3);
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    animation: breathe 8s ease-in-out infinite;
+}
+
+@keyframes breathe {
+    0%, 100% { transform: scale(1); opacity: 0.5; }
+    50% { transform: scale(1.5); opacity: 1; }
+}
+
+.breath-text {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+/* 완료 화면 */
+.complete-content {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.complete-icon {
+    font-size: 5rem;
+    margin-bottom: 20px;
+    animation: bounce 0.5s ease;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+.complete-content h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.complete-content p {
+    color: var(--text-muted);
+    margin-bottom: 30px;
+}
+
+.session-result {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    background: var(--surface);
+    padding: 20px;
+    border-radius: 16px;
+    margin-bottom: 30px;
+}
+
+.result-item {
+    text-align: center;
+}
+
+.result-label {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 5px;
+}
+
+.result-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+/* 전면 광고 */
+.interstitial-ad {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.interstitial-ad.active {
+    display: flex;
+}
+
+.interstitial-content {
+    background: var(--surface);
+    padding: 40px;
+    border-radius: 16px;
+    text-align: center;
+    max-width: 90%;
+}
+
+.interstitial-content .ad-placeholder {
+    display: block;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: var(--text);
+}
+
+#close-ad-btn {
+    background: var(--primary);
+    border: none;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+#close-ad-btn:disabled {
+    background: var(--secondary);
+    cursor: not-allowed;
+}
+
+/* 반응형 */
+@media (max-width: 360px) {
+    .timer-text {
+        font-size: 3rem;
+    }
+    
+    .timer-ring {
+        width: 240px;
+        height: 240px;
+    }
+    
+    .progress-ring {
+        width: 240px;
+        height: 240px;
+    }
+    
+    .progress-ring-bg,
+    .progress-ring-circle {
+        cx: 120;
+        cy: 120;
+        r: 110;
+    }
+}
+
+/* 다크모드 최적화 */
+@media (prefers-color-scheme: light) {
+    :root {
+        --background: #f5f6fa;
+        --surface: #ffffff;
+        --text: #2d3436;
+        --text-muted: #636e72;
+        --ring-bg: #dfe6e9;
+    }
+    
+    body {
+        background: linear-gradient(135deg, #f5f6fa 0%, #dfe6e9 100%);
+    }
+}
