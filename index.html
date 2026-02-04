@@ -65,9 +65,6 @@
                 </div>
 
                 <div class="action-buttons">
-                    <button id="premium-analysis-btn" class="premium-btn">
-                        <span>✨ AI 심층 분석 보기</span>
-                    </button>
                     <button id="view-history-btn" class="history-btn">
                         <span>📊 히스토리 보기</span>
                     </button>
@@ -151,28 +148,15 @@
         </div>
     </div>
 
-    <!-- 프리미엄 AI 분석 모달 -->
-    <div class="modal" id="premium-modal">
-        <div class="modal-content premium-modal-content">
-            <div class="modal-header">
-                <h2>✨ AI 심층 분석</h2>
-                <button class="modal-close" onclick="document.getElementById('premium-modal').classList.remove('active')">&times;</button>
-            </div>
-            <div class="premium-content-body">
-                <!-- AI 분석 콘텐츠가 동적으로 삽입됩니다 -->
-            </div>
-        </div>
-    </div>
-
     <!-- 히스토리 모달 -->
     <div class="modal" id="history-modal">
         <div class="modal-content">
             <div class="modal-header">
-                <h2>📊 디톡스 히스토리</h2>
+                <h2>📊 나의 기록</h2>
                 <button class="modal-close" id="close-history-btn">&times;</button>
             </div>
             <div class="history-content-body">
-                <!-- 히스토리 콘텐츠가 동적으로 삽입됩니다 -->
+                <!-- 배지와 히스토리가 동적으로 삽입됩니다 -->
             </div>
         </div>
     </div>

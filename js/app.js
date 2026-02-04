@@ -90,12 +90,6 @@ class DetoxTimer {
         // 광고 닫기 버튼
         document.getElementById('close-ad-btn').addEventListener('click', () => this.closeInterstitialAd());
 
-        // 프리미엄 AI 분석 버튼
-        const premiumBtn = document.getElementById('premium-analysis-btn');
-        if (premiumBtn) {
-            premiumBtn.addEventListener('click', () => this.showPremiumAnalysis());
-        }
-
         // 히스토리 보기 버튼
         const historyBtn = document.getElementById('view-history-btn');
         if (historyBtn) {
@@ -515,137 +509,7 @@ class DetoxTimer {
         return badges;
     }
 
-    // 프리미엄 AI 분석 (광고 시청 후)
-    showPremiumAnalysis() {
-        // 전면 광고 표시
-        this.showInterstitialAd(() => {
-            this.displayPremiumContent();
-        });
-    }
-
-    displayPremiumContent() {
-        // AI 심층 분석 콘텐츠 생성
-        const analysis = this.generateAIAnalysis();
-
-        // 프리미엄 모달 표시
-        const modal = document.getElementById('premium-modal');
-        if (!modal) return;
-
-        const content = modal.querySelector('.premium-content-body');
-        content.innerHTML = `
-            <h3>📊 AI 심층 통계 분석</h3>
-
-            <div class="analysis-section">
-                <h4>📈 주간 트렌드</h4>
-                <p>${analysis.weeklyTrend}</p>
-                ${this.renderWeeklyChart()}
-            </div>
-
-            <div class="analysis-section">
-                <h4>🎯 성과 분석</h4>
-                <p>${analysis.performance}</p>
-            </div>
-
-            <div class="analysis-section">
-                <h4>⏰ 최적 시간대</h4>
-                <p>${analysis.bestTime}</p>
-            </div>
-
-            <div class="analysis-section">
-                <h4>💡 개인 맞춤 제안</h4>
-                <p>${analysis.suggestions}</p>
-            </div>
-
-            <div class="badges-display">
-                <h4>🏅 획득 배지</h4>
-                ${this.renderBadges()}
-            </div>
-        `;
-
-        modal.classList.add('active');
-    }
-
-    generateAIAnalysis() {
-        const recentSessions = this.history.sessions.slice(-7);
-        const successRate = this.stats.totalSessions > 0
-            ? Math.round((this.stats.successfulSessions / this.stats.totalSessions) * 100)
-            : 0;
-
-        // 주간 트렌드
-        let weeklyTrend = '';
-        if (recentSessions.length < 3) {
-            weeklyTrend = '아직 충분한 데이터가 없습니다. 꾸준히 디톡스를 실천해보세요!';
-        } else {
-            const successCount = recentSessions.filter(s => s.success).length;
-            const avgMinutes = Math.round(recentSessions.reduce((sum, s) => sum + s.minutes, 0) / recentSessions.length);
-            weeklyTrend = `최근 7일간 ${successCount}회 성공했습니다. 평균 ${avgMinutes}분 동안 디지털 디톡스를 실천했어요.`;
-        }
-
-        // 성과 분석
-        let performance = '';
-        if (successRate >= 80) {
-            performance = `🌟 훌륭해요! 성공률이 ${successRate}%로 매우 높습니다. 이 습관을 계속 유지하세요!`;
-        } else if (successRate >= 50) {
-            performance = `👍 좋아요! 성공률이 ${successRate}%입니다. 조금만 더 노력하면 80% 이상 달성 가능해요.`;
-        } else {
-            performance = `💪 시작이 중요합니다! 현재 성공률은 ${successRate}%입니다. 짧은 시간부터 시작해보세요.`;
-        }
-
-        // 최적 시간대 (임의 생성, 실제로는 세션 시간 분석 가능)
-        const bestTime = '저녁 8-9시 사이에 디톡스를 시도할 때 성공률이 높습니다. 일상 루틴에 맞춰 정해진 시간에 실천해보세요.';
-
-        // 맞춤 제안
-        let suggestions = '';
-        if (this.stats.streak === 0) {
-            suggestions = '연속 성공 기록을 만들어보세요. 매일 같은 시간, 5분부터 시작하는 것을 추천합니다.';
-        } else if (this.stats.streak < 7) {
-            suggestions = `현재 ${this.stats.streak}일 연속 성공 중입니다! 7일을 목표로 달려보세요. 🔥 일주일 연속 배지를 획득할 수 있어요.`;
-        } else {
-            suggestions = `${this.stats.streak}일 연속 성공! 훌륭합니다. 이제 디톡스 시간을 늘려보는 건 어떨까요?`;
-        }
-
-        return {
-            weeklyTrend,
-            performance,
-            bestTime,
-            suggestions
-        };
-    }
-
-    renderWeeklyChart() {
-        const last7Days = [];
-        for (let i = 6; i >= 0; i--) {
-            const date = new Date();
-            date.setDate(date.getDate() - i);
-            const dateStr = date.toISOString().split('T')[0];
-
-            const sessionsOnDay = this.history.sessions.filter(s =>
-                s.date.split('T')[0] === dateStr
-            );
-
-            const totalMinutes = sessionsOnDay.reduce((sum, s) => sum + s.minutes, 0);
-            last7Days.push({ date: dateStr, minutes: totalMinutes });
-        }
-
-        const maxMinutes = Math.max(...last7Days.map(d => d.minutes), 30);
-
-        let html = '<div class="weekly-chart">';
-        last7Days.forEach((day, index) => {
-            const dayName = ['일', '월', '화', '수', '목', '금', '토'][new Date(day.date).getDay()];
-            const height = (day.minutes / maxMinutes) * 100;
-            html += `
-                <div class="chart-bar">
-                    <div class="bar" style="height: ${height}%;">
-                        <span class="bar-value">${day.minutes}분</span>
-                    </div>
-                    <span class="bar-label">${dayName}</span>
-                </div>
-            `;
-        });
-        html += '</div>';
-        return html;
-    }
-
+    // 배지 렌더링 (히스토리 화면용)
     renderBadges() {
         const badges = this.getBadgesList();
         let html = '<div class="badges-grid">';
@@ -670,11 +534,23 @@ class DetoxTimer {
 
         const content = modal.querySelector('.history-content-body');
 
+        let html = '';
+
+        // 배지 섹션
+        html += `
+            <div class="badges-section">
+                <h3>🏅 업적</h3>
+                ${this.renderBadges()}
+            </div>
+        `;
+
+        // 히스토리 섹션
         if (this.history.sessions.length === 0) {
-            content.innerHTML = '<p class="empty-state">아직 기록이 없습니다. 첫 디톡스를 시작해보세요!</p>';
+            html += '<p class="empty-state">아직 기록이 없습니다. 첫 디톡스를 시작해보세요!</p>';
         } else {
-            let html = '<div class="history-list">';
-            const sortedSessions = [...this.history.sessions].reverse();
+            html += '<div class="history-section"><h3>📖 최근 기록</h3>';
+            html += '<div class="history-list">';
+            const sortedSessions = [...this.history.sessions].reverse().slice(0, 10);
 
             sortedSessions.forEach(session => {
                 const date = new Date(session.date);
@@ -693,10 +569,10 @@ class DetoxTimer {
                 `;
             });
 
-            html += '</div>';
-            content.innerHTML = html;
+            html += '</div></div>';
         }
 
+        content.innerHTML = html;
         modal.classList.add('active');
     }
 
