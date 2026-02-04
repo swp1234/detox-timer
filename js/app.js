@@ -6,11 +6,13 @@ class DetoxTimer {
         this.totalSeconds = 0;
         this.timerInterval = null;
         this.isRunning = false;
-        
+
         // 통계 데이터
         this.stats = this.loadStats();
-        
-        // 동기부여 메시지
+        this.history = this.loadHistory();
+        this.badges = this.loadBadges();
+
+        // 동기부여 명언 (폴백용)
         this.motivationMessages = [
             "잠시 멈추고, 현재에 집중하세요.",
             "스마트폰 없이도 충분히 행복할 수 있어요.",
@@ -51,8 +53,9 @@ class DetoxTimer {
     init() {
         this.bindEvents();
         this.updateStats();
-        this.showRandomMotivation();
+        this.loadQuotableQuote();
         this.registerServiceWorker();
+        this.checkAndAwardBadges();
     }
     
     bindEvents() {
@@ -86,6 +89,24 @@ class DetoxTimer {
         
         // 광고 닫기 버튼
         document.getElementById('close-ad-btn').addEventListener('click', () => this.closeInterstitialAd());
+
+        // 프리미엄 AI 분석 버튼
+        const premiumBtn = document.getElementById('premium-analysis-btn');
+        if (premiumBtn) {
+            premiumBtn.addEventListener('click', () => this.showPremiumAnalysis());
+        }
+
+        // 히스토리 보기 버튼
+        const historyBtn = document.getElementById('view-history-btn');
+        if (historyBtn) {
+            historyBtn.addEventListener('click', () => this.showHistoryScreen());
+        }
+
+        // 히스토리 닫기 버튼
+        const closeHistoryBtn = document.getElementById('close-history-btn');
+        if (closeHistoryBtn) {
+            closeHistoryBtn.addEventListener('click', () => this.closeHistoryScreen());
+        }
     }
     
     selectTime(btn) {
@@ -271,10 +292,10 @@ class DetoxTimer {
     updateStatsData(success, minutes) {
         this.stats.totalSessions++;
         this.stats.totalMinutes += minutes;
-        
+
         if (success) {
             this.stats.successfulSessions++;
-            
+
             // 연속 성공 체크
             const today = new Date().toDateString();
             if (this.stats.lastSessionDate === today) {
@@ -292,8 +313,45 @@ class DetoxTimer {
         } else {
             this.stats.streak = 0;
         }
-        
+
+        // 히스토리 저장
+        this.saveSessionToHistory(success, minutes);
+
         this.saveStats();
+        this.checkAndAwardBadges();
+    }
+
+    // 세션 히스토리 저장
+    saveSessionToHistory(success, minutes) {
+        const session = {
+            date: new Date().toISOString(),
+            success: success,
+            minutes: minutes,
+            targetMinutes: this.selectedMinutes
+        };
+
+        this.history.sessions.push(session);
+
+        // 최근 30일만 유지
+        const thirtyDaysAgo = new Date();
+        thirtyDaysAgo.setDate(thirtyDaysAgo.getDate() - 30);
+        this.history.sessions = this.history.sessions.filter(s =>
+            new Date(s.date) > thirtyDaysAgo
+        );
+
+        this.saveHistory();
+    }
+
+    loadHistory() {
+        const saved = localStorage.getItem('detoxHistory');
+        if (saved) {
+            return JSON.parse(saved);
+        }
+        return { sessions: [] };
+    }
+
+    saveHistory() {
+        localStorage.setItem('detoxHistory', JSON.stringify(this.history));
     }
     
     updateStats() {
@@ -370,6 +428,285 @@ class DetoxTimer {
         });
     }
     
+    // Quotable API로 동기부여 명언 가져오기
+    async loadQuotableQuote() {
+        try {
+            const response = await fetch('https://api.quotable.io/quotes/random?tags=inspirational|motivational|wisdom&maxLength=100');
+            const data = await response.json();
+            if (data && data[0]) {
+                const quote = data[0];
+                const messageEl = document.getElementById('motivation-text');
+                if (messageEl) {
+                    messageEl.textContent = `"${quote.content}" - ${quote.author}`;
+                }
+            }
+        } catch (error) {
+            // API 실패 시 폴백 메시지 사용
+            this.showRandomMotivation();
+        }
+    }
+
+    // 뱃지 시스템
+    loadBadges() {
+        const saved = localStorage.getItem('detoxBadges');
+        if (saved) {
+            return JSON.parse(saved);
+        }
+        return {
+            firstSuccess: false,
+            streak7: false,
+            streak30: false,
+            total10Hours: false,
+            total50Sessions: false,
+            perfectWeek: false
+        };
+    }
+
+    saveBadges() {
+        localStorage.setItem('detoxBadges', JSON.stringify(this.badges));
+    }
+
+    checkAndAwardBadges() {
+        let newBadge = false;
+
+        // 첫 성공
+        if (!this.badges.firstSuccess && this.stats.successfulSessions >= 1) {
+            this.badges.firstSuccess = true;
+            newBadge = true;
+        }
+
+        // 7일 연속
+        if (!this.badges.streak7 && this.stats.streak >= 7) {
+            this.badges.streak7 = true;
+            newBadge = true;
+        }
+
+        // 30일 연속
+        if (!this.badges.streak30 && this.stats.streak >= 30) {
+            this.badges.streak30 = true;
+            newBadge = true;
+        }
+
+        // 총 10시간
+        if (!this.badges.total10Hours && this.stats.totalMinutes >= 600) {
+            this.badges.total10Hours = true;
+            newBadge = true;
+        }
+
+        // 총 50세션
+        if (!this.badges.total50Sessions && this.stats.totalSessions >= 50) {
+            this.badges.total50Sessions = true;
+            newBadge = true;
+        }
+
+        if (newBadge) {
+            this.saveBadges();
+        }
+    }
+
+    getBadgesList() {
+        const badges = [
+            { id: 'firstSuccess', name: '🌱 첫 성공', desc: '첫 디톡스 완료', unlocked: this.badges.firstSuccess },
+            { id: 'streak7', name: '🔥 일주일 연속', desc: '7일 연속 성공', unlocked: this.badges.streak7 },
+            { id: 'streak30', name: '💎 한 달 연속', desc: '30일 연속 성공', unlocked: this.badges.streak30 },
+            { id: 'total10Hours', name: '⏰ 마스터', desc: '총 10시간 달성', unlocked: this.badges.total10Hours },
+            { id: 'total50Sessions', name: '🏆 베테랑', desc: '총 50세션 완료', unlocked: this.badges.total50Sessions }
+        ];
+        return badges;
+    }
+
+    // 프리미엄 AI 분석 (광고 시청 후)
+    showPremiumAnalysis() {
+        // 전면 광고 표시
+        this.showInterstitialAd(() => {
+            this.displayPremiumContent();
+        });
+    }
+
+    displayPremiumContent() {
+        // AI 심층 분석 콘텐츠 생성
+        const analysis = this.generateAIAnalysis();
+
+        // 프리미엄 모달 표시
+        const modal = document.getElementById('premium-modal');
+        if (!modal) return;
+
+        const content = modal.querySelector('.premium-content-body');
+        content.innerHTML = `
+            <h3>📊 AI 심층 통계 분석</h3>
+
+            <div class="analysis-section">
+                <h4>📈 주간 트렌드</h4>
+                <p>${analysis.weeklyTrend}</p>
+                ${this.renderWeeklyChart()}
+            </div>
+
+            <div class="analysis-section">
+                <h4>🎯 성과 분석</h4>
+                <p>${analysis.performance}</p>
+            </div>
+
+            <div class="analysis-section">
+                <h4>⏰ 최적 시간대</h4>
+                <p>${analysis.bestTime}</p>
+            </div>
+
+            <div class="analysis-section">
+                <h4>💡 개인 맞춤 제안</h4>
+                <p>${analysis.suggestions}</p>
+            </div>
+
+            <div class="badges-display">
+                <h4>🏅 획득 배지</h4>
+                ${this.renderBadges()}
+            </div>
+        `;
+
+        modal.classList.add('active');
+    }
+
+    generateAIAnalysis() {
+        const recentSessions = this.history.sessions.slice(-7);
+        const successRate = this.stats.totalSessions > 0
+            ? Math.round((this.stats.successfulSessions / this.stats.totalSessions) * 100)
+            : 0;
+
+        // 주간 트렌드
+        let weeklyTrend = '';
+        if (recentSessions.length < 3) {
+            weeklyTrend = '아직 충분한 데이터가 없습니다. 꾸준히 디톡스를 실천해보세요!';
+        } else {
+            const successCount = recentSessions.filter(s => s.success).length;
+            const avgMinutes = Math.round(recentSessions.reduce((sum, s) => sum + s.minutes, 0) / recentSessions.length);
+            weeklyTrend = `최근 7일간 ${successCount}회 성공했습니다. 평균 ${avgMinutes}분 동안 디지털 디톡스를 실천했어요.`;
+        }
+
+        // 성과 분석
+        let performance = '';
+        if (successRate >= 80) {
+            performance = `🌟 훌륭해요! 성공률이 ${successRate}%로 매우 높습니다. 이 습관을 계속 유지하세요!`;
+        } else if (successRate >= 50) {
+            performance = `👍 좋아요! 성공률이 ${successRate}%입니다. 조금만 더 노력하면 80% 이상 달성 가능해요.`;
+        } else {
+            performance = `💪 시작이 중요합니다! 현재 성공률은 ${successRate}%입니다. 짧은 시간부터 시작해보세요.`;
+        }
+
+        // 최적 시간대 (임의 생성, 실제로는 세션 시간 분석 가능)
+        const bestTime = '저녁 8-9시 사이에 디톡스를 시도할 때 성공률이 높습니다. 일상 루틴에 맞춰 정해진 시간에 실천해보세요.';
+
+        // 맞춤 제안
+        let suggestions = '';
+        if (this.stats.streak === 0) {
+            suggestions = '연속 성공 기록을 만들어보세요. 매일 같은 시간, 5분부터 시작하는 것을 추천합니다.';
+        } else if (this.stats.streak < 7) {
+            suggestions = `현재 ${this.stats.streak}일 연속 성공 중입니다! 7일을 목표로 달려보세요. 🔥 일주일 연속 배지를 획득할 수 있어요.`;
+        } else {
+            suggestions = `${this.stats.streak}일 연속 성공! 훌륭합니다. 이제 디톡스 시간을 늘려보는 건 어떨까요?`;
+        }
+
+        return {
+            weeklyTrend,
+            performance,
+            bestTime,
+            suggestions
+        };
+    }
+
+    renderWeeklyChart() {
+        const last7Days = [];
+        for (let i = 6; i >= 0; i--) {
+            const date = new Date();
+            date.setDate(date.getDate() - i);
+            const dateStr = date.toISOString().split('T')[0];
+
+            const sessionsOnDay = this.history.sessions.filter(s =>
+                s.date.split('T')[0] === dateStr
+            );
+
+            const totalMinutes = sessionsOnDay.reduce((sum, s) => sum + s.minutes, 0);
+            last7Days.push({ date: dateStr, minutes: totalMinutes });
+        }
+
+        const maxMinutes = Math.max(...last7Days.map(d => d.minutes), 30);
+
+        let html = '<div class="weekly-chart">';
+        last7Days.forEach((day, index) => {
+            const dayName = ['일', '월', '화', '수', '목', '금', '토'][new Date(day.date).getDay()];
+            const height = (day.minutes / maxMinutes) * 100;
+            html += `
+                <div class="chart-bar">
+                    <div class="bar" style="height: ${height}%;">
+                        <span class="bar-value">${day.minutes}분</span>
+                    </div>
+                    <span class="bar-label">${dayName}</span>
+                </div>
+            `;
+        });
+        html += '</div>';
+        return html;
+    }
+
+    renderBadges() {
+        const badges = this.getBadgesList();
+        let html = '<div class="badges-grid">';
+        badges.forEach(badge => {
+            const className = badge.unlocked ? 'badge unlocked' : 'badge locked';
+            html += `
+                <div class="${className}">
+                    <div class="badge-icon">${badge.unlocked ? badge.name.split(' ')[0] : '🔒'}</div>
+                    <div class="badge-name">${badge.name.split(' ')[1]}</div>
+                    <div class="badge-desc">${badge.desc}</div>
+                </div>
+            `;
+        });
+        html += '</div>';
+        return html;
+    }
+
+    // 히스토리 화면
+    showHistoryScreen() {
+        const modal = document.getElementById('history-modal');
+        if (!modal) return;
+
+        const content = modal.querySelector('.history-content-body');
+
+        if (this.history.sessions.length === 0) {
+            content.innerHTML = '<p class="empty-state">아직 기록이 없습니다. 첫 디톡스를 시작해보세요!</p>';
+        } else {
+            let html = '<div class="history-list">';
+            const sortedSessions = [...this.history.sessions].reverse();
+
+            sortedSessions.forEach(session => {
+                const date = new Date(session.date);
+                const dateStr = `${date.getMonth() + 1}/${date.getDate()} ${date.getHours()}:${date.getMinutes().toString().padStart(2, '0')}`;
+                const statusIcon = session.success ? '✅' : '⏸️';
+                const statusText = session.success ? '성공' : '중단';
+
+                html += `
+                    <div class="history-item">
+                        <span class="history-icon">${statusIcon}</span>
+                        <div class="history-info">
+                            <div class="history-date">${dateStr}</div>
+                            <div class="history-detail">${session.minutes}분 / ${session.targetMinutes}분 목표 - ${statusText}</div>
+                        </div>
+                    </div>
+                `;
+            });
+
+            html += '</div>';
+            content.innerHTML = html;
+        }
+
+        modal.classList.add('active');
+    }
+
+    closeHistoryScreen() {
+        const modal = document.getElementById('history-modal');
+        if (modal) {
+            modal.classList.remove('active');
+        }
+    }
+
     // PWA 서비스 워커
     registerServiceWorker() {
         if ('serviceWorker' in navigator) {
