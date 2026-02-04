@@ -1,0 +1,72 @@
+{
+  "app": {
+    "title": "Digital Detox Timer",
+    "description": "Digital Detox Timer - Reduce smartphone usage and improve focus"
+  },
+  "header": {
+    "title": "🧘 Digital Detox",
+    "subtitle": "Take a break from your smartphone"
+  },
+  "setup": {
+    "motivation": "Pause for a moment and focus on the present.",
+    "selectTime": "Select Detox Time",
+    "customInput": "Custom (minutes)",
+    "startBtn": "🚀 Start Detox",
+    "viewHistoryBtn": "📊 View History",
+    "stats": {
+      "totalSessions": "Total Sessions",
+      "successRate": "Success Rate",
+      "totalTime": "Total Detox"
+    }
+  },
+  "timer": {
+    "message": "You're focusing! Doing great.",
+    "breathText": "Take a deep breath...",
+    "giveUpBtn": "😢 Give Up"
+  },
+  "complete": {
+    "success": {
+      "icon": "🎉",
+      "title": "Congratulations!",
+      "message": "You've successfully completed digital detox."
+    },
+    "failed": {
+      "icon": "😔",
+      "title": "Not quite",
+      "message": "That's okay. Try again!"
+    },
+    "result": {
+      "time": "Detox Time",
+      "streak": "Streak"
+    },
+    "restartBtn": "🔄 Restart",
+    "shareBtn": "📤 Share Results"
+  },
+  "history": {
+    "title": "📊 My Records",
+    "badges": "Badges",
+    "sessions": "Session History",
+    "empty": "No records yet",
+    "success": "Success",
+    "failed": "Failed",
+    "badgeNames": {
+      "first": "First Try",
+      "streak3": "3-Day Streak",
+      "streak7": "7-Day Streak",
+      "hour": "1 Hour Achieved",
+      "master": "Detox Master"
+    }
+  },
+  "language": {
+    "select": "Select Language"
+  },
+  "ads": {
+    "banner": "Advertisement"
+  },
+  "time": {
+    "minutes": "min",
+    "hour": "hour",
+    "hours": "hours",
+    "times": "times"
+  }
+}

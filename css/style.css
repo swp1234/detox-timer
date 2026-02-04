@@ -33,6 +33,86 @@ body {
 }
 
 /* 배경 파티클 효과 */
+/* 언어 선택 - 우측 상단 고정 */
+.language-selector {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.lang-btn {
+    background: var(--surface);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text);
+    font-size: 20px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.lang-btn:hover {
+    background: var(--surface-light);
+    transform: scale(1.05);
+}
+
+.lang-menu {
+    position: absolute;
+    top: 52px;
+    right: 0;
+    background: rgba(26, 47, 26, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(0, 184, 148, 0.3);
+    border-radius: 12px;
+    padding: 8px;
+    min-width: 150px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    animation: slideDown 0.3s ease;
+}
+
+.lang-menu.hidden {
+    display: none;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.lang-option {
+    width: 100%;
+    padding: 10px 14px;
+    background: transparent;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 14px;
+    color: var(--text);
+    transition: background 0.2s ease;
+}
+
+.lang-option:hover {
+    background: rgba(0, 184, 148, 0.2);
+}
+
+.lang-option.active {
+    background: rgba(0, 184, 148, 0.3);
+    font-weight: 600;
+}
+
 body::before {
     content: '';
     position: fixed;
@@ -40,7 +120,7 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: 
+    background-image:
         radial-gradient(2px 2px at 20px 30px, var(--primary), transparent),
         radial-gradient(2px 2px at 40px 70px, var(--accent), transparent),
         radial-gradient(1px 1px at 90px 40px, #fff, transparent),

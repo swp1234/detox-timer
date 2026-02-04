@@ -13,14 +13,20 @@
 </head>
 <body>
     <div class="app-container">
-        <!-- 광고 영역 (상단 배너) -->
-        <div class="ad-banner ad-top" id="ad-top">
-            <span class="ad-placeholder">광고 영역</span>
+        <!-- 언어 선택 -->
+        <div class="language-selector">
+            <button id="lang-toggle" class="lang-btn" aria-label="Language">🌐</button>
+            <div id="lang-menu" class="lang-menu hidden">
+                <button class="lang-option" data-lang="ko">🇰🇷 한국어</button>
+                <button class="lang-option" data-lang="en">🇺🇸 English</button>
+                <button class="lang-option" data-lang="zh">🇨🇳 简体中文</button>
+                <button class="lang-option" data-lang="hi">🇮🇳 हिन्दी</button>
+            </div>
         </div>
 
         <header>
-            <h1>🧘 디지털 디톡스</h1>
-            <p class="subtitle">스마트폰에서 잠시 벗어나세요</p>
+            <h1 data-i18n="header.title">🧘 디지털 디톡스</h1>
+            <p class="subtitle" data-i18n="header.subtitle">스마트폰에서 잠시 벗어나세요</p>
         </header>
 
         <main>
@@ -161,6 +167,7 @@
         </div>
     </div>
 
+    <script src="js/i18n.js"></script>
     <script src="js/app.js"></script>
 </body>
 </html>
