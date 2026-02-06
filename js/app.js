@@ -56,6 +56,47 @@ class DetoxTimer {
         this.loadQuotableQuote();
         this.registerServiceWorker();
         this.checkAndAwardBadges();
+        this.initI18n();
+    }
+
+    async initI18n() {
+        try {
+            await i18n.loadTranslations(i18n.getCurrentLanguage());
+            i18n.updateUI();
+
+            const currentLang = i18n.getCurrentLanguage();
+            document.querySelector(`[data-lang="${currentLang}"]`)?.classList.add('active');
+
+            this.setupLanguageSelector();
+        } catch (e) {
+            // i18n 파일 없으면 기본 한국어 유지
+        }
+    }
+
+    setupLanguageSelector() {
+        const langToggle = document.getElementById('lang-toggle');
+        const langMenu = document.getElementById('lang-menu');
+        const langOptions = document.querySelectorAll('.lang-option');
+
+        langToggle.addEventListener('click', () => {
+            langMenu.classList.toggle('hidden');
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.language-selector')) {
+                langMenu.classList.add('hidden');
+            }
+        });
+
+        langOptions.forEach(option => {
+            option.addEventListener('click', async () => {
+                const lang = option.getAttribute('data-lang');
+                await i18n.setLanguage(lang);
+                langOptions.forEach(opt => opt.classList.remove('active'));
+                option.classList.add('active');
+                langMenu.classList.add('hidden');
+            });
+        });
     }
     
     bindEvents() {
@@ -100,6 +141,18 @@ class DetoxTimer {
         const closeHistoryBtn = document.getElementById('close-history-btn');
         if (closeHistoryBtn) {
             closeHistoryBtn.addEventListener('click', () => this.closeHistoryScreen());
+        }
+
+        // 프리미엄 분석 버튼
+        const premiumBtn = document.getElementById('premium-analysis-btn');
+        if (premiumBtn) {
+            premiumBtn.addEventListener('click', () => this.showPremiumAnalysis());
+        }
+
+        // 프리미엄 모달 닫기
+        const closePremiumBtn = document.getElementById('close-premium-btn');
+        if (closePremiumBtn) {
+            closePremiumBtn.addEventListener('click', () => this.closePremiumModal());
         }
     }
     
@@ -578,6 +631,151 @@ class DetoxTimer {
 
     closeHistoryScreen() {
         const modal = document.getElementById('history-modal');
+        if (modal) {
+            modal.classList.remove('active');
+        }
+    }
+
+    // 프리미엄 분석
+    showPremiumAnalysis() {
+        this.showInterstitialAd(() => {
+            this.renderPremiumContent();
+        });
+    }
+
+    renderPremiumContent() {
+        const modal = document.getElementById('premium-modal');
+        const body = document.getElementById('premium-body');
+        if (!modal || !body) return;
+
+        const successRate = this.stats.totalSessions > 0
+            ? Math.round((this.stats.successfulSessions / this.stats.totalSessions) * 100)
+            : 0;
+
+        // 주간 패턴 분석
+        const weekDays = ['일', '월', '화', '수', '목', '금', '토'];
+        const dayCount = {};
+        weekDays.forEach(d => dayCount[d] = { total: 0, success: 0 });
+
+        this.history.sessions.forEach(s => {
+            const day = weekDays[new Date(s.date).getDay()];
+            dayCount[day].total++;
+            if (s.success) dayCount[day].success++;
+        });
+
+        let bestDay = '-';
+        let bestDayRate = 0;
+        Object.entries(dayCount).forEach(([day, data]) => {
+            if (data.total > 0) {
+                const rate = data.success / data.total;
+                if (rate > bestDayRate) {
+                    bestDayRate = rate;
+                    bestDay = day;
+                }
+            }
+        });
+
+        // 평균 세션 시간
+        const avgMinutes = this.history.sessions.length > 0
+            ? Math.round(this.history.sessions.reduce((sum, s) => sum + s.minutes, 0) / this.history.sessions.length)
+            : 0;
+
+        // 레벨 판정
+        let level, levelDesc;
+        if (this.stats.totalMinutes >= 600) {
+            level = '🏆 디톡스 마스터';
+            levelDesc = '10시간 이상의 디지털 디톡스를 달성했습니다! 당신의 집중력은 최상급입니다.';
+        } else if (this.stats.totalMinutes >= 300) {
+            level = '💎 디톡스 전문가';
+            levelDesc = '5시간 이상의 디톡스 경험으로 자기 관리 능력이 뛰어납니다.';
+        } else if (this.stats.totalMinutes >= 60) {
+            level = '🌟 디톡스 실천가';
+            levelDesc = '1시간 이상 디톡스를 실천하고 계시네요! 꾸준히 이어가세요.';
+        } else {
+            level = '🌱 디톡스 입문자';
+            levelDesc = '디지털 디톡스의 첫 걸음을 내딛었습니다. 조금씩 시간을 늘려보세요!';
+        }
+
+        // 개선 팁
+        let tips = [];
+        if (successRate < 50) {
+            tips.push('목표 시간을 줄여서 성공 경험을 쌓아보세요.');
+            tips.push('디톡스 전에 알림을 끄고, 폰을 다른 방에 두세요.');
+        } else if (successRate < 80) {
+            tips.push('성공률이 좋아지고 있어요! 목표 시간을 조금씩 늘려보세요.');
+            tips.push('디톡스 시간에 산책이나 명상을 함께 해보세요.');
+        } else {
+            tips.push('훌륭한 성공률! 더 긴 세션에 도전해보세요.');
+            tips.push('친구나 가족과 함께 디톡스를 시도해보는 건 어떨까요?');
+        }
+        tips.push('매일 같은 시간에 디톡스하면 습관이 됩니다.');
+        tips.push('디톡스 후 기분을 기록하면 동기부여에 도움이 됩니다.');
+
+        let html = `
+            <div class="premium-analysis-content">
+                <div class="premium-level-section">
+                    <div class="premium-level-badge">${level}</div>
+                    <p class="premium-level-desc">${levelDesc}</p>
+                </div>
+
+                <div class="premium-stats-grid">
+                    <div class="premium-stat-card">
+                        <div class="premium-stat-value">${this.stats.totalSessions}</div>
+                        <div class="premium-stat-label">총 세션</div>
+                    </div>
+                    <div class="premium-stat-card">
+                        <div class="premium-stat-value">${successRate}%</div>
+                        <div class="premium-stat-label">성공률</div>
+                    </div>
+                    <div class="premium-stat-card">
+                        <div class="premium-stat-value">${avgMinutes}분</div>
+                        <div class="premium-stat-label">평균 시간</div>
+                    </div>
+                    <div class="premium-stat-card">
+                        <div class="premium-stat-value">${this.stats.streak}일</div>
+                        <div class="premium-stat-label">연속 성공</div>
+                    </div>
+                </div>
+
+                <div class="premium-block">
+                    <h4>📅 요일별 패턴</h4>
+                    <div class="day-pattern">
+                        ${weekDays.map(day => {
+                            const data = dayCount[day];
+                            const rate = data.total > 0 ? Math.round((data.success / data.total) * 100) : 0;
+                            const height = Math.max(rate, 5);
+                            return `
+                                <div class="day-bar-wrap">
+                                    <div class="day-bar" style="height: ${height}%; background: ${rate >= 70 ? 'var(--primary)' : rate >= 40 ? 'var(--warning)' : 'var(--danger)'}"></div>
+                                    <span class="day-label">${day}</span>
+                                </div>
+                            `;
+                        }).join('')}
+                    </div>
+                    <p class="pattern-note">최고 성과 요일: <strong>${bestDay}요일</strong></p>
+                </div>
+
+                <div class="premium-block">
+                    <h4>🎯 개인 맞춤 조언</h4>
+                    <ul class="premium-tips-list">
+                        ${tips.map(tip => `<li>${tip}</li>`).join('')}
+                    </ul>
+                </div>
+
+                <div class="premium-block">
+                    <h4>📊 총 디톡스 시간</h4>
+                    <p class="total-time-display">${this.stats.totalMinutes >= 60 ? `${Math.floor(this.stats.totalMinutes / 60)}시간 ${this.stats.totalMinutes % 60}분` : `${this.stats.totalMinutes}분`}</p>
+                    <p class="time-note">스마트폰 없이 보낸 소중한 시간입니다</p>
+                </div>
+            </div>
+        `;
+
+        body.innerHTML = html;
+        modal.classList.add('active');
+    }
+
+    closePremiumModal() {
+        const modal = document.getElementById('premium-modal');
         if (modal) {
             modal.classList.remove('active');
         }

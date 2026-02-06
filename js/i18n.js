@@ -2,9 +2,9 @@
 
 class I18n {
     constructor() {
-        this.currentLang = this.detectLanguage();
-        this.translations = {};
         this.supportedLanguages = ['ko', 'en', 'zh', 'hi'];
+        this.translations = {};
+        this.currentLang = this.detectLanguage();
     }
 
     detectLanguage() {
