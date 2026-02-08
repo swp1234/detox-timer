@@ -2,7 +2,7 @@
 
 class I18n {
     constructor() {
-        this.supportedLanguages = ['ko', 'en', 'zh', 'hi'];
+        this.supportedLanguages = ['ko', 'en', 'zh', 'hi', 'ru'];
         this.translations = {};
         this.currentLang = this.detectLanguage();
     }
@@ -107,7 +107,8 @@ class I18n {
             'ko': '한국어',
             'en': 'English',
             'zh': '简体中文',
-            'hi': 'हिन्दी'
+            'hi': 'हिन्दी',
+            'ru': 'Русский'
         };
         return names[lang] || lang;
     }
