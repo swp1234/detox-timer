@@ -1,0 +1,87 @@
+{
+  "app": {
+    "title": "Timer Detoks Digital",
+    "description": "Timer Detoks Digital - Kurangi penggunaan smartphone dan tingkatkan fokus"
+  },
+  "header": {
+    "title": "🧘 Detoks Digital",
+    "subtitle": "Istirahat sejenak dari smartphone Anda"
+  },
+  "setup": {
+    "motivation": "Berhenti sejenak dan fokus pada saat ini.",
+    "selectTime": "Pilih Waktu Detoks",
+    "customInput": "Khusus (menit)",
+    "startBtn": "🚀 Mulai Detoks",
+    "viewHistoryBtn": "📊 Lihat Riwayat",
+    "stats": {
+      "totalSessions": "Total Sesi",
+      "successRate": "Tingkat Keberhasilan",
+      "totalTime": "Total Detoks"
+    }
+  },
+  "timer": {
+    "message": "Anda sedang fokus! Hebat sekali.",
+    "breathText": "Ambil napas dalam-dalam...",
+    "giveUpBtn": "😢 Menyerah"
+  },
+  "complete": {
+    "success": {
+      "icon": "🎉",
+      "title": "Selamat!",
+      "message": "Anda telah berhasil menyelesaikan detoks digital."
+    },
+    "failed": {
+      "icon": "😔",
+      "title": "Hampir saja",
+      "message": "Tidak apa-apa. Coba lagi!"
+    },
+    "result": {
+      "time": "Waktu Detoks",
+      "streak": "Hari Berturut-turut"
+    },
+    "restartBtn": "🔄 Mulai Lagi",
+    "shareBtn": "📤 Bagikan Hasil"
+  },
+  "history": {
+    "title": "📊 Catatan Saya",
+    "badges": "Lencana",
+    "sessions": "Riwayat Sesi",
+    "empty": "Belum ada catatan",
+    "success": "Berhasil",
+    "failed": "Gagal",
+    "badgeNames": {
+      "first": "Percobaan Pertama",
+      "streak3": "Hari Berturut-turut 3",
+      "streak7": "Hari Berturut-turut 7",
+      "hour": "1 Jam Tercapai",
+      "master": "Ahli Detoks"
+    }
+  },
+  "language": {
+    "select": "Pilih Bahasa"
+  },
+  "ads": {
+    "banner": "Iklan"
+  },
+  "time": {
+    "minutes": "mnt",
+    "hour": "jam",
+    "hours": "jam",
+    "times": "kali",
+    "5min": "5 menit",
+    "10min": "10 menit",
+    "15min": "15 menit",
+    "30min": "30 menit",
+    "1hour": "1 jam",
+    "2hours": "2 jam"
+  },
+  "premium": {
+    "title": "🧠 Analisis Mendalam AI",
+    "premiumBtn": "🧠 Lihat Analisis Mendalam AI"
+  },
+  "ads": {
+    "banner": "Iklan",
+    "closeBtn": "Tutup Iklan"
+  },
+  "recommendations": "Coba Juga"
+}

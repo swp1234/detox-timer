@@ -53,6 +53,7 @@ class DetoxTimer {
     init() {
         this.bindEvents();
         this.updateStats();
+        this.renderWeeklyHeatmap();
         this.loadQuotableQuote();
         this.registerServiceWorker();
         this.checkAndAwardBadges();
@@ -296,6 +297,7 @@ class DetoxTimer {
     restart() {
         this.showScreen('setup-screen');
         this.updateStats();
+        this.renderWeeklyHeatmap();
         this.showRandomMotivation();
         
         // 프로그레스 링 리셋
@@ -779,6 +781,75 @@ class DetoxTimer {
         if (modal) {
             modal.classList.remove('active');
         }
+    }
+
+    // 주간 활동 히트맵
+    renderWeeklyHeatmap() {
+        const container = document.getElementById('weekly-heatmap');
+        if (!container) return;
+
+        const dayLabels = ['일', '월', '화', '수', '목', '금', '토'];
+        const today = new Date();
+        const todayDay = today.getDay();
+
+        // 최근 7일 데이터 수집
+        const weekData = [];
+        for (let i = 6; i >= 0; i--) {
+            const date = new Date(today);
+            date.setDate(date.getDate() - i);
+            const dateStr = date.toDateString();
+            const dayIndex = date.getDay();
+
+            // 해당 날짜의 세션 수와 분 수 계산
+            const daySessions = this.history.sessions.filter(s => {
+                return new Date(s.date).toDateString() === dateStr;
+            });
+            const totalMin = daySessions.reduce((sum, s) => sum + s.minutes, 0);
+            const successCount = daySessions.filter(s => s.success).length;
+
+            weekData.push({
+                label: dayLabels[dayIndex],
+                minutes: totalMin,
+                sessions: daySessions.length,
+                success: successCount,
+                isToday: i === 0
+            });
+        }
+
+        // 레벨 결정 (분 기준)
+        function getLevel(minutes) {
+            if (minutes === 0) return '';
+            if (minutes < 15) return 'level-1';
+            if (minutes < 45) return 'level-2';
+            return 'level-3';
+        }
+
+        let html = '<div class="heatmap-title">이번 주 활동</div>';
+        html += '<div class="heatmap-grid">';
+
+        weekData.forEach(day => {
+            const levelClass = getLevel(day.minutes);
+            const todayClass = day.isToday ? ' today' : '';
+            const display = day.minutes > 0 ? `${day.minutes}분` : '';
+
+            html += `
+                <div class="heatmap-day">
+                    <span class="heatmap-label">${day.label}</span>
+                    <div class="heatmap-cell ${levelClass}${todayClass}">${display}</div>
+                </div>
+            `;
+        });
+
+        html += '</div>';
+
+        // 주간 합산
+        const weekTotal = weekData.reduce((sum, d) => sum + d.minutes, 0);
+        const weekSessions = weekData.reduce((sum, d) => sum + d.sessions, 0);
+        if (weekTotal > 0) {
+            html += `<div class="heatmap-streak">이번 주 ${weekSessions}회 · ${weekTotal >= 60 ? Math.floor(weekTotal / 60) + '시간 ' + (weekTotal % 60) + '분' : weekTotal + '분'} 디톡스</div>`;
+        }
+
+        container.innerHTML = html;
     }
 
     // PWA 서비스 워커

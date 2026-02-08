@@ -1,0 +1,87 @@
+{
+  "app": {
+    "title": "Dijital Detoks Sayacı",
+    "description": "Dijital Detoks Sayacı - Akıllı telefon kullanımını azalt ve odaklanmayı artır"
+  },
+  "header": {
+    "title": "🧘 Dijital Detoks",
+    "subtitle": "Akıllı telefonundan bir ara ver"
+  },
+  "setup": {
+    "motivation": "Bir an dur ve şu ana odaklan.",
+    "selectTime": "Detoks Süresini Seç",
+    "customInput": "Özel (dakika)",
+    "startBtn": "🚀 Detoksu Başlat",
+    "viewHistoryBtn": "📊 Geçmişi Görüntüle",
+    "stats": {
+      "totalSessions": "Toplam Oturumlar",
+      "successRate": "Başarı Oranı",
+      "totalTime": "Toplam Detoks"
+    }
+  },
+  "timer": {
+    "message": "Odaklanıyorsun! Harika gidiyorsun.",
+    "breathText": "Derin bir nefes al...",
+    "giveUpBtn": "😢 Vazgeç"
+  },
+  "complete": {
+    "success": {
+      "icon": "🎉",
+      "title": "Tebrikler!",
+      "message": "Dijital detoksunu başarıyla tamamladın."
+    },
+    "failed": {
+      "icon": "😔",
+      "title": "Tam olmadı",
+      "message": "Sorun yok. Tekrar dene!"
+    },
+    "result": {
+      "time": "Detoks Süresi",
+      "streak": "Seri"
+    },
+    "restartBtn": "🔄 Yeniden Başlat",
+    "shareBtn": "📤 Sonuçları Paylaş"
+  },
+  "history": {
+    "title": "📊 Benim Kayıtlarım",
+    "badges": "Rozetler",
+    "sessions": "Oturum Geçmişi",
+    "empty": "Henüz kayıt yok",
+    "success": "Başarılı",
+    "failed": "Başarısız",
+    "badgeNames": {
+      "first": "İlk Deneme",
+      "streak3": "3 Günlük Seri",
+      "streak7": "7 Günlük Seri",
+      "hour": "1 Saat Başarısı",
+      "master": "Detoks Ustası"
+    }
+  },
+  "language": {
+    "select": "Dil Seç"
+  },
+  "ads": {
+    "banner": "Reklam"
+  },
+  "time": {
+    "minutes": "dk",
+    "hour": "saat",
+    "hours": "saat",
+    "times": "kez",
+    "5min": "5 dk",
+    "10min": "10 dk",
+    "15min": "15 dk",
+    "30min": "30 dk",
+    "1hour": "1 saat",
+    "2hours": "2 saat"
+  },
+  "premium": {
+    "title": "🧠 AI Derin Analizi",
+    "premiumBtn": "🧠 AI Derin Analizini Görüntüle"
+  },
+  "ads": {
+    "banner": "Reklam",
+    "closeBtn": "Reklamı Kapat"
+  },
+  "recommendations": "Bunları da Dene"
+}

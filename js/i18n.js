@@ -2,7 +2,7 @@
 
 class I18n {
     constructor() {
-        this.supportedLanguages = ['ko', 'en', 'zh', 'hi', 'ru'];
+        this.supportedLanguages = ['ko', 'en', 'ja', 'es', 'pt', 'zh', 'id', 'tr', 'de', 'fr', 'hi', 'ru'];
         this.translations = {};
         this.currentLang = this.detectLanguage();
     }
@@ -106,7 +106,14 @@ class I18n {
         const names = {
             'ko': '한국어',
             'en': 'English',
+            'ja': '日本語',
+            'es': 'Español',
+            'pt': 'Português',
             'zh': '简体中文',
+            'id': 'Bahasa Indonesia',
+            'tr': 'Türkçe',
+            'de': 'Deutsch',
+            'fr': 'Français',
             'hi': 'हिन्दी',
             'ru': 'Русский'
         };

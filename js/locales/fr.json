@@ -1,0 +1,87 @@
+{
+  "app": {
+    "title": "Minuteur de Détoxification Numérique",
+    "description": "Minuteur de Détoxification Numérique - Réduis l'utilisation du smartphone et améliore la concentration"
+  },
+  "header": {
+    "title": "🧘 Détoxification Numérique",
+    "subtitle": "Prends une pause de ton smartphone"
+  },
+  "setup": {
+    "motivation": "Fais une pause et concentre-toi sur le présent.",
+    "selectTime": "Sélectionne le Temps de Détoxification",
+    "customInput": "Personnalisé (minutes)",
+    "startBtn": "🚀 Commencer la Détoxification",
+    "viewHistoryBtn": "📊 Voir l'Historique",
+    "stats": {
+      "totalSessions": "Sessions Totales",
+      "successRate": "Taux de Réussite",
+      "totalTime": "Détoxification Totale"
+    }
+  },
+  "timer": {
+    "message": "Tu te concentres! Tu fais du bon travail.",
+    "breathText": "Prends une profonde respiration...",
+    "giveUpBtn": "😢 Abandonner"
+  },
+  "complete": {
+    "success": {
+      "icon": "🎉",
+      "title": "Félicitations!",
+      "message": "Tu as terminé avec succès la détoxification numérique."
+    },
+    "failed": {
+      "icon": "😔",
+      "title": "Pas tout à fait",
+      "message": "C'est d'accord. Essaie à nouveau!"
+    },
+    "result": {
+      "time": "Temps de Détoxification",
+      "streak": "Série"
+    },
+    "restartBtn": "🔄 Recommencer",
+    "shareBtn": "📤 Partager les Résultats"
+  },
+  "history": {
+    "title": "📊 Mes Records",
+    "badges": "Badges",
+    "sessions": "Historique des Sessions",
+    "empty": "Pas de records encore",
+    "success": "Succès",
+    "failed": "Échoué",
+    "badgeNames": {
+      "first": "Premier Essai",
+      "streak3": "Série de 3 Jours",
+      "streak7": "Série de 7 Jours",
+      "hour": "1 Heure Réalisée",
+      "master": "Maître de la Détoxification"
+    }
+  },
+  "language": {
+    "select": "Sélectionner la Langue"
+  },
+  "ads": {
+    "banner": "Publicité"
+  },
+  "time": {
+    "minutes": "min",
+    "hour": "heure",
+    "hours": "heures",
+    "times": "fois",
+    "5min": "5 min",
+    "10min": "10 min",
+    "15min": "15 min",
+    "30min": "30 min",
+    "1hour": "1 heure",
+    "2hours": "2 heures"
+  },
+  "premium": {
+    "title": "🧠 Analyse Profonde par IA",
+    "premiumBtn": "🧠 Voir l'Analyse Profonde par IA"
+  },
+  "ads": {
+    "banner": "Publicité",
+    "closeBtn": "Fermer la Publicité"
+  },
+  "recommendations": "Essaie aussi"
+}

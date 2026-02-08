@@ -1,0 +1,87 @@
+{
+  "app": {
+    "title": "Cronômetro de Desintoxicação Digital",
+    "description": "Cronômetro de Desintoxicação Digital - Reduza o uso de smartphone e melhore o foco"
+  },
+  "header": {
+    "title": "🧘 Desintoxicação Digital",
+    "subtitle": "Faça uma pausa do seu smartphone"
+  },
+  "setup": {
+    "motivation": "Pause por um momento e foque no presente.",
+    "selectTime": "Selecione Tempo de Desintoxicação",
+    "customInput": "Personalizado (minutos)",
+    "startBtn": "🚀 Começar Desintoxicação",
+    "viewHistoryBtn": "📊 Ver Histórico",
+    "stats": {
+      "totalSessions": "Total de Sessões",
+      "successRate": "Taxa de Sucesso",
+      "totalTime": "Tempo Total de Desintoxicação"
+    }
+  },
+  "timer": {
+    "message": "Você está focando! Está indo muito bem.",
+    "breathText": "Respire fundo...",
+    "giveUpBtn": "😢 Desistir"
+  },
+  "complete": {
+    "success": {
+      "icon": "🎉",
+      "title": "Parabéns!",
+      "message": "Você completou com sucesso a desintoxicação digital."
+    },
+    "failed": {
+      "icon": "😔",
+      "title": "Quase",
+      "message": "Tudo bem. Tente novamente!"
+    },
+    "result": {
+      "time": "Tempo de Desintoxicação",
+      "streak": "Sequência"
+    },
+    "restartBtn": "🔄 Reiniciar",
+    "shareBtn": "📤 Compartilhar Resultados"
+  },
+  "history": {
+    "title": "📊 Meus Registros",
+    "badges": "Distintivos",
+    "sessions": "Histórico de Sessões",
+    "empty": "Sem registros ainda",
+    "success": "Sucesso",
+    "failed": "Falhou",
+    "badgeNames": {
+      "first": "Primeira Tentativa",
+      "streak3": "Sequência de 3 Dias",
+      "streak7": "Sequência de 7 Dias",
+      "hour": "1 Hora Conquistada",
+      "master": "Mestre em Desintoxicação"
+    }
+  },
+  "language": {
+    "select": "Selecionar Idioma"
+  },
+  "ads": {
+    "banner": "Publicidade"
+  },
+  "time": {
+    "minutes": "min",
+    "hour": "hora",
+    "hours": "horas",
+    "times": "vezes",
+    "5min": "5 min",
+    "10min": "10 min",
+    "15min": "15 min",
+    "30min": "30 min",
+    "1hour": "1 hora",
+    "2hours": "2 horas"
+  },
+  "premium": {
+    "title": "🧠 Análise Profunda de IA",
+    "premiumBtn": "🧠 Ver Análise Profunda de IA"
+  },
+  "ads": {
+    "banner": "Publicidade",
+    "closeBtn": "Fechar Publicidade"
+  },
+  "recommendations": "Experimente Também"
+}

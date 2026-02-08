@@ -67,6 +67,21 @@
     "minutes": "min",
     "hour": "hour",
     "hours": "hours",
-    "times": "times"
-  }
+    "times": "times",
+    "5min": "5 min",
+    "10min": "10 min",
+    "15min": "15 min",
+    "30min": "30 min",
+    "1hour": "1 hour",
+    "2hours": "2 hours"
+  },
+  "premium": {
+    "title": "🧠 AI Deep Analysis",
+    "premiumBtn": "🧠 View AI Deep Analysis"
+  },
+  "ads": {
+    "banner": "Advertisement",
+    "closeBtn": "Close Ad"
+  },
+  "recommendations": "Try These Too"
 }
