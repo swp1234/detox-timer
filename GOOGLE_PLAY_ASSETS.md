@@ -349,7 +349,7 @@ digital detox, timer, focus, meditation, smartphone addiction, productivity, wel
    ```
 
 2. **TWA 설정**
-   - TWA URL: https://swp1234.github.io/detox-timer/
+   - TWA URL: https://dopabrain.com/detox-timer/
    - Theme color: #00b894
 
 3. **🌟 Android 위젯 구현**

@@ -44,7 +44,7 @@ git push -u origin main
 ```
 
 GitHub Pages에서 배포 활성화 후 접속:
-https://swp1234.github.io/detox-timer/
+https://dopabrain.com/detox-timer/
 
 ## 💡 광고 영역
 
