@@ -1,92 +1,91 @@
 {
-  "app": {
-    "title": "Timer Detoks Digital",
-    "description": "Timer Detoks Digital - Kurangi penggunaan smartphone dan tingkatkan fokus",
-    "loading": "Loading..."
-  },
-  "header": {
-    "title": "🧘 Detoks Digital",
-    "subtitle": "Istirahat sejenak dari smartphone Anda"
-  },
-  "setup": {
-    "motivation": "Berhenti sejenak dan fokus pada saat ini.",
-    "selectTime": "Pilih Waktu Detoks",
-    "customInput": "Khusus (menit)",
-    "startBtn": "🚀 Mulai Detoks",
-    "viewHistoryBtn": "📊 Lihat Riwayat",
-    "stats": {
-      "totalSessions": "Total Sesi",
-      "successRate": "Tingkat Keberhasilan",
-      "totalTime": "Total Detoks"
-    },
-    "timeHint": "Start with 5 minutes if you're new"
-  },
-  "timer": {
-    "message": "Anda sedang fokus! Hebat sekali.",
-    "breathText": "Ambil napas dalam-dalam...",
-    "giveUpBtn": "😢 Menyerah",
-    "pauseBtn": "⏸ Jeda",
-    "whiteNoiseLink": "Dengarkan white noise"
-  },
-  "complete": {
-    "success": {
-      "icon": "🎉",
-      "title": "Selamat!",
-      "message": "Anda telah berhasil menyelesaikan detoks digital."
-    },
-    "failed": {
-      "icon": "😔",
-      "title": "Hampir saja",
-      "message": "Tidak apa-apa. Coba lagi!"
-    },
-    "result": {
-      "time": "Waktu Detoks",
-      "streak": "Hari Berturut-turut"
-    },
-    "restartBtn": "🔄 Mulai Lagi",
-    "shareBtn": "📤 Bagikan Hasil"
-  },
-  "history": {
-    "title": "📊 Catatan Saya",
-    "badges": "Lencana",
-    "sessions": "Riwayat Sesi",
-    "empty": "Belum ada catatan",
-    "success": "Berhasil",
-    "failed": "Gagal",
-    "badgeNames": {
-      "first": "Percobaan Pertama",
-      "streak3": "Hari Berturut-turut 3",
-      "streak7": "Hari Berturut-turut 7",
-      "hour": "1 Jam Tercapai",
-      "master": "Ahli Detoks"
-    }
-  },
-  "language": {
-    "select": "Pilih Bahasa"
-  },
   "ads": {
     "banner": "Iklan",
     "closeBtn": "Tutup Iklan"
   },
-  "time": {
-    "minutes": "mnt",
-    "hour": "jam",
-    "hours": "jam",
-    "times": "kali",
-    "5min": "5 menit",
-    "10min": "10 menit",
-    "15min": "15 menit",
-    "30min": "30 menit",
-    "1hour": "1 jam",
-    "2hours": "2 jam"
+  "app": {
+    "description": "Timer Detoks Digital - Kurangi penggunaan smartphone dan tingkatkan fokus",
+    "loading": "Loading...",
+    "title": "Timer Detoks Digital"
+  },
+  "complete": {
+    "failed": {
+      "icon": "😔",
+      "message": "Tidak apa-apa. Coba lagi!",
+      "title": "Hampir saja"
+    },
+    "restartBtn": "🔄 Mulai Lagi",
+    "result": {
+      "streak": "Hari Berturut-turut",
+      "time": "Waktu Detoks"
+    },
+    "shareBtn": "📤 Bagikan Hasil",
+    "success": {
+      "icon": "🎉",
+      "message": "Anda telah berhasil menyelesaikan detoks digital.",
+      "title": "Selamat!"
+    }
+  },
+  "header": {
+    "subtitle": "Istirahat sejenak dari smartphone Anda",
+    "title": "🧘 Detoks Digital"
+  },
+  "hero": {
+    "subtitle": "Small daily actions create big changes",
+    "title": "You're enough without your phone"
+  },
+  "history": {
+    "badgeNames": {
+      "first": "Percobaan Pertama",
+      "hour": "1 Jam Tercapai",
+      "master": "Ahli Detoks",
+      "streak3": "Hari Berturut-turut 3",
+      "streak7": "Hari Berturut-turut 7"
+    },
+    "badges": "Lencana",
+    "empty": "Belum ada catatan",
+    "failed": "Gagal",
+    "sessions": "Riwayat Sesi",
+    "success": "Berhasil",
+    "title": "📊 Catatan Saya"
+  },
+  "language": {
+    "select": "Pilih Bahasa"
   },
   "premium": {
-    "title": "🧠 Analisis Mendalam AI",
-    "premiumBtn": "🧠 Lihat Analisis Mendalam AI"
+    "title": "🧠 Analisis Mendalam AI"
   },
   "recommendations": "Coba Juga",
-  "hero": {
-    "title": "You're enough without your phone",
-    "subtitle": "Small daily actions create big changes"
+  "setup": {
+    "customInput": "Khusus (menit)",
+    "motivation": "Berhenti sejenak dan fokus pada saat ini.",
+    "selectTime": "Pilih Waktu Detoks",
+    "startBtn": "🚀 Mulai Detoks",
+    "stats": {
+      "successRate": "Tingkat Keberhasilan",
+      "totalSessions": "Total Sesi",
+      "totalTime": "Total Detoks"
+    },
+    "timeHint": "Start with 5 minutes if you're new",
+    "viewHistoryBtn": "📊 Lihat Riwayat"
+  },
+  "time": {
+    "10min": "10 menit",
+    "15min": "15 menit",
+    "1hour": "1 jam",
+    "2hours": "2 jam",
+    "30min": "30 menit",
+    "5min": "5 menit",
+    "hour": "jam",
+    "hours": "jam",
+    "minutes": "mnt",
+    "times": "kali"
+  },
+  "timer": {
+    "breathText": "Ambil napas dalam-dalam...",
+    "giveUpBtn": "😢 Menyerah",
+    "message": "Anda sedang fokus! Hebat sekali.",
+    "pauseBtn": "⏸ Jeda",
+    "whiteNoiseLink": "Dengarkan white noise"
   }
 }

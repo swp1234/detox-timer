@@ -1,92 +1,91 @@
 {
-  "app": {
-    "title": "Cronômetro de Desintoxicação Digital",
-    "description": "Cronômetro de Desintoxicação Digital - Reduza o uso de smartphone e melhore o foco",
-    "loading": "Loading..."
-  },
-  "header": {
-    "title": "🧘 Desintoxicação Digital",
-    "subtitle": "Faça uma pausa do seu smartphone"
-  },
-  "setup": {
-    "motivation": "Pause por um momento e foque no presente.",
-    "selectTime": "Selecione Tempo de Desintoxicação",
-    "customInput": "Personalizado (minutos)",
-    "startBtn": "🚀 Começar Desintoxicação",
-    "viewHistoryBtn": "📊 Ver Histórico",
-    "stats": {
-      "totalSessions": "Total de Sessões",
-      "successRate": "Taxa de Sucesso",
-      "totalTime": "Tempo Total de Desintoxicação"
-    },
-    "timeHint": "Start with 5 minutes if you're new"
-  },
-  "timer": {
-    "message": "Você está focando! Está indo muito bem.",
-    "breathText": "Respire fundo...",
-    "giveUpBtn": "😢 Desistir",
-    "pauseBtn": "⏸ Pausar",
-    "whiteNoiseLink": "Ouvir ruído branco"
-  },
-  "complete": {
-    "success": {
-      "icon": "🎉",
-      "title": "Parabéns!",
-      "message": "Você completou com sucesso a desintoxicação digital."
-    },
-    "failed": {
-      "icon": "😔",
-      "title": "Quase",
-      "message": "Tudo bem. Tente novamente!"
-    },
-    "result": {
-      "time": "Tempo de Desintoxicação",
-      "streak": "Sequência"
-    },
-    "restartBtn": "🔄 Reiniciar",
-    "shareBtn": "📤 Compartilhar Resultados"
-  },
-  "history": {
-    "title": "📊 Meus Registros",
-    "badges": "Distintivos",
-    "sessions": "Histórico de Sessões",
-    "empty": "Sem registros ainda",
-    "success": "Sucesso",
-    "failed": "Falhou",
-    "badgeNames": {
-      "first": "Primeira Tentativa",
-      "streak3": "Sequência de 3 Dias",
-      "streak7": "Sequência de 7 Dias",
-      "hour": "1 Hora Conquistada",
-      "master": "Mestre em Desintoxicação"
-    }
-  },
-  "language": {
-    "select": "Selecionar Idioma"
-  },
   "ads": {
     "banner": "Publicidade",
     "closeBtn": "Fechar Publicidade"
   },
-  "time": {
-    "minutes": "min",
-    "hour": "hora",
-    "hours": "horas",
-    "times": "vezes",
-    "5min": "5 min",
-    "10min": "10 min",
-    "15min": "15 min",
-    "30min": "30 min",
-    "1hour": "1 hora",
-    "2hours": "2 horas"
+  "app": {
+    "description": "Cronômetro de Desintoxicação Digital - Reduza o uso de smartphone e melhore o foco",
+    "loading": "Loading...",
+    "title": "Cronômetro de Desintoxicação Digital"
+  },
+  "complete": {
+    "failed": {
+      "icon": "😔",
+      "message": "Tudo bem. Tente novamente!",
+      "title": "Quase"
+    },
+    "restartBtn": "🔄 Reiniciar",
+    "result": {
+      "streak": "Sequência",
+      "time": "Tempo de Desintoxicação"
+    },
+    "shareBtn": "📤 Compartilhar Resultados",
+    "success": {
+      "icon": "🎉",
+      "message": "Você completou com sucesso a desintoxicação digital.",
+      "title": "Parabéns!"
+    }
+  },
+  "header": {
+    "subtitle": "Faça uma pausa do seu smartphone",
+    "title": "🧘 Desintoxicação Digital"
+  },
+  "hero": {
+    "subtitle": "Small daily actions create big changes",
+    "title": "You're enough without your phone"
+  },
+  "history": {
+    "badgeNames": {
+      "first": "Primeira Tentativa",
+      "hour": "1 Hora Conquistada",
+      "master": "Mestre em Desintoxicação",
+      "streak3": "Sequência de 3 Dias",
+      "streak7": "Sequência de 7 Dias"
+    },
+    "badges": "Distintivos",
+    "empty": "Sem registros ainda",
+    "failed": "Falhou",
+    "sessions": "Histórico de Sessões",
+    "success": "Sucesso",
+    "title": "📊 Meus Registros"
+  },
+  "language": {
+    "select": "Selecionar Idioma"
   },
   "premium": {
-    "title": "🧠 Análise Profunda de IA",
-    "premiumBtn": "🧠 Ver Análise Profunda de IA"
+    "title": "🧠 Análise Profunda de IA"
   },
   "recommendations": "Experimente Também",
-  "hero": {
-    "title": "You're enough without your phone",
-    "subtitle": "Small daily actions create big changes"
+  "setup": {
+    "customInput": "Personalizado (minutos)",
+    "motivation": "Pause por um momento e foque no presente.",
+    "selectTime": "Selecione Tempo de Desintoxicação",
+    "startBtn": "🚀 Começar Desintoxicação",
+    "stats": {
+      "successRate": "Taxa de Sucesso",
+      "totalSessions": "Total de Sessões",
+      "totalTime": "Tempo Total de Desintoxicação"
+    },
+    "timeHint": "Start with 5 minutes if you're new",
+    "viewHistoryBtn": "📊 Ver Histórico"
+  },
+  "time": {
+    "10min": "10 min",
+    "15min": "15 min",
+    "1hour": "1 hora",
+    "2hours": "2 horas",
+    "30min": "30 min",
+    "5min": "5 min",
+    "hour": "hora",
+    "hours": "horas",
+    "minutes": "min",
+    "times": "vezes"
+  },
+  "timer": {
+    "breathText": "Respire fundo...",
+    "giveUpBtn": "😢 Desistir",
+    "message": "Você está focando! Está indo muito bem.",
+    "pauseBtn": "⏸ Pausar",
+    "whiteNoiseLink": "Ouvir ruído branco"
   }
 }

@@ -1,95 +1,91 @@
 {
-  "app": {
-    "title": "Digital Detox Timer",
-    "description": "Digital Detox Timer - Reduce smartphone usage and improve focus",
-    "loading": "Loading..."
-  },
-  "header": {
-    "title": "🧘 Digital Detox",
-    "subtitle": "Take a break from your smartphone"
-  },
-  "hero": {
-    "title": "You're enough without your phone",
-    "subtitle": "Small daily actions create big changes"
-  },
-  "setup": {
-    "motivation": "Pause for a moment and focus on the present.",
-    "selectTime": "📏 Select Detox Time",
-    "timeHint": "Start with 5 minutes if you're new",
-    "customInput": "Custom (minutes)",
-    "startBtn": "Start Now",
-    "viewHistoryBtn": "📊 View History",
-    "stats": {
-      "totalSessions": "Total Sessions",
-      "successRate": "Success Rate",
-      "totalTime": "Total Detox"
-    }
-  },
-  "timer": {
-    "message": "You're focusing! Doing great.",
-    "breathText": "Take a deep breath...",
-    "giveUpBtn": "😢 Give Up",
-    "pauseBtn": "⏸ Pause",
-    "whiteNoiseLink": "Listen to Focus White Noise"
-  },
-  "complete": {
-    "success": {
-      "icon": "🎉",
-      "title": "Congratulations!",
-      "message": "You've successfully completed digital detox."
-    },
-    "failed": {
-      "icon": "😔",
-      "title": "Not quite",
-      "message": "That's okay. Try again!"
-    },
-    "result": {
-      "time": "Detox Time",
-      "streak": "Streak"
-    },
-    "restartBtn": "🔄 Restart",
-    "shareBtn": "📤 Share Results"
-  },
-  "history": {
-    "title": "📊 My Records",
-    "badges": "Badges",
-    "sessions": "Session History",
-    "empty": "No records yet",
-    "success": "Success",
-    "failed": "Failed",
-    "badgeNames": {
-      "first": "First Try",
-      "streak3": "3-Day Streak",
-      "streak7": "7-Day Streak",
-      "hour": "1 Hour Achieved",
-      "master": "Detox Master"
-    }
-  },
-  "language": {
-    "select": "Select Language"
-  },
-  "ads": {
-    "banner": "Advertisement"
-  },
-  "time": {
-    "minutes": "min",
-    "hour": "hour",
-    "hours": "hours",
-    "times": "times",
-    "5min": "5 min",
-    "10min": "10 min",
-    "15min": "15 min",
-    "30min": "30 min",
-    "1hour": "1 hour",
-    "2hours": "2 hours"
-  },
-  "premium": {
-    "title": "🧠 AI Deep Analysis",
-    "premiumBtn": "🧠 View AI Deep Analysis"
-  },
   "ads": {
     "banner": "Advertisement",
     "closeBtn": "Close Ad"
   },
-  "recommendations": "Try These Too"
+  "app": {
+    "description": "Digital Detox Timer - Reduce smartphone usage and improve focus",
+    "loading": "Loading...",
+    "title": "Digital Detox Timer"
+  },
+  "complete": {
+    "failed": {
+      "icon": "😔",
+      "message": "That's okay. Try again!",
+      "title": "Not quite"
+    },
+    "restartBtn": "🔄 Restart",
+    "result": {
+      "streak": "Streak",
+      "time": "Detox Time"
+    },
+    "shareBtn": "📤 Share Results",
+    "success": {
+      "icon": "🎉",
+      "message": "You've successfully completed digital detox.",
+      "title": "Congratulations!"
+    }
+  },
+  "header": {
+    "subtitle": "Take a break from your smartphone",
+    "title": "🧘 Digital Detox"
+  },
+  "hero": {
+    "subtitle": "Small daily actions create big changes",
+    "title": "You're enough without your phone"
+  },
+  "history": {
+    "badgeNames": {
+      "first": "First Try",
+      "hour": "1 Hour Achieved",
+      "master": "Detox Master",
+      "streak3": "3-Day Streak",
+      "streak7": "7-Day Streak"
+    },
+    "badges": "Badges",
+    "empty": "No records yet",
+    "failed": "Failed",
+    "sessions": "Session History",
+    "success": "Success",
+    "title": "📊 My Records"
+  },
+  "language": {
+    "select": "Select Language"
+  },
+  "premium": {
+    "title": "🧠 AI Deep Analysis"
+  },
+  "recommendations": "Try These Too",
+  "setup": {
+    "customInput": "Custom (minutes)",
+    "motivation": "Pause for a moment and focus on the present.",
+    "selectTime": "📏 Select Detox Time",
+    "startBtn": "Start Now",
+    "stats": {
+      "successRate": "Success Rate",
+      "totalSessions": "Total Sessions",
+      "totalTime": "Total Detox"
+    },
+    "timeHint": "Start with 5 minutes if you're new",
+    "viewHistoryBtn": "📊 View History"
+  },
+  "time": {
+    "10min": "10 min",
+    "15min": "15 min",
+    "1hour": "1 hour",
+    "2hours": "2 hours",
+    "30min": "30 min",
+    "5min": "5 min",
+    "hour": "hour",
+    "hours": "hours",
+    "minutes": "min",
+    "times": "times"
+  },
+  "timer": {
+    "breathText": "Take a deep breath...",
+    "giveUpBtn": "😢 Give Up",
+    "message": "You're focusing! Doing great.",
+    "pauseBtn": "⏸ Pause",
+    "whiteNoiseLink": "Listen to Focus White Noise"
+  }
 }

@@ -1,92 +1,91 @@
 {
-  "app": {
-    "title": "Dijital Detoks Sayacı",
-    "description": "Dijital Detoks Sayacı - Akıllı telefon kullanımını azalt ve odaklanmayı artır",
-    "loading": "Loading..."
-  },
-  "header": {
-    "title": "🧘 Dijital Detoks",
-    "subtitle": "Akıllı telefonundan bir ara ver"
-  },
-  "setup": {
-    "motivation": "Bir an dur ve şu ana odaklan.",
-    "selectTime": "Detoks Süresini Seç",
-    "customInput": "Özel (dakika)",
-    "startBtn": "🚀 Detoksu Başlat",
-    "viewHistoryBtn": "📊 Geçmişi Görüntüle",
-    "stats": {
-      "totalSessions": "Toplam Oturumlar",
-      "successRate": "Başarı Oranı",
-      "totalTime": "Toplam Detoks"
-    },
-    "timeHint": "Start with 5 minutes if you're new"
-  },
-  "timer": {
-    "message": "Odaklanıyorsun! Harika gidiyorsun.",
-    "breathText": "Derin bir nefes al...",
-    "giveUpBtn": "😢 Vazgeç",
-    "pauseBtn": "⏸ Duraklat",
-    "whiteNoiseLink": "Beyaz sesi dinle"
-  },
-  "complete": {
-    "success": {
-      "icon": "🎉",
-      "title": "Tebrikler!",
-      "message": "Dijital detoksunu başarıyla tamamladın."
-    },
-    "failed": {
-      "icon": "😔",
-      "title": "Tam olmadı",
-      "message": "Sorun yok. Tekrar dene!"
-    },
-    "result": {
-      "time": "Detoks Süresi",
-      "streak": "Seri"
-    },
-    "restartBtn": "🔄 Yeniden Başlat",
-    "shareBtn": "📤 Sonuçları Paylaş"
-  },
-  "history": {
-    "title": "📊 Benim Kayıtlarım",
-    "badges": "Rozetler",
-    "sessions": "Oturum Geçmişi",
-    "empty": "Henüz kayıt yok",
-    "success": "Başarılı",
-    "failed": "Başarısız",
-    "badgeNames": {
-      "first": "İlk Deneme",
-      "streak3": "3 Günlük Seri",
-      "streak7": "7 Günlük Seri",
-      "hour": "1 Saat Başarısı",
-      "master": "Detoks Ustası"
-    }
-  },
-  "language": {
-    "select": "Dil Seç"
-  },
   "ads": {
     "banner": "Reklam",
     "closeBtn": "Reklamı Kapat"
   },
-  "time": {
-    "minutes": "dk",
-    "hour": "saat",
-    "hours": "saat",
-    "times": "kez",
-    "5min": "5 dk",
-    "10min": "10 dk",
-    "15min": "15 dk",
-    "30min": "30 dk",
-    "1hour": "1 saat",
-    "2hours": "2 saat"
+  "app": {
+    "description": "Dijital Detoks Sayacı - Akıllı telefon kullanımını azalt ve odaklanmayı artır",
+    "loading": "Loading...",
+    "title": "Dijital Detoks Sayacı"
+  },
+  "complete": {
+    "failed": {
+      "icon": "😔",
+      "message": "Sorun yok. Tekrar dene!",
+      "title": "Tam olmadı"
+    },
+    "restartBtn": "🔄 Yeniden Başlat",
+    "result": {
+      "streak": "Seri",
+      "time": "Detoks Süresi"
+    },
+    "shareBtn": "📤 Sonuçları Paylaş",
+    "success": {
+      "icon": "🎉",
+      "message": "Dijital detoksunu başarıyla tamamladın.",
+      "title": "Tebrikler!"
+    }
+  },
+  "header": {
+    "subtitle": "Akıllı telefonundan bir ara ver",
+    "title": "🧘 Dijital Detoks"
+  },
+  "hero": {
+    "subtitle": "Small daily actions create big changes",
+    "title": "You're enough without your phone"
+  },
+  "history": {
+    "badgeNames": {
+      "first": "İlk Deneme",
+      "hour": "1 Saat Başarısı",
+      "master": "Detoks Ustası",
+      "streak3": "3 Günlük Seri",
+      "streak7": "7 Günlük Seri"
+    },
+    "badges": "Rozetler",
+    "empty": "Henüz kayıt yok",
+    "failed": "Başarısız",
+    "sessions": "Oturum Geçmişi",
+    "success": "Başarılı",
+    "title": "📊 Benim Kayıtlarım"
+  },
+  "language": {
+    "select": "Dil Seç"
   },
   "premium": {
-    "title": "🧠 AI Derin Analizi",
-    "premiumBtn": "🧠 AI Derin Analizini Görüntüle"
+    "title": "🧠 AI Derin Analizi"
   },
   "recommendations": "Bunları da Dene",
-  "hero": {
-    "title": "You're enough without your phone",
-    "subtitle": "Small daily actions create big changes"
+  "setup": {
+    "customInput": "Özel (dakika)",
+    "motivation": "Bir an dur ve şu ana odaklan.",
+    "selectTime": "Detoks Süresini Seç",
+    "startBtn": "🚀 Detoksu Başlat",
+    "stats": {
+      "successRate": "Başarı Oranı",
+      "totalSessions": "Toplam Oturumlar",
+      "totalTime": "Toplam Detoks"
+    },
+    "timeHint": "Start with 5 minutes if you're new",
+    "viewHistoryBtn": "📊 Geçmişi Görüntüle"
+  },
+  "time": {
+    "10min": "10 dk",
+    "15min": "15 dk",
+    "1hour": "1 saat",
+    "2hours": "2 saat",
+    "30min": "30 dk",
+    "5min": "5 dk",
+    "hour": "saat",
+    "hours": "saat",
+    "minutes": "dk",
+    "times": "kez"
+  },
+  "timer": {
+    "breathText": "Derin bir nefes al...",
+    "giveUpBtn": "😢 Vazgeç",
+    "message": "Odaklanıyorsun! Harika gidiyorsun.",
+    "pauseBtn": "⏸ Duraklat",
+    "whiteNoiseLink": "Beyaz sesi dinle"
   }
 }

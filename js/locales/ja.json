@@ -1,92 +1,91 @@
 {
-  "app": {
-    "title": "デジタルデトックスタイマー",
-    "description": "スマートフォンの使用を減らし、集中力を高めてください。",
-    "loading": "Loading..."
-  },
-  "header": {
-    "title": "🧘 デジタルデトックス",
-    "subtitle": "スマートフォンから一息つきましょう"
-  },
-  "setup": {
-    "motivation": "一瞬立ち止まって、今に集中しましょう。",
-    "selectTime": "デトックス時間を選択",
-    "customInput": "カスタム（分）",
-    "startBtn": "🚀 デトックス開始",
-    "viewHistoryBtn": "📊 履歴を表示",
-    "stats": {
-      "totalSessions": "総セッション数",
-      "successRate": "成功率",
-      "totalTime": "総デトックス時間"
-    },
-    "timeHint": "Start with 5 minutes if you're new"
-  },
-  "timer": {
-    "message": "集中できています！頑張ってください。",
-    "breathText": "深呼吸をしてください。",
-    "giveUpBtn": "😢 諦める",
-    "pauseBtn": "⏸ 一時停止",
-    "whiteNoiseLink": "ホワイトノイズを聴く"
-  },
-  "complete": {
-    "success": {
-      "icon": "🎉",
-      "title": "おめでとうございます！",
-      "message": "デジタルデトックスを成功させました。"
-    },
-    "failed": {
-      "icon": "😔",
-      "title": "あともう少し",
-      "message": "大丈夫です。もう一度試してください！"
-    },
-    "result": {
-      "time": "デトックス時間",
-      "streak": "連続記録"
-    },
-    "restartBtn": "🔄 リスタート",
-    "shareBtn": "📤 結果をシェア"
-  },
-  "history": {
-    "title": "📊 マイ記録",
-    "badges": "バッジ",
-    "sessions": "セッション履歴",
-    "empty": "まだ記録がありません",
-    "success": "成功",
-    "failed": "失敗",
-    "badgeNames": {
-      "first": "初回達成",
-      "streak3": "3日連続",
-      "streak7": "7日連続",
-      "hour": "1時間達成",
-      "master": "デトックスマスター"
-    }
-  },
-  "language": {
-    "select": "言語を選択"
-  },
   "ads": {
     "banner": "広告",
     "closeBtn": "広告を閉じる"
   },
-  "time": {
-    "minutes": "分",
-    "hour": "時間",
-    "hours": "時間",
-    "times": "回",
-    "5min": "5分",
-    "10min": "10分",
-    "15min": "15分",
-    "30min": "30分",
-    "1hour": "1時間",
-    "2hours": "2時間"
+  "app": {
+    "description": "スマートフォンの使用を減らし、集中力を高めてください。",
+    "loading": "Loading...",
+    "title": "デジタルデトックスタイマー"
+  },
+  "complete": {
+    "failed": {
+      "icon": "😔",
+      "message": "大丈夫です。もう一度試してください！",
+      "title": "あともう少し"
+    },
+    "restartBtn": "🔄 リスタート",
+    "result": {
+      "streak": "連続記録",
+      "time": "デトックス時間"
+    },
+    "shareBtn": "📤 結果をシェア",
+    "success": {
+      "icon": "🎉",
+      "message": "デジタルデトックスを成功させました。",
+      "title": "おめでとうございます！"
+    }
+  },
+  "header": {
+    "subtitle": "スマートフォンから一息つきましょう",
+    "title": "🧘 デジタルデトックス"
+  },
+  "hero": {
+    "subtitle": "Small daily actions create big changes",
+    "title": "You're enough without your phone"
+  },
+  "history": {
+    "badgeNames": {
+      "first": "初回達成",
+      "hour": "1時間達成",
+      "master": "デトックスマスター",
+      "streak3": "3日連続",
+      "streak7": "7日連続"
+    },
+    "badges": "バッジ",
+    "empty": "まだ記録がありません",
+    "failed": "失敗",
+    "sessions": "セッション履歴",
+    "success": "成功",
+    "title": "📊 マイ記録"
+  },
+  "language": {
+    "select": "言語を選択"
   },
   "premium": {
-    "title": "🧠 AI詳細分析",
-    "premiumBtn": "🧠 AI詳細分析を表示"
+    "title": "🧠 AI詳細分析"
   },
   "recommendations": "これも試してみてください",
-  "hero": {
-    "title": "You're enough without your phone",
-    "subtitle": "Small daily actions create big changes"
+  "setup": {
+    "customInput": "カスタム（分）",
+    "motivation": "一瞬立ち止まって、今に集中しましょう。",
+    "selectTime": "デトックス時間を選択",
+    "startBtn": "🚀 デトックス開始",
+    "stats": {
+      "successRate": "成功率",
+      "totalSessions": "総セッション数",
+      "totalTime": "総デトックス時間"
+    },
+    "timeHint": "Start with 5 minutes if you're new",
+    "viewHistoryBtn": "📊 履歴を表示"
+  },
+  "time": {
+    "10min": "10分",
+    "15min": "15分",
+    "1hour": "1時間",
+    "2hours": "2時間",
+    "30min": "30分",
+    "5min": "5分",
+    "hour": "時間",
+    "hours": "時間",
+    "minutes": "分",
+    "times": "回"
+  },
+  "timer": {
+    "breathText": "深呼吸をしてください。",
+    "giveUpBtn": "😢 諦める",
+    "message": "集中できています！頑張ってください。",
+    "pauseBtn": "⏸ 一時停止",
+    "whiteNoiseLink": "ホワイトノイズを聴く"
   }
 }

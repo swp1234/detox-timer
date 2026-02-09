@@ -1,92 +1,91 @@
 {
-  "app": {
-    "title": "Minuteur de Détoxification Numérique",
-    "description": "Minuteur de Détoxification Numérique - Réduis l'utilisation du smartphone et améliore la concentration",
-    "loading": "Loading..."
-  },
-  "header": {
-    "title": "🧘 Détoxification Numérique",
-    "subtitle": "Prends une pause de ton smartphone"
-  },
-  "setup": {
-    "motivation": "Fais une pause et concentre-toi sur le présent.",
-    "selectTime": "Sélectionne le Temps de Détoxification",
-    "customInput": "Personnalisé (minutes)",
-    "startBtn": "🚀 Commencer la Détoxification",
-    "viewHistoryBtn": "📊 Voir l'Historique",
-    "stats": {
-      "totalSessions": "Sessions Totales",
-      "successRate": "Taux de Réussite",
-      "totalTime": "Détoxification Totale"
-    },
-    "timeHint": "Start with 5 minutes if you're new"
-  },
-  "timer": {
-    "message": "Tu te concentres! Tu fais du bon travail.",
-    "breathText": "Prends une profonde respiration...",
-    "giveUpBtn": "😢 Abandonner",
-    "pauseBtn": "⏸ Pause",
-    "whiteNoiseLink": "Écouter bruit blanc"
-  },
-  "complete": {
-    "success": {
-      "icon": "🎉",
-      "title": "Félicitations!",
-      "message": "Tu as terminé avec succès la détoxification numérique."
-    },
-    "failed": {
-      "icon": "😔",
-      "title": "Pas tout à fait",
-      "message": "C'est d'accord. Essaie à nouveau!"
-    },
-    "result": {
-      "time": "Temps de Détoxification",
-      "streak": "Série"
-    },
-    "restartBtn": "🔄 Recommencer",
-    "shareBtn": "📤 Partager les Résultats"
-  },
-  "history": {
-    "title": "📊 Mes Records",
-    "badges": "Badges",
-    "sessions": "Historique des Sessions",
-    "empty": "Pas de records encore",
-    "success": "Succès",
-    "failed": "Échoué",
-    "badgeNames": {
-      "first": "Premier Essai",
-      "streak3": "Série de 3 Jours",
-      "streak7": "Série de 7 Jours",
-      "hour": "1 Heure Réalisée",
-      "master": "Maître de la Détoxification"
-    }
-  },
-  "language": {
-    "select": "Sélectionner la Langue"
-  },
   "ads": {
     "banner": "Publicité",
     "closeBtn": "Fermer la Publicité"
   },
-  "time": {
-    "minutes": "min",
-    "hour": "heure",
-    "hours": "heures",
-    "times": "fois",
-    "5min": "5 min",
-    "10min": "10 min",
-    "15min": "15 min",
-    "30min": "30 min",
-    "1hour": "1 heure",
-    "2hours": "2 heures"
+  "app": {
+    "description": "Minuteur de Détoxification Numérique - Réduis l'utilisation du smartphone et améliore la concentration",
+    "loading": "Loading...",
+    "title": "Minuteur de Détoxification Numérique"
+  },
+  "complete": {
+    "failed": {
+      "icon": "😔",
+      "message": "C'est d'accord. Essaie à nouveau!",
+      "title": "Pas tout à fait"
+    },
+    "restartBtn": "🔄 Recommencer",
+    "result": {
+      "streak": "Série",
+      "time": "Temps de Détoxification"
+    },
+    "shareBtn": "📤 Partager les Résultats",
+    "success": {
+      "icon": "🎉",
+      "message": "Tu as terminé avec succès la détoxification numérique.",
+      "title": "Félicitations!"
+    }
+  },
+  "header": {
+    "subtitle": "Prends une pause de ton smartphone",
+    "title": "🧘 Détoxification Numérique"
+  },
+  "hero": {
+    "subtitle": "Small daily actions create big changes",
+    "title": "You're enough without your phone"
+  },
+  "history": {
+    "badgeNames": {
+      "first": "Premier Essai",
+      "hour": "1 Heure Réalisée",
+      "master": "Maître de la Détoxification",
+      "streak3": "Série de 3 Jours",
+      "streak7": "Série de 7 Jours"
+    },
+    "badges": "Badges",
+    "empty": "Pas de records encore",
+    "failed": "Échoué",
+    "sessions": "Historique des Sessions",
+    "success": "Succès",
+    "title": "📊 Mes Records"
+  },
+  "language": {
+    "select": "Sélectionner la Langue"
   },
   "premium": {
-    "title": "🧠 Analyse Profonde par IA",
-    "premiumBtn": "🧠 Voir l'Analyse Profonde par IA"
+    "title": "🧠 Analyse Profonde par IA"
   },
   "recommendations": "Essaie aussi",
-  "hero": {
-    "title": "You're enough without your phone",
-    "subtitle": "Small daily actions create big changes"
+  "setup": {
+    "customInput": "Personnalisé (minutes)",
+    "motivation": "Fais une pause et concentre-toi sur le présent.",
+    "selectTime": "Sélectionne le Temps de Détoxification",
+    "startBtn": "🚀 Commencer la Détoxification",
+    "stats": {
+      "successRate": "Taux de Réussite",
+      "totalSessions": "Sessions Totales",
+      "totalTime": "Détoxification Totale"
+    },
+    "timeHint": "Start with 5 minutes if you're new",
+    "viewHistoryBtn": "📊 Voir l'Historique"
+  },
+  "time": {
+    "10min": "10 min",
+    "15min": "15 min",
+    "1hour": "1 heure",
+    "2hours": "2 heures",
+    "30min": "30 min",
+    "5min": "5 min",
+    "hour": "heure",
+    "hours": "heures",
+    "minutes": "min",
+    "times": "fois"
+  },
+  "timer": {
+    "breathText": "Prends une profonde respiration...",
+    "giveUpBtn": "😢 Abandonner",
+    "message": "Tu te concentres! Tu fais du bon travail.",
+    "pauseBtn": "⏸ Pause",
+    "whiteNoiseLink": "Écouter bruit blanc"
   }
 }

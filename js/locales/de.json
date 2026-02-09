@@ -1,92 +1,91 @@
 {
-  "app": {
-    "title": "Digital Detox Timer",
-    "description": "Digital Detox Timer - Reduziere die Smartphone-Nutzung und verbessere die Konzentration",
-    "loading": "Loading..."
-  },
-  "header": {
-    "title": "🧘 Digital Detox",
-    "subtitle": "Mache eine Pause von deinem Smartphone"
-  },
-  "setup": {
-    "motivation": "Pausiere für einen Moment und konzentriere dich auf die Gegenwart.",
-    "selectTime": "Detox-Zeit auswählen",
-    "customInput": "Benutzerdefiniert (Minuten)",
-    "startBtn": "🚀 Starte Detox",
-    "viewHistoryBtn": "📊 Verlauf anzeigen",
-    "stats": {
-      "totalSessions": "Gesamtsitzungen",
-      "successRate": "Erfolgsquote",
-      "totalTime": "Gesamte Detox-Zeit"
-    },
-    "timeHint": "Start with 5 minutes if you're new"
-  },
-  "timer": {
-    "message": "Du konzentrierst dich! Machst es sehr gut.",
-    "breathText": "Atme tief durch...",
-    "giveUpBtn": "😢 Aufgeben",
-    "pauseBtn": "⏸ Pausieren",
-    "whiteNoiseLink": "Weißes Rauschen anhören"
-  },
-  "complete": {
-    "success": {
-      "icon": "🎉",
-      "title": "Glückwunsch!",
-      "message": "Du hast deine Digital Detox erfolgreich abgeschlossen."
-    },
-    "failed": {
-      "icon": "😔",
-      "title": "Nicht ganz",
-      "message": "Das ist okay. Versuche es noch mal!"
-    },
-    "result": {
-      "time": "Detox-Zeit",
-      "streak": "Serie"
-    },
-    "restartBtn": "🔄 Neu starten",
-    "shareBtn": "📤 Ergebnisse teilen"
-  },
-  "history": {
-    "title": "📊 Meine Aufzeichnungen",
-    "badges": "Abzeichen",
-    "sessions": "Sitzungsverlauf",
-    "empty": "Noch keine Aufzeichnungen",
-    "success": "Erfolg",
-    "failed": "Misserfolg",
-    "badgeNames": {
-      "first": "Erster Versuch",
-      "streak3": "3-Tage-Serie",
-      "streak7": "7-Tage-Serie",
-      "hour": "1 Stunde erreicht",
-      "master": "Detox-Meister"
-    }
-  },
-  "language": {
-    "select": "Sprache auswählen"
-  },
   "ads": {
     "banner": "Werbefläche",
     "closeBtn": "Werbung schließen"
   },
-  "time": {
-    "minutes": "Min",
-    "hour": "Stunde",
-    "hours": "Stunden",
-    "times": "mal",
-    "5min": "5 Min",
-    "10min": "10 Min",
-    "15min": "15 Min",
-    "30min": "30 Min",
-    "1hour": "1 Stunde",
-    "2hours": "2 Stunden"
+  "app": {
+    "description": "Digital Detox Timer - Reduziere die Smartphone-Nutzung und verbessere die Konzentration",
+    "loading": "Loading...",
+    "title": "Digital Detox Timer"
+  },
+  "complete": {
+    "failed": {
+      "icon": "😔",
+      "message": "Das ist okay. Versuche es noch mal!",
+      "title": "Nicht ganz"
+    },
+    "restartBtn": "🔄 Neu starten",
+    "result": {
+      "streak": "Serie",
+      "time": "Detox-Zeit"
+    },
+    "shareBtn": "📤 Ergebnisse teilen",
+    "success": {
+      "icon": "🎉",
+      "message": "Du hast deine Digital Detox erfolgreich abgeschlossen.",
+      "title": "Glückwunsch!"
+    }
+  },
+  "header": {
+    "subtitle": "Mache eine Pause von deinem Smartphone",
+    "title": "🧘 Digital Detox"
+  },
+  "hero": {
+    "subtitle": "Small daily actions create big changes",
+    "title": "You're enough without your phone"
+  },
+  "history": {
+    "badgeNames": {
+      "first": "Erster Versuch",
+      "hour": "1 Stunde erreicht",
+      "master": "Detox-Meister",
+      "streak3": "3-Tage-Serie",
+      "streak7": "7-Tage-Serie"
+    },
+    "badges": "Abzeichen",
+    "empty": "Noch keine Aufzeichnungen",
+    "failed": "Misserfolg",
+    "sessions": "Sitzungsverlauf",
+    "success": "Erfolg",
+    "title": "📊 Meine Aufzeichnungen"
+  },
+  "language": {
+    "select": "Sprache auswählen"
   },
   "premium": {
-    "title": "🧠 KI-Tiefenanalyse",
-    "premiumBtn": "🧠 KI-Tiefenanalyse anzeigen"
+    "title": "🧠 KI-Tiefenanalyse"
   },
   "recommendations": "Probiere auch diese",
-  "hero": {
-    "title": "You're enough without your phone",
-    "subtitle": "Small daily actions create big changes"
+  "setup": {
+    "customInput": "Benutzerdefiniert (Minuten)",
+    "motivation": "Pausiere für einen Moment und konzentriere dich auf die Gegenwart.",
+    "selectTime": "Detox-Zeit auswählen",
+    "startBtn": "🚀 Starte Detox",
+    "stats": {
+      "successRate": "Erfolgsquote",
+      "totalSessions": "Gesamtsitzungen",
+      "totalTime": "Gesamte Detox-Zeit"
+    },
+    "timeHint": "Start with 5 minutes if you're new",
+    "viewHistoryBtn": "📊 Verlauf anzeigen"
+  },
+  "time": {
+    "10min": "10 Min",
+    "15min": "15 Min",
+    "1hour": "1 Stunde",
+    "2hours": "2 Stunden",
+    "30min": "30 Min",
+    "5min": "5 Min",
+    "hour": "Stunde",
+    "hours": "Stunden",
+    "minutes": "Min",
+    "times": "mal"
+  },
+  "timer": {
+    "breathText": "Atme tief durch...",
+    "giveUpBtn": "😢 Aufgeben",
+    "message": "Du konzentrierst dich! Machst es sehr gut.",
+    "pauseBtn": "⏸ Pausieren",
+    "whiteNoiseLink": "Weißes Rauschen anhören"
   }
 }

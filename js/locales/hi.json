@@ -1,92 +1,91 @@
 {
-  "app": {
-    "title": "डिजिटल डिटॉक्स टाइमर",
-    "description": "डिजिटल डिटॉक्स टाइमर - स्मार्टफोन का उपयोग कम करें और फोकस बढ़ाएं",
-    "loading": "Loading..."
-  },
-  "header": {
-    "title": "🧘 डिजिटल डिटॉक्स",
-    "subtitle": "अपने स्मार्टफ़ोन से एक ब्रेक लें"
-  },
-  "setup": {
-    "motivation": "एक पल के लिए रुकें और वर्तमान पर ध्यान दें।",
-    "selectTime": "डिटॉक्स समय चुनें",
-    "customInput": "कस्टम (मिनट)",
-    "startBtn": "🚀 डिटॉक्स शुरू करें",
-    "viewHistoryBtn": "📊 इतिहास देखें",
-    "stats": {
-      "totalSessions": "कुल सत्र",
-      "successRate": "सफलता दर",
-      "totalTime": "कुल डिटॉक्स"
-    },
-    "timeHint": "Start with 5 minutes if you're new"
-  },
-  "timer": {
-    "message": "आप ध्यान केंद्रित कर रहे हैं! बहुत अच्छा।",
-    "breathText": "गहरी सांस लें...",
-    "giveUpBtn": "😢 हार मानें",
-    "pauseBtn": "⏸ रुकें",
-    "whiteNoiseLink": "सफेद शोर सुनें"
-  },
-  "complete": {
-    "success": {
-      "icon": "🎉",
-      "title": "बधाई हो!",
-      "message": "आपने सफलतापूर्वक डिजिटल डिटॉक्स पूरा किया।"
-    },
-    "failed": {
-      "icon": "😔",
-      "title": "लगभग पहुंच गए",
-      "message": "कोई बात नहीं। फिर से कोशिश करें!"
-    },
-    "result": {
-      "time": "डिटॉक्स समय",
-      "streak": "लगातार सफलता"
-    },
-    "restartBtn": "🔄 पुनः प्रारंभ करें",
-    "shareBtn": "📤 परिणाम साझा करें"
-  },
-  "history": {
-    "title": "📊 मेरे रिकॉर्ड",
-    "badges": "बैज",
-    "sessions": "सत्र इतिहास",
-    "empty": "अभी तक कोई रिकॉर्ड नहीं",
-    "success": "सफलता",
-    "failed": "असफल",
-    "badgeNames": {
-      "first": "पहला प्रयास",
-      "streak3": "3 दिन की लकीर",
-      "streak7": "7 दिन की लकीर",
-      "hour": "1 घंटा प्राप्त",
-      "master": "डिटॉक्स मास्टर"
-    }
-  },
-  "language": {
-    "select": "भाषा चुनें"
-  },
   "ads": {
     "banner": "विज्ञापन",
     "closeBtn": "विज्ञापन बंद करें"
   },
-  "time": {
-    "minutes": "मिनट",
-    "hour": "घंटा",
-    "hours": "घंटे",
-    "times": "बार",
-    "5min": "5 मिनट",
-    "10min": "10 मिनट",
-    "15min": "15 मिनट",
-    "30min": "30 मिनट",
-    "1hour": "1 घंटा",
-    "2hours": "2 घंटे"
+  "app": {
+    "description": "डिजिटल डिटॉक्स टाइमर - स्मार्टफोन का उपयोग कम करें और फोकस बढ़ाएं",
+    "loading": "Loading...",
+    "title": "डिजिटल डिटॉक्स टाइमर"
+  },
+  "complete": {
+    "failed": {
+      "icon": "😔",
+      "message": "कोई बात नहीं। फिर से कोशिश करें!",
+      "title": "लगभग पहुंच गए"
+    },
+    "restartBtn": "🔄 पुनः प्रारंभ करें",
+    "result": {
+      "streak": "लगातार सफलता",
+      "time": "डिटॉक्स समय"
+    },
+    "shareBtn": "📤 परिणाम साझा करें",
+    "success": {
+      "icon": "🎉",
+      "message": "आपने सफलतापूर्वक डिजिटल डिटॉक्स पूरा किया।",
+      "title": "बधाई हो!"
+    }
+  },
+  "header": {
+    "subtitle": "अपने स्मार्टफ़ोन से एक ब्रेक लें",
+    "title": "🧘 डिजिटल डिटॉक्स"
+  },
+  "hero": {
+    "subtitle": "Small daily actions create big changes",
+    "title": "You're enough without your phone"
+  },
+  "history": {
+    "badgeNames": {
+      "first": "पहला प्रयास",
+      "hour": "1 घंटा प्राप्त",
+      "master": "डिटॉक्स मास्टर",
+      "streak3": "3 दिन की लकीर",
+      "streak7": "7 दिन की लकीर"
+    },
+    "badges": "बैज",
+    "empty": "अभी तक कोई रिकॉर्ड नहीं",
+    "failed": "असफल",
+    "sessions": "सत्र इतिहास",
+    "success": "सफलता",
+    "title": "📊 मेरे रिकॉर्ड"
+  },
+  "language": {
+    "select": "भाषा चुनें"
   },
   "premium": {
-    "title": "🧠 AI गहन विश्लेषण",
-    "premiumBtn": "🧠 AI गहन विश्लेषण देखें"
+    "title": "🧠 AI गहन विश्लेषण"
   },
   "recommendations": "यह भी आजमाएं",
-  "hero": {
-    "title": "You're enough without your phone",
-    "subtitle": "Small daily actions create big changes"
+  "setup": {
+    "customInput": "कस्टम (मिनट)",
+    "motivation": "एक पल के लिए रुकें और वर्तमान पर ध्यान दें।",
+    "selectTime": "डिटॉक्स समय चुनें",
+    "startBtn": "🚀 डिटॉक्स शुरू करें",
+    "stats": {
+      "successRate": "सफलता दर",
+      "totalSessions": "कुल सत्र",
+      "totalTime": "कुल डिटॉक्स"
+    },
+    "timeHint": "Start with 5 minutes if you're new",
+    "viewHistoryBtn": "📊 इतिहास देखें"
+  },
+  "time": {
+    "10min": "10 मिनट",
+    "15min": "15 मिनट",
+    "1hour": "1 घंटा",
+    "2hours": "2 घंटे",
+    "30min": "30 मिनट",
+    "5min": "5 मिनट",
+    "hour": "घंटा",
+    "hours": "घंटे",
+    "minutes": "मिनट",
+    "times": "बार"
+  },
+  "timer": {
+    "breathText": "गहरी सांस लें...",
+    "giveUpBtn": "😢 हार मानें",
+    "message": "आप ध्यान केंद्रित कर रहे हैं! बहुत अच्छा।",
+    "pauseBtn": "⏸ रुकें",
+    "whiteNoiseLink": "सफेद शोर सुनें"
   }
 }

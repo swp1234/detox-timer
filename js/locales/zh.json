@@ -1,92 +1,91 @@
 {
-  "app": {
-    "title": "数字排毒计时器",
-    "description": "数字排毒计时器 - 减少智能手机使用时间，提高注意力",
-    "loading": "Loading..."
-  },
-  "header": {
-    "title": "🧘 数字排毒",
-    "subtitle": "暂时远离智能手机"
-  },
-  "setup": {
-    "motivation": "暂停片刻，专注于当下。",
-    "selectTime": "选择排毒时间",
-    "customInput": "自定义（分钟）",
-    "startBtn": "🚀 开始排毒",
-    "viewHistoryBtn": "📊 查看历史",
-    "stats": {
-      "totalSessions": "总会话数",
-      "successRate": "成功率",
-      "totalTime": "总排毒"
-    },
-    "timeHint": "Start with 5 minutes if you're new"
-  },
-  "timer": {
-    "message": "正在专注！做得很好。",
-    "breathText": "深呼吸...",
-    "giveUpBtn": "😢 放弃",
-    "pauseBtn": "⏸ 暂停",
-    "whiteNoiseLink": "听白噪音集中"
-  },
-  "complete": {
-    "success": {
-      "icon": "🎉",
-      "title": "恭喜！",
-      "message": "您已成功完成数字排毒。"
-    },
-    "failed": {
-      "icon": "😔",
-      "title": "差一点",
-      "message": "没关系。再试一次！"
-    },
-    "result": {
-      "time": "排毒时间",
-      "streak": "连续成功"
-    },
-    "restartBtn": "🔄 重新开始",
-    "shareBtn": "📤 分享结果"
-  },
-  "history": {
-    "title": "📊 我的记录",
-    "badges": "徽章",
-    "sessions": "会话历史",
-    "empty": "暂无记录",
-    "success": "成功",
-    "failed": "失败",
-    "badgeNames": {
-      "first": "首次尝试",
-      "streak3": "3天连续",
-      "streak7": "7天连续",
-      "hour": "达到1小时",
-      "master": "排毒大师"
-    }
-  },
-  "language": {
-    "select": "选择语言"
-  },
   "ads": {
     "banner": "广告区域",
     "closeBtn": "关闭广告"
   },
-  "time": {
-    "minutes": "分钟",
-    "hour": "小时",
-    "hours": "小时",
-    "times": "次",
-    "5min": "5分钟",
-    "10min": "10分钟",
-    "15min": "15分钟",
-    "30min": "30分钟",
-    "1hour": "1小时",
-    "2hours": "2小时"
+  "app": {
+    "description": "数字排毒计时器 - 减少智能手机使用时间，提高注意力",
+    "loading": "Loading...",
+    "title": "数字排毒计时器"
+  },
+  "complete": {
+    "failed": {
+      "icon": "😔",
+      "message": "没关系。再试一次！",
+      "title": "差一点"
+    },
+    "restartBtn": "🔄 重新开始",
+    "result": {
+      "streak": "连续成功",
+      "time": "排毒时间"
+    },
+    "shareBtn": "📤 分享结果",
+    "success": {
+      "icon": "🎉",
+      "message": "您已成功完成数字排毒。",
+      "title": "恭喜！"
+    }
+  },
+  "header": {
+    "subtitle": "暂时远离智能手机",
+    "title": "🧘 数字排毒"
+  },
+  "hero": {
+    "subtitle": "Small daily actions create big changes",
+    "title": "You're enough without your phone"
+  },
+  "history": {
+    "badgeNames": {
+      "first": "首次尝试",
+      "hour": "达到1小时",
+      "master": "排毒大师",
+      "streak3": "3天连续",
+      "streak7": "7天连续"
+    },
+    "badges": "徽章",
+    "empty": "暂无记录",
+    "failed": "失败",
+    "sessions": "会话历史",
+    "success": "成功",
+    "title": "📊 我的记录"
+  },
+  "language": {
+    "select": "选择语言"
   },
   "premium": {
-    "title": "🧠 AI深度分析",
-    "premiumBtn": "🧠 查看AI深度分析"
+    "title": "🧠 AI深度分析"
   },
   "recommendations": "也试试这些",
-  "hero": {
-    "title": "You're enough without your phone",
-    "subtitle": "Small daily actions create big changes"
+  "setup": {
+    "customInput": "自定义（分钟）",
+    "motivation": "暂停片刻，专注于当下。",
+    "selectTime": "选择排毒时间",
+    "startBtn": "🚀 开始排毒",
+    "stats": {
+      "successRate": "成功率",
+      "totalSessions": "总会话数",
+      "totalTime": "总排毒"
+    },
+    "timeHint": "Start with 5 minutes if you're new",
+    "viewHistoryBtn": "📊 查看历史"
+  },
+  "time": {
+    "10min": "10分钟",
+    "15min": "15分钟",
+    "1hour": "1小时",
+    "2hours": "2小时",
+    "30min": "30分钟",
+    "5min": "5分钟",
+    "hour": "小时",
+    "hours": "小时",
+    "minutes": "分钟",
+    "times": "次"
+  },
+  "timer": {
+    "breathText": "深呼吸...",
+    "giveUpBtn": "😢 放弃",
+    "message": "正在专注！做得很好。",
+    "pauseBtn": "⏸ 暂停",
+    "whiteNoiseLink": "听白噪音集中"
   }
 }

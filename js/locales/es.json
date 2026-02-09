@@ -1,92 +1,91 @@
 {
-  "app": {
-    "title": "Temporizador de Desintoxicación Digital",
-    "description": "Temporizador de Desintoxicación Digital - Reduce el uso del teléfono inteligente y mejora el enfoque",
-    "loading": "Loading..."
-  },
-  "header": {
-    "title": "🧘 Desintoxicación Digital",
-    "subtitle": "Tómate un descanso de tu teléfono inteligente"
-  },
-  "setup": {
-    "motivation": "Pausa un momento y enfócate en el presente.",
-    "selectTime": "Selecciona Tiempo de Desintoxicación",
-    "customInput": "Personalizado (minutos)",
-    "startBtn": "🚀 Iniciar Desintoxicación",
-    "viewHistoryBtn": "📊 Ver Historial",
-    "stats": {
-      "totalSessions": "Total de Sesiones",
-      "successRate": "Tasa de Éxito",
-      "totalTime": "Tiempo Total de Desintoxicación"
-    },
-    "timeHint": "Start with 5 minutes if you're new"
-  },
-  "timer": {
-    "message": "¡Estás enfocado! Lo estás haciendo muy bien.",
-    "breathText": "Respira profundamente...",
-    "giveUpBtn": "😢 Rendirse",
-    "pauseBtn": "⏸ Pausar",
-    "whiteNoiseLink": "Escuchar ruido blanco"
-  },
-  "complete": {
-    "success": {
-      "icon": "🎉",
-      "title": "¡Felicitaciones!",
-      "message": "Has completado exitosamente la desintoxicación digital."
-    },
-    "failed": {
-      "icon": "😔",
-      "title": "No del todo",
-      "message": "¡Está bien! ¡Intenta de nuevo!"
-    },
-    "result": {
-      "time": "Tiempo de Desintoxicación",
-      "streak": "Racha"
-    },
-    "restartBtn": "🔄 Reiniciar",
-    "shareBtn": "📤 Compartir Resultados"
-  },
-  "history": {
-    "title": "📊 Mis Registros",
-    "badges": "Insignias",
-    "sessions": "Historial de Sesiones",
-    "empty": "Sin registros aún",
-    "success": "Éxito",
-    "failed": "Fallido",
-    "badgeNames": {
-      "first": "Primer Intento",
-      "streak3": "Racha de 3 Días",
-      "streak7": "Racha de 7 Días",
-      "hour": "1 Hora Alcanzada",
-      "master": "Maestro de Desintoxicación"
-    }
-  },
-  "language": {
-    "select": "Seleccionar Idioma"
-  },
   "ads": {
     "banner": "Publicidad",
     "closeBtn": "Cerrar Publicidad"
   },
-  "time": {
-    "minutes": "min",
-    "hour": "hora",
-    "hours": "horas",
-    "times": "veces",
-    "5min": "5 min",
-    "10min": "10 min",
-    "15min": "15 min",
-    "30min": "30 min",
-    "1hour": "1 hora",
-    "2hours": "2 horas"
+  "app": {
+    "description": "Temporizador de Desintoxicación Digital - Reduce el uso del teléfono inteligente y mejora el enfoque",
+    "loading": "Loading...",
+    "title": "Temporizador de Desintoxicación Digital"
+  },
+  "complete": {
+    "failed": {
+      "icon": "😔",
+      "message": "¡Está bien! ¡Intenta de nuevo!",
+      "title": "No del todo"
+    },
+    "restartBtn": "🔄 Reiniciar",
+    "result": {
+      "streak": "Racha",
+      "time": "Tiempo de Desintoxicación"
+    },
+    "shareBtn": "📤 Compartir Resultados",
+    "success": {
+      "icon": "🎉",
+      "message": "Has completado exitosamente la desintoxicación digital.",
+      "title": "¡Felicitaciones!"
+    }
+  },
+  "header": {
+    "subtitle": "Tómate un descanso de tu teléfono inteligente",
+    "title": "🧘 Desintoxicación Digital"
+  },
+  "hero": {
+    "subtitle": "Small daily actions create big changes",
+    "title": "You're enough without your phone"
+  },
+  "history": {
+    "badgeNames": {
+      "first": "Primer Intento",
+      "hour": "1 Hora Alcanzada",
+      "master": "Maestro de Desintoxicación",
+      "streak3": "Racha de 3 Días",
+      "streak7": "Racha de 7 Días"
+    },
+    "badges": "Insignias",
+    "empty": "Sin registros aún",
+    "failed": "Fallido",
+    "sessions": "Historial de Sesiones",
+    "success": "Éxito",
+    "title": "📊 Mis Registros"
+  },
+  "language": {
+    "select": "Seleccionar Idioma"
   },
   "premium": {
-    "title": "🧠 Análisis Profundo de IA",
-    "premiumBtn": "🧠 Ver Análisis Profundo de IA"
+    "title": "🧠 Análisis Profundo de IA"
   },
   "recommendations": "Prueba Estas También",
-  "hero": {
-    "title": "You're enough without your phone",
-    "subtitle": "Small daily actions create big changes"
+  "setup": {
+    "customInput": "Personalizado (minutos)",
+    "motivation": "Pausa un momento y enfócate en el presente.",
+    "selectTime": "Selecciona Tiempo de Desintoxicación",
+    "startBtn": "🚀 Iniciar Desintoxicación",
+    "stats": {
+      "successRate": "Tasa de Éxito",
+      "totalSessions": "Total de Sesiones",
+      "totalTime": "Tiempo Total de Desintoxicación"
+    },
+    "timeHint": "Start with 5 minutes if you're new",
+    "viewHistoryBtn": "📊 Ver Historial"
+  },
+  "time": {
+    "10min": "10 min",
+    "15min": "15 min",
+    "1hour": "1 hora",
+    "2hours": "2 horas",
+    "30min": "30 min",
+    "5min": "5 min",
+    "hour": "hora",
+    "hours": "horas",
+    "minutes": "min",
+    "times": "veces"
+  },
+  "timer": {
+    "breathText": "Respira profundamente...",
+    "giveUpBtn": "😢 Rendirse",
+    "message": "¡Estás enfocado! Lo estás haciendo muy bien.",
+    "pauseBtn": "⏸ Pausar",
+    "whiteNoiseLink": "Escuchar ruido blanco"
   }
 }

@@ -1,92 +1,91 @@
 {
-  "app": {
-    "title": "Таймер цифрового детокса",
-    "description": "Таймер цифрового детокса - Уменьшите использование смартфона и повысьте концентрацию",
-    "loading": "Loading..."
-  },
-  "header": {
-    "title": "🧘 Цифровой детокс",
-    "subtitle": "Сделайте перерыв от смартфона"
-  },
-  "setup": {
-    "motivation": "Притормозите на мгновение и сосредоточьтесь на настоящем моменте.",
-    "selectTime": "Выберите время детокса",
-    "customInput": "Другое время (минуты)",
-    "startBtn": "🚀 Начать детокс",
-    "viewHistoryBtn": "📊 Посмотреть историю",
-    "stats": {
-      "totalSessions": "Всего сеансов",
-      "successRate": "Процент успеха",
-      "totalTime": "Всего детокса"
-    },
-    "timeHint": "Start with 5 minutes if you're new"
-  },
-  "timer": {
-    "message": "Вы сосредоточены! Отлично, так держать.",
-    "breathText": "Сделайте глубокий вдох...",
-    "giveUpBtn": "😢 Сдаться",
-    "pauseBtn": "⏸ Пауза",
-    "whiteNoiseLink": "Слушать белый шум"
-  },
-  "complete": {
-    "success": {
-      "icon": "🎉",
-      "title": "Поздравляем!",
-      "message": "Вы успешно завершили цифровой детокс."
-    },
-    "failed": {
-      "icon": "😔",
-      "title": "Почти получилось",
-      "message": "Ничего страшного. Попробуйте снова!"
-    },
-    "result": {
-      "time": "Время детокса",
-      "streak": "Серия"
-    },
-    "restartBtn": "🔄 Начать заново",
-    "shareBtn": "📤 Поделиться результатом"
-  },
-  "history": {
-    "title": "📊 Мои рекорды",
-    "badges": "Значки",
-    "sessions": "История сеансов",
-    "empty": "Рекордов еще нет",
-    "success": "Успех",
-    "failed": "Неудача",
-    "badgeNames": {
-      "first": "Первая попытка",
-      "streak3": "Серия из 3 дней",
-      "streak7": "Серия из 7 дней",
-      "hour": "Достигнут 1 час",
-      "master": "Мастер детокса"
-    }
-  },
-  "language": {
-    "select": "Выберите язык"
-  },
   "ads": {
     "banner": "Объявление",
     "closeBtn": "Закрыть объявление"
   },
-  "time": {
-    "minutes": "мин",
-    "hour": "час",
-    "hours": "часов",
-    "times": "раз",
-    "5min": "5 мин",
-    "10min": "10 мин",
-    "15min": "15 мин",
-    "30min": "30 мин",
-    "1hour": "1 час",
-    "2hours": "2 часа"
+  "app": {
+    "description": "Таймер цифрового детокса - Уменьшите использование смартфона и повысьте концентрацию",
+    "loading": "Loading...",
+    "title": "Таймер цифрового детокса"
+  },
+  "complete": {
+    "failed": {
+      "icon": "😔",
+      "message": "Ничего страшного. Попробуйте снова!",
+      "title": "Почти получилось"
+    },
+    "restartBtn": "🔄 Начать заново",
+    "result": {
+      "streak": "Серия",
+      "time": "Время детокса"
+    },
+    "shareBtn": "📤 Поделиться результатом",
+    "success": {
+      "icon": "🎉",
+      "message": "Вы успешно завершили цифровой детокс.",
+      "title": "Поздравляем!"
+    }
+  },
+  "header": {
+    "subtitle": "Сделайте перерыв от смартфона",
+    "title": "🧘 Цифровой детокс"
+  },
+  "hero": {
+    "subtitle": "Small daily actions create big changes",
+    "title": "You're enough without your phone"
+  },
+  "history": {
+    "badgeNames": {
+      "first": "Первая попытка",
+      "hour": "Достигнут 1 час",
+      "master": "Мастер детокса",
+      "streak3": "Серия из 3 дней",
+      "streak7": "Серия из 7 дней"
+    },
+    "badges": "Значки",
+    "empty": "Рекордов еще нет",
+    "failed": "Неудача",
+    "sessions": "История сеансов",
+    "success": "Успех",
+    "title": "📊 Мои рекорды"
+  },
+  "language": {
+    "select": "Выберите язык"
   },
   "premium": {
-    "title": "🧠 Глубокий анализ ИИ",
-    "premiumBtn": "🧠 Просмотр глубокого анализа ИИ"
+    "title": "🧠 Глубокий анализ ИИ"
   },
   "recommendations": "Попробуйте также",
-  "hero": {
-    "title": "You're enough without your phone",
-    "subtitle": "Small daily actions create big changes"
+  "setup": {
+    "customInput": "Другое время (минуты)",
+    "motivation": "Притормозите на мгновение и сосредоточьтесь на настоящем моменте.",
+    "selectTime": "Выберите время детокса",
+    "startBtn": "🚀 Начать детокс",
+    "stats": {
+      "successRate": "Процент успеха",
+      "totalSessions": "Всего сеансов",
+      "totalTime": "Всего детокса"
+    },
+    "timeHint": "Start with 5 minutes if you're new",
+    "viewHistoryBtn": "📊 Посмотреть историю"
+  },
+  "time": {
+    "10min": "10 мин",
+    "15min": "15 мин",
+    "1hour": "1 час",
+    "2hours": "2 часа",
+    "30min": "30 мин",
+    "5min": "5 мин",
+    "hour": "час",
+    "hours": "часов",
+    "minutes": "мин",
+    "times": "раз"
+  },
+  "timer": {
+    "breathText": "Сделайте глубокий вдох...",
+    "giveUpBtn": "😢 Сдаться",
+    "message": "Вы сосредоточены! Отлично, так держать.",
+    "pauseBtn": "⏸ Пауза",
+    "whiteNoiseLink": "Слушать белый шум"
   }
 }
