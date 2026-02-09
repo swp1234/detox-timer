@@ -1,7 +1,8 @@
 {
   "app": {
     "title": "Timer Detoks Digital",
-    "description": "Timer Detoks Digital - Kurangi penggunaan smartphone dan tingkatkan fokus"
+    "description": "Timer Detoks Digital - Kurangi penggunaan smartphone dan tingkatkan fokus",
+    "loading": "Loading..."
   },
   "header": {
     "title": "🧘 Detoks Digital",
@@ -17,7 +18,8 @@
       "totalSessions": "Total Sesi",
       "successRate": "Tingkat Keberhasilan",
       "totalTime": "Total Detoks"
-    }
+    },
+    "timeHint": "Start with 5 minutes if you're new"
   },
   "timer": {
     "message": "Anda sedang fokus! Hebat sekali.",
@@ -63,7 +65,8 @@
     "select": "Pilih Bahasa"
   },
   "ads": {
-    "banner": "Iklan"
+    "banner": "Iklan",
+    "closeBtn": "Tutup Iklan"
   },
   "time": {
     "minutes": "mnt",
@@ -81,9 +84,9 @@
     "title": "🧠 Analisis Mendalam AI",
     "premiumBtn": "🧠 Lihat Analisis Mendalam AI"
   },
-  "ads": {
-    "banner": "Iklan",
-    "closeBtn": "Tutup Iklan"
-  },
-  "recommendations": "Coba Juga"
+  "recommendations": "Coba Juga",
+  "hero": {
+    "title": "You're enough without your phone",
+    "subtitle": "Small daily actions create big changes"
+  }
 }

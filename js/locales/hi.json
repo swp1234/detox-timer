@@ -1,7 +1,8 @@
 {
   "app": {
     "title": "डिजिटल डिटॉक्स टाइमर",
-    "description": "डिजिटल डिटॉक्स टाइमर - स्मार्टफोन का उपयोग कम करें और फोकस बढ़ाएं"
+    "description": "डिजिटल डिटॉक्स टाइमर - स्मार्टफोन का उपयोग कम करें और फोकस बढ़ाएं",
+    "loading": "Loading..."
   },
   "header": {
     "title": "🧘 डिजिटल डिटॉक्स",
@@ -17,7 +18,8 @@
       "totalSessions": "कुल सत्र",
       "successRate": "सफलता दर",
       "totalTime": "कुल डिटॉक्स"
-    }
+    },
+    "timeHint": "Start with 5 minutes if you're new"
   },
   "timer": {
     "message": "आप ध्यान केंद्रित कर रहे हैं! बहुत अच्छा।",
@@ -63,7 +65,8 @@
     "select": "भाषा चुनें"
   },
   "ads": {
-    "banner": "विज्ञापन"
+    "banner": "विज्ञापन",
+    "closeBtn": "विज्ञापन बंद करें"
   },
   "time": {
     "minutes": "मिनट",
@@ -81,9 +84,9 @@
     "title": "🧠 AI गहन विश्लेषण",
     "premiumBtn": "🧠 AI गहन विश्लेषण देखें"
   },
-  "ads": {
-    "banner": "विज्ञापन",
-    "closeBtn": "विज्ञापन बंद करें"
-  },
-  "recommendations": "यह भी आजमाएं"
+  "recommendations": "यह भी आजमाएं",
+  "hero": {
+    "title": "You're enough without your phone",
+    "subtitle": "Small daily actions create big changes"
+  }
 }

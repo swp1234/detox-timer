@@ -1,7 +1,8 @@
 {
   "app": {
     "title": "Minuteur de Détoxification Numérique",
-    "description": "Minuteur de Détoxification Numérique - Réduis l'utilisation du smartphone et améliore la concentration"
+    "description": "Minuteur de Détoxification Numérique - Réduis l'utilisation du smartphone et améliore la concentration",
+    "loading": "Loading..."
   },
   "header": {
     "title": "🧘 Détoxification Numérique",
@@ -17,7 +18,8 @@
       "totalSessions": "Sessions Totales",
       "successRate": "Taux de Réussite",
       "totalTime": "Détoxification Totale"
-    }
+    },
+    "timeHint": "Start with 5 minutes if you're new"
   },
   "timer": {
     "message": "Tu te concentres! Tu fais du bon travail.",
@@ -63,7 +65,8 @@
     "select": "Sélectionner la Langue"
   },
   "ads": {
-    "banner": "Publicité"
+    "banner": "Publicité",
+    "closeBtn": "Fermer la Publicité"
   },
   "time": {
     "minutes": "min",
@@ -81,9 +84,9 @@
     "title": "🧠 Analyse Profonde par IA",
     "premiumBtn": "🧠 Voir l'Analyse Profonde par IA"
   },
-  "ads": {
-    "banner": "Publicité",
-    "closeBtn": "Fermer la Publicité"
-  },
-  "recommendations": "Essaie aussi"
+  "recommendations": "Essaie aussi",
+  "hero": {
+    "title": "You're enough without your phone",
+    "subtitle": "Small daily actions create big changes"
+  }
 }

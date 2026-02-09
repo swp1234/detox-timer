@@ -1,7 +1,8 @@
 {
   "app": {
     "title": "デジタルデトックスタイマー",
-    "description": "スマートフォンの使用を減らし、集中力を高めてください。"
+    "description": "スマートフォンの使用を減らし、集中力を高めてください。",
+    "loading": "Loading..."
   },
   "header": {
     "title": "🧘 デジタルデトックス",
@@ -17,7 +18,8 @@
       "totalSessions": "総セッション数",
       "successRate": "成功率",
       "totalTime": "総デトックス時間"
-    }
+    },
+    "timeHint": "Start with 5 minutes if you're new"
   },
   "timer": {
     "message": "集中できています！頑張ってください。",
@@ -63,7 +65,8 @@
     "select": "言語を選択"
   },
   "ads": {
-    "banner": "広告"
+    "banner": "広告",
+    "closeBtn": "広告を閉じる"
   },
   "time": {
     "minutes": "分",
@@ -81,9 +84,9 @@
     "title": "🧠 AI詳細分析",
     "premiumBtn": "🧠 AI詳細分析を表示"
   },
-  "ads": {
-    "banner": "広告",
-    "closeBtn": "広告を閉じる"
-  },
-  "recommendations": "これも試してみてください"
+  "recommendations": "これも試してみてください",
+  "hero": {
+    "title": "You're enough without your phone",
+    "subtitle": "Small daily actions create big changes"
+  }
 }

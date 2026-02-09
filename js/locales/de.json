@@ -1,7 +1,8 @@
 {
   "app": {
     "title": "Digital Detox Timer",
-    "description": "Digital Detox Timer - Reduziere die Smartphone-Nutzung und verbessere die Konzentration"
+    "description": "Digital Detox Timer - Reduziere die Smartphone-Nutzung und verbessere die Konzentration",
+    "loading": "Loading..."
   },
   "header": {
     "title": "🧘 Digital Detox",
@@ -17,7 +18,8 @@
       "totalSessions": "Gesamtsitzungen",
       "successRate": "Erfolgsquote",
       "totalTime": "Gesamte Detox-Zeit"
-    }
+    },
+    "timeHint": "Start with 5 minutes if you're new"
   },
   "timer": {
     "message": "Du konzentrierst dich! Machst es sehr gut.",
@@ -63,7 +65,8 @@
     "select": "Sprache auswählen"
   },
   "ads": {
-    "banner": "Werbung"
+    "banner": "Werbefläche",
+    "closeBtn": "Werbung schließen"
   },
   "time": {
     "minutes": "Min",
@@ -81,9 +84,9 @@
     "title": "🧠 KI-Tiefenanalyse",
     "premiumBtn": "🧠 KI-Tiefenanalyse anzeigen"
   },
-  "ads": {
-    "banner": "Werbefläche",
-    "closeBtn": "Werbung schließen"
-  },
-  "recommendations": "Probiere auch diese"
+  "recommendations": "Probiere auch diese",
+  "hero": {
+    "title": "You're enough without your phone",
+    "subtitle": "Small daily actions create big changes"
+  }
 }

@@ -1,7 +1,8 @@
 {
   "app": {
     "title": "Таймер цифрового детокса",
-    "description": "Таймер цифрового детокса - Уменьшите использование смартфона и повысьте концентрацию"
+    "description": "Таймер цифрового детокса - Уменьшите использование смартфона и повысьте концентрацию",
+    "loading": "Loading..."
   },
   "header": {
     "title": "🧘 Цифровой детокс",
@@ -17,7 +18,8 @@
       "totalSessions": "Всего сеансов",
       "successRate": "Процент успеха",
       "totalTime": "Всего детокса"
-    }
+    },
+    "timeHint": "Start with 5 minutes if you're new"
   },
   "timer": {
     "message": "Вы сосредоточены! Отлично, так держать.",
@@ -63,7 +65,8 @@
     "select": "Выберите язык"
   },
   "ads": {
-    "banner": "Реклама"
+    "banner": "Объявление",
+    "closeBtn": "Закрыть объявление"
   },
   "time": {
     "minutes": "мин",
@@ -81,9 +84,9 @@
     "title": "🧠 Глубокий анализ ИИ",
     "premiumBtn": "🧠 Просмотр глубокого анализа ИИ"
   },
-  "ads": {
-    "banner": "Объявление",
-    "closeBtn": "Закрыть объявление"
-  },
-  "recommendations": "Попробуйте также"
+  "recommendations": "Попробуйте также",
+  "hero": {
+    "title": "You're enough without your phone",
+    "subtitle": "Small daily actions create big changes"
+  }
 }

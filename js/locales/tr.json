@@ -1,7 +1,8 @@
 {
   "app": {
     "title": "Dijital Detoks Sayacı",
-    "description": "Dijital Detoks Sayacı - Akıllı telefon kullanımını azalt ve odaklanmayı artır"
+    "description": "Dijital Detoks Sayacı - Akıllı telefon kullanımını azalt ve odaklanmayı artır",
+    "loading": "Loading..."
   },
   "header": {
     "title": "🧘 Dijital Detoks",
@@ -17,7 +18,8 @@
       "totalSessions": "Toplam Oturumlar",
       "successRate": "Başarı Oranı",
       "totalTime": "Toplam Detoks"
-    }
+    },
+    "timeHint": "Start with 5 minutes if you're new"
   },
   "timer": {
     "message": "Odaklanıyorsun! Harika gidiyorsun.",
@@ -63,7 +65,8 @@
     "select": "Dil Seç"
   },
   "ads": {
-    "banner": "Reklam"
+    "banner": "Reklam",
+    "closeBtn": "Reklamı Kapat"
   },
   "time": {
     "minutes": "dk",
@@ -81,9 +84,9 @@
     "title": "🧠 AI Derin Analizi",
     "premiumBtn": "🧠 AI Derin Analizini Görüntüle"
   },
-  "ads": {
-    "banner": "Reklam",
-    "closeBtn": "Reklamı Kapat"
-  },
-  "recommendations": "Bunları da Dene"
+  "recommendations": "Bunları da Dene",
+  "hero": {
+    "title": "You're enough without your phone",
+    "subtitle": "Small daily actions create big changes"
+  }
 }

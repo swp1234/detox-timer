@@ -1,7 +1,8 @@
 {
   "app": {
     "title": "Cronômetro de Desintoxicação Digital",
-    "description": "Cronômetro de Desintoxicação Digital - Reduza o uso de smartphone e melhore o foco"
+    "description": "Cronômetro de Desintoxicação Digital - Reduza o uso de smartphone e melhore o foco",
+    "loading": "Loading..."
   },
   "header": {
     "title": "🧘 Desintoxicação Digital",
@@ -17,7 +18,8 @@
       "totalSessions": "Total de Sessões",
       "successRate": "Taxa de Sucesso",
       "totalTime": "Tempo Total de Desintoxicação"
-    }
+    },
+    "timeHint": "Start with 5 minutes if you're new"
   },
   "timer": {
     "message": "Você está focando! Está indo muito bem.",
@@ -63,7 +65,8 @@
     "select": "Selecionar Idioma"
   },
   "ads": {
-    "banner": "Publicidade"
+    "banner": "Publicidade",
+    "closeBtn": "Fechar Publicidade"
   },
   "time": {
     "minutes": "min",
@@ -81,9 +84,9 @@
     "title": "🧠 Análise Profunda de IA",
     "premiumBtn": "🧠 Ver Análise Profunda de IA"
   },
-  "ads": {
-    "banner": "Publicidade",
-    "closeBtn": "Fechar Publicidade"
-  },
-  "recommendations": "Experimente Também"
+  "recommendations": "Experimente Também",
+  "hero": {
+    "title": "You're enough without your phone",
+    "subtitle": "Small daily actions create big changes"
+  }
 }

@@ -1,7 +1,8 @@
 {
   "app": {
     "title": "数字排毒计时器",
-    "description": "数字排毒计时器 - 减少智能手机使用时间，提高注意力"
+    "description": "数字排毒计时器 - 减少智能手机使用时间，提高注意力",
+    "loading": "Loading..."
   },
   "header": {
     "title": "🧘 数字排毒",
@@ -17,7 +18,8 @@
       "totalSessions": "总会话数",
       "successRate": "成功率",
       "totalTime": "总排毒"
-    }
+    },
+    "timeHint": "Start with 5 minutes if you're new"
   },
   "timer": {
     "message": "正在专注！做得很好。",
@@ -63,7 +65,8 @@
     "select": "选择语言"
   },
   "ads": {
-    "banner": "广告区域"
+    "banner": "广告区域",
+    "closeBtn": "关闭广告"
   },
   "time": {
     "minutes": "分钟",
@@ -81,9 +84,9 @@
     "title": "🧠 AI深度分析",
     "premiumBtn": "🧠 查看AI深度分析"
   },
-  "ads": {
-    "banner": "广告区域",
-    "closeBtn": "关闭广告"
-  },
-  "recommendations": "也试试这些"
+  "recommendations": "也试试这些",
+  "hero": {
+    "title": "You're enough without your phone",
+    "subtitle": "Small daily actions create big changes"
+  }
 }
