@@ -22,7 +22,9 @@
   "timer": {
     "message": "Du konzentrierst dich! Machst es sehr gut.",
     "breathText": "Atme tief durch...",
-    "giveUpBtn": "😢 Aufgeben"
+    "giveUpBtn": "😢 Aufgeben",
+    "pauseBtn": "⏸ Pausieren",
+    "whiteNoiseLink": "Weißes Rauschen anhören"
   },
   "complete": {
     "success": {

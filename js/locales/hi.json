@@ -22,7 +22,9 @@
   "timer": {
     "message": "आप ध्यान केंद्रित कर रहे हैं! बहुत अच्छा।",
     "breathText": "गहरी सांस लें...",
-    "giveUpBtn": "😢 हार मानें"
+    "giveUpBtn": "😢 हार मानें",
+    "pauseBtn": "⏸ रुकें",
+    "whiteNoiseLink": "सफेद शोर सुनें"
   },
   "complete": {
     "success": {

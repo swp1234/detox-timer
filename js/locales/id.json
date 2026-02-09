@@ -22,7 +22,9 @@
   "timer": {
     "message": "Anda sedang fokus! Hebat sekali.",
     "breathText": "Ambil napas dalam-dalam...",
-    "giveUpBtn": "😢 Menyerah"
+    "giveUpBtn": "😢 Menyerah",
+    "pauseBtn": "⏸ Jeda",
+    "whiteNoiseLink": "Dengarkan white noise"
   },
   "complete": {
     "success": {

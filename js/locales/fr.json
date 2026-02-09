@@ -22,7 +22,9 @@
   "timer": {
     "message": "Tu te concentres! Tu fais du bon travail.",
     "breathText": "Prends une profonde respiration...",
-    "giveUpBtn": "😢 Abandonner"
+    "giveUpBtn": "😢 Abandonner",
+    "pauseBtn": "⏸ Pause",
+    "whiteNoiseLink": "Écouter bruit blanc"
   },
   "complete": {
     "success": {

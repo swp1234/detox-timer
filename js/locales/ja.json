@@ -22,7 +22,9 @@
   "timer": {
     "message": "集中できています！頑張ってください。",
     "breathText": "深呼吸をしてください。",
-    "giveUpBtn": "😢 諦める"
+    "giveUpBtn": "😢 諦める",
+    "pauseBtn": "⏸ 一時停止",
+    "whiteNoiseLink": "ホワイトノイズを聴く"
   },
   "complete": {
     "success": {

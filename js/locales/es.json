@@ -22,7 +22,9 @@
   "timer": {
     "message": "¡Estás enfocado! Lo estás haciendo muy bien.",
     "breathText": "Respira profundamente...",
-    "giveUpBtn": "😢 Rendirse"
+    "giveUpBtn": "😢 Rendirse",
+    "pauseBtn": "⏸ Pausar",
+    "whiteNoiseLink": "Escuchar ruido blanco"
   },
   "complete": {
     "success": {

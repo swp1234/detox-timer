@@ -22,7 +22,9 @@
   "timer": {
     "message": "正在专注！做得很好。",
     "breathText": "深呼吸...",
-    "giveUpBtn": "😢 放弃"
+    "giveUpBtn": "😢 放弃",
+    "pauseBtn": "⏸ 暂停",
+    "whiteNoiseLink": "听白噪音集中"
   },
   "complete": {
     "success": {

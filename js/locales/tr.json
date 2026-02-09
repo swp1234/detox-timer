@@ -22,7 +22,9 @@
   "timer": {
     "message": "Odaklanıyorsun! Harika gidiyorsun.",
     "breathText": "Derin bir nefes al...",
-    "giveUpBtn": "😢 Vazgeç"
+    "giveUpBtn": "😢 Vazgeç",
+    "pauseBtn": "⏸ Duraklat",
+    "whiteNoiseLink": "Beyaz sesi dinle"
   },
   "complete": {
     "success": {

@@ -22,7 +22,9 @@
   "timer": {
     "message": "Вы сосредоточены! Отлично, так держать.",
     "breathText": "Сделайте глубокий вдох...",
-    "giveUpBtn": "😢 Сдаться"
+    "giveUpBtn": "😢 Сдаться",
+    "pauseBtn": "⏸ Пауза",
+    "whiteNoiseLink": "Слушать белый шум"
   },
   "complete": {
     "success": {
