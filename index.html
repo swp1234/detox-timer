@@ -64,9 +64,9 @@
         </div>
 
         <header>
-            <h1 data-i18n="header.title">🧘 디지털 디톡스</h1>
+            <h1 data-i18n="header.title"><span aria-label="Meditation icon">🧘</span> 디지털 디톡스</h1>
             <p class="subtitle" data-i18n="header.subtitle">스마트폰에서 잠시 벗어나세요</p>
-            <div class="social-proof-badge" style="margin-top: 12px; display: inline-block; background: rgba(0, 184, 148, 0.15); border: 1px solid rgba(0, 184, 148, 0.3); color: #55efc4; padding: 6px 14px; border-radius: 20px; font-size: 0.8rem; font-weight: 600;">🔥 50,000+ 사용자가 실천중</div>
+            <div class="social-proof-badge" style="margin-top: 12px; display: inline-block; background: rgba(0, 184, 148, 0.15); border: 1px solid rgba(0, 184, 148, 0.3); color: #55efc4; padding: 6px 14px; border-radius: 20px; font-size: 0.8rem; font-weight: 600;"><span aria-label="Fire icon">🔥</span> 50,000+ 사용자가 실천중</div>
         </header>
 
         <main>
@@ -74,7 +74,7 @@
             <section id="setup-screen" class="screen active">
                 <!-- 히어로 영역 -->
                 <div class="hero-section">
-                    <div class="hero-badge">⏱️ 집중력 향상</div>
+                    <div class="hero-badge"><span aria-label="Timer icon">⏱️</span> 집중력 향상</div>
                     <h2 data-i18n="hero.title">스마트폰 없이도 충분해요</h2>
                     <p class="hero-subtitle" data-i18n="hero.subtitle">짧은 시간이라도 매일의 실천이 변화를 만듭니다</p>
                 </div>
@@ -85,7 +85,7 @@
 
                 <div class="time-selector">
                     <div class="time-selector-header">
-                        <h2 data-i18n="setup.selectTime">📏 디톡스 시간 선택</h2>
+                        <h2 data-i18n="setup.selectTime"><span aria-label="Ruler icon">📏</span> 디톡스 시간 선택</h2>
                         <p class="time-hint" data-i18n="setup.timeHint">처음이라면 5분부터 시작하세요</p>
                     </div>
                     <div class="time-buttons">
@@ -136,7 +136,7 @@
             <section id="timer-screen" class="screen">
                 <div class="timer-display">
                     <div class="timer-ring">
-                        <svg class="progress-ring" width="320" height="320" viewBox="0 0 320 320">
+                        <svg class="progress-ring" width="320" height="320" viewBox="0 0 320 320" aria-hidden="true">
                             <defs>
                                 <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
                                     <stop offset="0%" style="stop-color:#55efc4"/>
@@ -148,9 +148,9 @@
                             <!-- 프로그레스 원 -->
                             <circle class="progress-ring-circle" cx="160" cy="160" r="150" fill="none" stroke-width="8" stroke="url(#gradient)"/>
                         </svg>
-                        <div class="timer-text">
+                        <div class="timer-text" role="timer" aria-label="Timer display" aria-live="polite">
                             <span id="timer-minutes">30</span>
-                            <span class="timer-colon">:</span>
+                            <span class="timer-colon" aria-hidden="true">:</span>
                             <span id="timer-seconds">00</span>
                         </div>
                     </div>
@@ -183,9 +183,9 @@
             </section>
 
             <!-- 완료 화면 -->
-            <section id="complete-screen" class="screen">
+            <section id="complete-screen" class="screen" role="region" aria-live="polite" aria-label="Completion results">
                 <div class="complete-content">
-                    <div class="complete-icon" id="complete-icon">🎉</div>
+                    <div class="complete-icon" id="complete-icon" aria-label="Celebration icon">🎉</div>
                     <h2 id="complete-title" data-i18n="complete.success.title">축하합니다!</h2>
                     <p id="complete-message" data-i18n="complete.success.message">디지털 디톡스를 성공적으로 완료했습니다.</p>
 
@@ -263,7 +263,7 @@
                                 <span class="rec-desc">감정 테스트</span>
                             </span>
                         </a>
-                        <a href="https://dopabrain.com/d-day/" class="rec-card" target="_blank">
+                        <a href="https://dopabrain.com/dday-counter/" class="rec-card" target="_blank">
                             <span class="rec-icon">📅</span>
                             <span class="rec-info">
                                 <span class="rec-name">D-Day 카운터</span>
@@ -289,8 +289,8 @@
 
         <!-- 푸터 -->
         <footer class="game-footer">
-            <a href="https://dopabrain.com/portal/" class="back-link" data-i18n="game.back">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="m15 18-6-6 6-6"></path></svg>
+            <a href="https://dopabrain.com/portal/" class="back-link" data-i18n="game.back" aria-label="Go back to DopaBrain home">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16" aria-hidden="true"><path d="m15 18-6-6 6-6"></path></svg>
                 DopaBrain 홈
             </a>
         </footer>
@@ -305,11 +305,11 @@
     </div>
 
     <!-- 히스토리 모달 -->
-    <div class="modal" id="history-modal">
+    <div class="modal" id="history-modal" role="dialog" aria-modal="true" aria-labelledby="history-modal-title">
         <div class="modal-content">
             <div class="modal-header">
-                <h2 data-i18n="history.title">📊 나의 기록</h2>
-                <button class="modal-close" id="close-history-btn">&times;</button>
+                <h2 id="history-modal-title" data-i18n="history.title"><span aria-label="Chart icon">📊</span> 나의 기록</h2>
+                <button class="modal-close" id="close-history-btn" aria-label="Close dialog">&times;</button>
             </div>
             <div class="history-content-body">
                 <!-- 배지와 히스토리가 동적으로 삽입됩니다 -->
@@ -318,11 +318,11 @@
     </div>
 
     <!-- 프리미엄 분석 모달 -->
-    <div class="modal" id="premium-modal">
+    <div class="modal" id="premium-modal" role="dialog" aria-modal="true" aria-labelledby="premium-modal-title">
         <div class="modal-content">
             <div class="modal-header">
-                <h2 data-i18n="premium.title">🧠 AI 심층 분석</h2>
-                <button class="modal-close" id="close-premium-btn">&times;</button>
+                <h2 id="premium-modal-title" data-i18n="premium.title"><span aria-label="Brain icon">🧠</span> AI 심층 분석</h2>
+                <button class="modal-close" id="close-premium-btn" aria-label="Close dialog">&times;</button>
             </div>
             <div class="history-content-body" id="premium-body">
             </div>
