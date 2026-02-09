@@ -71,12 +71,22 @@
         <main>
             <!-- 메인 화면: 타이머 설정 -->
             <section id="setup-screen" class="screen active">
+                <!-- 히어로 영역 -->
+                <div class="hero-section">
+                    <div class="hero-badge">⏱️ 집중력 향상</div>
+                    <h2 data-i18n="hero.title">스마트폰 없이도 충분해요</h2>
+                    <p class="hero-subtitle" data-i18n="hero.subtitle">짧은 시간이라도 매일의 실천이 변화를 만듭니다</p>
+                </div>
+
                 <div class="motivation-card">
                     <p id="motivation-text" data-i18n="setup.motivation">잠시 멈추고, 현재에 집중하세요.</p>
                 </div>
 
                 <div class="time-selector">
-                    <h2 data-i18n="setup.selectTime">디톡스 시간 선택</h2>
+                    <div class="time-selector-header">
+                        <h2 data-i18n="setup.selectTime">📏 디톡스 시간 선택</h2>
+                        <p class="time-hint" data-i18n="setup.timeHint">처음이라면 5분부터 시작하세요</p>
+                    </div>
                     <div class="time-buttons">
                         <button class="time-btn" data-minutes="5" data-i18n="time.5min">5분</button>
                         <button class="time-btn" data-minutes="10" data-i18n="time.10min">10분</button>
@@ -86,12 +96,14 @@
                         <button class="time-btn" data-minutes="120" data-i18n="time.2hours">2시간</button>
                     </div>
                     <div class="custom-time">
-                        <input type="number" id="custom-minutes" min="1" max="480" placeholder="직접 입력 (분)" data-i18n="setup.customInput">
+                        <input type="number" id="custom-minutes" min="1" max="480" placeholder="직접 입력 (분)" data-i18n="setup.customInput" data-i18n-placeholder="setup.customInput">
                     </div>
                 </div>
 
-                <button id="start-btn" class="primary-btn">
-                    <span data-i18n="setup.startBtn">🚀 디톡스 시작</span>
+                <button id="start-btn" class="primary-btn cta-btn">
+                    <span class="btn-icon">🚀</span>
+                    <span data-i18n="setup.startBtn">지금 시작하기</span>
+                    <span class="btn-arrow">→</span>
                 </button>
 
                 <div class="stats-preview">

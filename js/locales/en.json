@@ -7,11 +7,16 @@
     "title": "🧘 Digital Detox",
     "subtitle": "Take a break from your smartphone"
   },
+  "hero": {
+    "title": "You're enough without your phone",
+    "subtitle": "Small daily actions create big changes"
+  },
   "setup": {
     "motivation": "Pause for a moment and focus on the present.",
-    "selectTime": "Select Detox Time",
+    "selectTime": "📏 Select Detox Time",
+    "timeHint": "Start with 5 minutes if you're new",
     "customInput": "Custom (minutes)",
-    "startBtn": "🚀 Start Detox",
+    "startBtn": "Start Now",
     "viewHistoryBtn": "📊 View History",
     "stats": {
       "totalSessions": "Total Sessions",

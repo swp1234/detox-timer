@@ -51,26 +51,46 @@ class DetoxTimer {
     }
     
     init() {
+        // i18n 초기화 먼저 수행 (동기적으로)
+        this.initI18nSync();
+
+        // 그 다음 UI 초기화
         this.bindEvents();
         this.updateStats();
         this.renderWeeklyHeatmap();
         this.loadQuotableQuote();
         this.registerServiceWorker();
         this.checkAndAwardBadges();
-        this.initI18n();
+        this.showRandomMotivation();
     }
 
-    async initI18n() {
+    initI18nSync() {
         try {
-            await i18n.loadTranslations(i18n.getCurrentLanguage());
-            i18n.updateUI();
+            if (typeof i18n !== 'undefined') {
+                const currentLang = i18n.getCurrentLanguage();
+                // 언어 선택기 활성화 표시
+                setTimeout(() => {
+                    const langBtn = document.querySelector(`[data-lang="${currentLang}"]`);
+                    if (langBtn) langBtn.classList.add('active');
+                }, 100);
 
-            const currentLang = i18n.getCurrentLanguage();
-            document.querySelector(`[data-lang="${currentLang}"]`)?.classList.add('active');
-
-            this.setupLanguageSelector();
+                // 비동기 번역 로드
+                this.initI18nAsync();
+                this.setupLanguageSelector();
+            }
         } catch (e) {
-            // i18n 파일 없으면 기본 한국어 유지
+            console.warn('i18n initialization issue:', e.message);
+        }
+    }
+
+    async initI18nAsync() {
+        try {
+            if (typeof i18n === 'undefined') return;
+            const currentLang = i18n.getCurrentLanguage();
+            await i18n.loadTranslations(currentLang);
+            i18n.updateUI();
+        } catch (e) {
+            console.error('Failed to load i18n translations:', e);
         }
     }
 
@@ -315,8 +335,13 @@ class DetoxTimer {
     
     showRandomMotivation() {
         const messageEl = document.getElementById('motivation-text');
+        if (!messageEl) return;
         const randomMessage = this.motivationMessages[Math.floor(Math.random() * this.motivationMessages.length)];
-        messageEl.textContent = randomMessage;
+        messageEl.style.opacity = 0;
+        setTimeout(() => {
+            messageEl.textContent = randomMessage;
+            messageEl.style.opacity = 1;
+        }, 100);
     }
     
     // 통계 관련

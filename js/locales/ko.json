@@ -7,11 +7,16 @@
     "title": "🧘 디지털 디톡스",
     "subtitle": "스마트폰에서 잠시 벗어나세요"
   },
+  "hero": {
+    "title": "스마트폰 없이도 충분해요",
+    "subtitle": "짧은 시간이라도 매일의 실천이 변화를 만듭니다"
+  },
   "setup": {
     "motivation": "잠시 멈추고, 현재에 집중하세요.",
-    "selectTime": "디톡스 시간 선택",
+    "selectTime": "📏 디톡스 시간 선택",
+    "timeHint": "처음이라면 5분부터 시작하세요",
     "customInput": "직접 입력 (분)",
-    "startBtn": "🚀 디톡스 시작",
+    "startBtn": "지금 시작하기",
     "viewHistoryBtn": "📊 히스토리 보기",
     "stats": {
       "totalSessions": "총 세션",
