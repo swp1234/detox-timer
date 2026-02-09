@@ -27,7 +27,9 @@
   "timer": {
     "message": "You're focusing! Doing great.",
     "breathText": "Take a deep breath...",
-    "giveUpBtn": "😢 Give Up"
+    "giveUpBtn": "😢 Give Up",
+    "pauseBtn": "⏸ Pause",
+    "whiteNoiseLink": "Listen to Focus White Noise"
   },
   "complete": {
     "success": {

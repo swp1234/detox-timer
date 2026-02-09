@@ -1363,3 +1363,111 @@ main {
 .back-link:hover {
   color: rgba(255,255,255,0.7);
 }
+
+/* 타이머 추천 섹션 */
+.timer-recommendation {
+  margin: 30px 0;
+  animation: slideUp 0.8s ease 0.3s both;
+}
+
+.rec-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 20px;
+  background: linear-gradient(135deg, rgba(85, 239, 196, 0.15) 0%, rgba(0, 184, 148, 0.1) 100%);
+  border: 2px solid rgba(0, 184, 148, 0.3);
+  border-radius: 20px;
+  text-decoration: none;
+  color: #55efc4;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  min-height: 56px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.rec-link:hover {
+  border-color: var(--primary-light);
+  background: linear-gradient(135deg, rgba(85, 239, 196, 0.25) 0%, rgba(0, 184, 148, 0.2) 100%);
+  box-shadow: 0 10px 35px rgba(0, 184, 148, 0.3);
+  transform: translateY(-2px);
+}
+
+.rec-link:active {
+  transform: scale(0.98);
+}
+
+.rec-emoji {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.rec-text {
+  flex: 1;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.rec-arrow {
+  font-size: 1.2rem;
+  opacity: 0;
+  transform: translateX(-5px);
+  transition: all 0.3s ease;
+}
+
+.rec-link:hover .rec-arrow {
+  opacity: 1;
+  transform: translateX(5px);
+}
+
+/* 타이머 버튼 섹션 */
+.timer-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.timer-action-btn {
+  min-height: 56px;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.pause-btn {
+  background: linear-gradient(135deg, rgba(255, 234, 167, 0.3) 0%, rgba(255, 193, 7, 0.2) 100%);
+  border: 2px solid rgba(255, 193, 7, 0.4);
+  color: #ffeb99;
+  cursor: pointer;
+}
+
+.pause-btn:hover {
+  border-color: #ffeb99;
+  background: linear-gradient(135deg, rgba(255, 234, 167, 0.4) 0%, rgba(255, 193, 7, 0.3) 100%);
+  box-shadow: 0 10px 30px rgba(255, 193, 7, 0.2);
+  transform: translateY(-2px);
+}
+
+.pause-btn:active {
+  transform: scale(0.97);
+}
+
+/* Confetti 클래스 (JS에서 사용) */
+@keyframes confetti-fall {
+  to {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.confetti {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  background: #ffd700;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 999;
+  animation: confetti-fall 2s ease-in forwards;
+}

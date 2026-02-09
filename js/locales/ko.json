@@ -27,7 +27,9 @@
   "timer": {
     "message": "집중하고 있어요! 잘하고 있습니다.",
     "breathText": "숨을 깊게 들이쉬세요...",
-    "giveUpBtn": "😢 포기하기"
+    "giveUpBtn": "😢 포기하기",
+    "pauseBtn": "⏸ 일시정지",
+    "whiteNoiseLink": "집중 백색소음 듣기"
   },
   "complete": {
     "success": {

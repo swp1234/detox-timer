@@ -188,18 +188,55 @@ class DetoxTimer {
         this.totalSeconds = this.selectedMinutes * 60;
         this.remainingSeconds = this.totalSeconds;
         this.isRunning = true;
-        
+
         this.showScreen('timer-screen');
         this.updateTimerDisplay();
         this.initProgressRing();
-        
+
+        // 일시정지 버튼 표시
+        const pauseBtn = document.getElementById('pause-btn');
+        if (pauseBtn) {
+            pauseBtn.style.display = 'block';
+            pauseBtn.addEventListener('click', () => this.pauseTimer());
+        }
+
         // 타이머 시작
         this.timerInterval = setInterval(() => this.tick(), 1000);
-        
+
         // 메시지 변경 인터벌
         this.messageInterval = setInterval(() => this.changeTimerMessage(), 30000);
-        
+
         // 호흡 가이드 인터벌
+        this.breathInterval = setInterval(() => this.updateBreathGuide(), 4000);
+    }
+
+    pauseTimer() {
+        if (!this.isRunning) return;
+
+        this.isRunning = false;
+        this.stopTimer();
+
+        const pauseBtn = document.getElementById('pause-btn');
+        if (pauseBtn) {
+            pauseBtn.textContent = '▶ 계속하기';
+            pauseBtn.addEventListener('click', () => this.resumeTimer());
+        }
+    }
+
+    resumeTimer() {
+        if (this.isRunning) return;
+
+        this.isRunning = true;
+        const pauseBtn = document.getElementById('pause-btn');
+        if (pauseBtn) {
+            pauseBtn.innerHTML = '<span data-i18n="timer.pauseBtn">⏸ 일시정지</span>';
+            pauseBtn.removeEventListener('click', () => this.resumeTimer());
+            pauseBtn.addEventListener('click', () => this.pauseTimer());
+        }
+
+        // 타이머 재개
+        this.timerInterval = setInterval(() => this.tick(), 1000);
+        this.messageInterval = setInterval(() => this.changeTimerMessage(), 30000);
         this.breathInterval = setInterval(() => this.updateBreathGuide(), 4000);
     }
     
@@ -292,19 +329,51 @@ class DetoxTimer {
         const message = document.getElementById('complete-message');
         const resultTime = document.getElementById('result-time');
         const resultStreak = document.getElementById('result-streak');
-        
+
         if (success) {
             icon.textContent = '🎉';
             title.textContent = '축하합니다!';
             message.textContent = '디지털 디톡스를 성공적으로 완료했습니다.';
+            // Confetti 효과 재생
+            this.createConfetti();
         } else {
             icon.textContent = '💪';
             title.textContent = '괜찮아요!';
             message.textContent = `${minutes}분 동안 노력했어요. 다음에 더 잘할 수 있어요!`;
         }
-        
+
         resultTime.textContent = success ? `${this.selectedMinutes}분` : `${minutes}분`;
         resultStreak.textContent = `${this.stats.streak}회`;
+    }
+
+    createConfetti() {
+        const confettiCount = 50;
+        const colors = ['#ffd700', '#ffeb99', '#00b894', '#55efc4', '#ff6b6b', '#4ecdc4'];
+
+        for (let i = 0; i < confettiCount; i++) {
+            const confetti = document.createElement('div');
+            confetti.classList.add('confetti');
+
+            const color = colors[Math.floor(Math.random() * colors.length)];
+            confetti.style.background = color;
+
+            const leftPos = Math.random() * 100;
+            const size = Math.random() * 8 + 5;
+            const duration = Math.random() * 1 + 1.5;
+            const delay = Math.random() * 0.3;
+
+            confetti.style.left = leftPos + '%';
+            confetti.style.width = size + 'px';
+            confetti.style.height = size + 'px';
+            confetti.style.top = '-10px';
+            confetti.style.animationDuration = duration + 's';
+            confetti.style.animationDelay = delay + 's';
+
+            document.body.appendChild(confetti);
+
+            // 애니메이션 완료 후 제거
+            setTimeout(() => confetti.remove(), (duration + delay) * 1000);
+        }
     }
     
     stopTimer() {
