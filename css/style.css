@@ -369,7 +369,12 @@ main {
 
 .time-btn:hover {
     border-color: var(--primary);
-    transform: translateY(-2px);
+    transform: translateY(-2px) scale(0.98);
+    box-shadow: 0 8px 25px rgba(0, 184, 148, 0.2);
+}
+
+.time-btn:active {
+    transform: scale(0.95);
 }
 
 .time-btn.selected {
@@ -441,23 +446,25 @@ main {
 }
 
 .primary-btn:hover {
-    transform: translateY(-3px);
+    transform: translateY(-3px) scale(0.98);
     box-shadow: 0 15px 40px rgba(0, 184, 148, 0.4);
 }
 
 .primary-btn:active {
-    transform: translateY(0);
+    transform: scale(0.95);
 }
 
 /* CTA 버튼 강조 */
 .cta-btn {
     padding: 18px 24px;
+    min-height: 56px;
     font-size: 1.05rem;
+    font-weight: 700;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
-    animation: pulse 2s ease-in-out infinite;
+    animation: none !important;
 }
 
 .btn-icon {
@@ -490,17 +497,28 @@ main {
     border: 1px solid rgba(255, 255, 255, 0.2);
     color: var(--text-muted);
     padding: 16px;
+    min-height: 56px;
     border-radius: 20px;
     font-size: 1rem;
+    font-weight: 700;
     cursor: pointer;
     transition: all 0.3s ease;
     letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .secondary-btn:hover {
     border-color: var(--danger);
     color: var(--danger);
     background: rgba(250, 177, 160, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(250, 177, 160, 0.2);
+}
+
+.secondary-btn:active {
+    transform: scale(0.97);
 }
 
 /* 통계 미리보기 - 글래스모피즘 */
@@ -1044,7 +1062,8 @@ main {
     background: linear-gradient(135deg, #ffd700, #ffb700);
     color: #5a4000;
     border: none;
-    padding: 14px 28px;
+    padding: 16px 28px;
+    min-height: 56px;
     border-radius: 24px;
     font-size: 1rem;
     font-weight: 700;
@@ -1052,13 +1071,19 @@ main {
     transition: all 0.3s ease;
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 8px;
     box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+    margin-bottom: 20px;
 }
 
 .premium-btn:hover {
-    transform: translateY(-2px);
+    transform: scale(0.97) translateY(-2px);
     box-shadow: 0 8px 25px rgba(255, 215, 0, 0.4);
+}
+
+.premium-btn:active {
+    transform: scale(0.95);
 }
 
 .premium-badge {
@@ -1307,14 +1332,15 @@ main {
 
 /* Recommendations Section */
 .recommendations-section { margin: 24px 0 0; padding: 0 16px; }
-.rec-title { font-size: 15px; font-weight: 700; color: rgba(255,255,255,0.5); margin-bottom: 12px; text-align: center; letter-spacing: 0.5px; }
-.rec-grid { display: flex; flex-direction: column; gap: 10px; }
-.rec-card { display: flex; align-items: center; gap: 14px; padding: 14px 16px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; text-decoration: none; color: #fff; transition: all 0.2s ease; }
-.rec-card:hover { background: rgba(255,255,255,0.1); transform: translateY(-1px); }
-.rec-icon { font-size: 28px; flex-shrink: 0; }
-.rec-info { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
-.rec-name { font-size: 14px; font-weight: 600; }
-.rec-desc { font-size: 12px; color: rgba(255,255,255,0.5); }
+.rec-title { font-size: 15px; font-weight: 700; color: rgba(255,255,255,0.65); margin-bottom: 16px; text-align: center; letter-spacing: 0.5px; }
+.rec-grid { display: flex; flex-direction: column; gap: 12px; }
+.rec-card { display: flex; align-items: center; gap: 14px; padding: 16px; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); border-radius: 16px; text-decoration: none; color: #fff; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); min-height: 60px; }
+.rec-card:hover { background: rgba(255,255,255,0.12); transform: translateY(-2px); box-shadow: 0 8px 25px rgba(0, 184, 148, 0.2); }
+.rec-card:active { transform: scale(0.98); }
+.rec-icon { font-size: 32px; flex-shrink: 0; }
+.rec-info { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+.rec-name { font-size: 14px; font-weight: 700; color: rgba(255,255,255,0.9); }
+.rec-desc { font-size: 12px; color: rgba(255,255,255,0.7); }
 
 /* Game Footer */
 .game-footer {
