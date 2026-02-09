@@ -1,7 +1,8 @@
 {
   "app": {
     "title": "Digital Detox Timer",
-    "description": "Digital Detox Timer - Reduce smartphone usage and improve focus"
+    "description": "Digital Detox Timer - Reduce smartphone usage and improve focus",
+    "loading": "Loading..."
   },
   "header": {
     "title": "🧘 Digital Detox",
