@@ -50,32 +50,56 @@ class DetoxTimer {
         this.init();
     }
     
-    init() {
-        // i18n 초기화 먼저 수행 (동기적으로)
-        this.initI18nSync();
+    async init() {
+        try {
+            // i18n 초기화 먼저 수행 (동기적으로)
+            await this.initI18nSync();
 
-        // 그 다음 UI 초기화
-        this.bindEvents();
-        this.updateStats();
-        this.renderWeeklyHeatmap();
-        this.loadQuotableQuote();
-        this.registerServiceWorker();
-        this.checkAndAwardBadges();
-        this.showRandomMotivation();
+            // 그 다음 UI 초기화
+            this.bindEvents();
+            this.updateStats();
+            this.renderWeeklyHeatmap();
+            this.loadQuotableQuote();
+            this.registerServiceWorker();
+            this.checkAndAwardBadges();
+            this.showRandomMotivation();
+
+            // 모든 초기화 완료 후 로딩 화면 제거
+            this.hideLoadingScreen();
+        } catch (error) {
+            console.error('Initialization error:', error);
+            // 에러 발생해도 로딩 화면은 제거
+            this.hideLoadingScreen();
+        }
     }
 
-    initI18nSync() {
+    hideLoadingScreen() {
+        const loader = document.getElementById('app-loader');
+        if (loader) {
+            // hidden 클래스를 추가하여 CSS 전환 효과 적용
+            loader.classList.add('hidden');
+            // 전환 완료 후 완전히 제거
+            setTimeout(() => {
+                loader.style.display = 'none';
+            }, 300);
+        }
+    }
+
+    async initI18nSync() {
         try {
             if (typeof i18n !== 'undefined') {
                 const currentLang = i18n.getCurrentLanguage();
+
+                // 번역 로드 (비동기, await 필수)
+                await this.initI18nAsync();
+
                 // 언어 선택기 활성화 표시
                 setTimeout(() => {
                     const langBtn = document.querySelector(`[data-lang="${currentLang}"]`);
                     if (langBtn) langBtn.classList.add('active');
                 }, 100);
 
-                // 비동기 번역 로드
-                this.initI18nAsync();
+                // UI 업데이트
                 this.setupLanguageSelector();
             }
         } catch (e) {
@@ -85,12 +109,20 @@ class DetoxTimer {
 
     async initI18nAsync() {
         try {
-            if (typeof i18n === 'undefined') return;
+            if (typeof i18n === 'undefined') {
+                console.warn('i18n not available');
+                return false;
+            }
             const currentLang = i18n.getCurrentLanguage();
-            await i18n.loadTranslations(currentLang);
-            i18n.updateUI();
+            const loaded = await i18n.loadTranslations(currentLang);
+            if (loaded) {
+                i18n.updateUI();
+                return true;
+            }
+            return false;
         } catch (e) {
             console.error('Failed to load i18n translations:', e);
+            return false;
         }
     }
 
@@ -957,6 +989,15 @@ class DetoxTimer {
 }
 
 // 앱 초기화
-document.addEventListener('DOMContentLoaded', () => {
-    new DetoxTimer();
+document.addEventListener('DOMContentLoaded', async () => {
+    try {
+        const app = new DetoxTimer();
+    } catch (error) {
+        console.error('Failed to initialize app:', error);
+        // 에러가 발생해도 로딩 화면 제거
+        const loader = document.getElementById('app-loader');
+        if (loader) {
+            loader.style.display = 'none';
+        }
+    }
 });

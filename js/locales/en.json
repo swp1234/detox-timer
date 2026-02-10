@@ -14,6 +14,7 @@
       "message": "That's okay. Try again!",
       "title": "Not quite"
     },
+    "premiumBtn": "🧠 AI Deep Analysis",
     "restartBtn": "🔄 Restart",
     "result": {
       "streak": "Streak",
@@ -55,7 +56,9 @@
   "premium": {
     "title": "🧠 AI Deep Analysis"
   },
-  "recommendations": "Try These Too",
+  "recommendations": {
+    "title": "Try These Too"
+  },
   "setup": {
     "customInput": "Custom (minutes)",
     "motivation": "Pause for a moment and focus on the present.",

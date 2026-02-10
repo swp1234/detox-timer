@@ -14,6 +14,7 @@
       "message": "Tudo bem. Tente novamente!",
       "title": "Quase"
     },
+    "premiumBtn": "🧠 Análise Profunda de IA",
     "restartBtn": "🔄 Reiniciar",
     "result": {
       "streak": "Sequência",
@@ -55,7 +56,9 @@
   "premium": {
     "title": "🧠 Análise Profunda de IA"
   },
-  "recommendations": "Experimente Também",
+  "recommendations": {
+    "title": "Experimente Também"
+  },
   "setup": {
     "customInput": "Personalizado (minutos)",
     "motivation": "Pause por um momento e foque no presente.",

@@ -25,13 +25,20 @@ class I18n {
 
     async loadTranslations(lang) {
         try {
+            // 이미 로드된 언어는 캐시에서 반환
+            if (this.translations[lang]) {
+                return true;
+            }
+
             const response = await fetch(`js/locales/${lang}.json`);
             if (!response.ok) throw new Error('Translation file not found');
-            this.translations[lang] = await response.json();
+            const data = await response.json();
+            this.translations[lang] = data;
             return true;
         } catch (error) {
             console.error(`Failed to load ${lang} translations:`, error);
             if (lang !== 'en') {
+                // 현재 언어 로드 실패 시 영어로 폴백
                 return this.loadTranslations('en');
             }
             return false;

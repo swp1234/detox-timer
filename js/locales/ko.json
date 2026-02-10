@@ -43,6 +43,7 @@
       "title": "아쉬워요",
       "message": "괜찮아요. 다시 도전해보세요!"
     },
+    "premiumBtn": "🧠 AI 심층 분석 보기",
     "result": {
       "time": "디톡스 시간",
       "streak": "연속 성공"
@@ -90,5 +91,7 @@
     "banner": "광고 영역",
     "closeBtn": "광고 닫기"
   },
-  "recommendations": "이것도 해보세요"
+  "recommendations": {
+    "title": "이것도 해보세요"
+  }
 }

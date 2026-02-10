@@ -14,6 +14,7 @@
       "message": "Das ist okay. Versuche es noch mal!",
       "title": "Nicht ganz"
     },
+    "premiumBtn": "🧠 KI-Tiefenanalyse",
     "restartBtn": "🔄 Neu starten",
     "result": {
       "streak": "Serie",
@@ -55,7 +56,9 @@
   "premium": {
     "title": "🧠 KI-Tiefenanalyse"
   },
-  "recommendations": "Probiere auch diese",
+  "recommendations": {
+    "title": "Probiere auch diese"
+  },
   "setup": {
     "customInput": "Benutzerdefiniert (Minuten)",
     "motivation": "Pausiere für einen Moment und konzentriere dich auf die Gegenwart.",

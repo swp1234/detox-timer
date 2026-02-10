@@ -14,6 +14,7 @@
       "message": "没关系。再试一次！",
       "title": "差一点"
     },
+    "premiumBtn": "🧠 AI深度分析",
     "restartBtn": "🔄 重新开始",
     "result": {
       "streak": "连续成功",
@@ -55,7 +56,9 @@
   "premium": {
     "title": "🧠 AI深度分析"
   },
-  "recommendations": "也试试这些",
+  "recommendations": {
+    "title": "也试试这些"
+  },
   "setup": {
     "customInput": "自定义（分钟）",
     "motivation": "暂停片刻，专注于当下。",

@@ -14,6 +14,7 @@
       "message": "Sorun yok. Tekrar dene!",
       "title": "Tam olmadı"
     },
+    "premiumBtn": "🧠 AI Derin Analizi",
     "restartBtn": "🔄 Yeniden Başlat",
     "result": {
       "streak": "Seri",
@@ -55,7 +56,9 @@
   "premium": {
     "title": "🧠 AI Derin Analizi"
   },
-  "recommendations": "Bunları da Dene",
+  "recommendations": {
+    "title": "Bunları da Dene"
+  },
   "setup": {
     "customInput": "Özel (dakika)",
     "motivation": "Bir an dur ve şu ana odaklan.",

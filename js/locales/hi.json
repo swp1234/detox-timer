@@ -14,6 +14,7 @@
       "message": "कोई बात नहीं। फिर से कोशिश करें!",
       "title": "लगभग पहुंच गए"
     },
+    "premiumBtn": "🧠 AI गहन विश्लेषण",
     "restartBtn": "🔄 पुनः प्रारंभ करें",
     "result": {
       "streak": "लगातार सफलता",
@@ -55,7 +56,9 @@
   "premium": {
     "title": "🧠 AI गहन विश्लेषण"
   },
-  "recommendations": "यह भी आजमाएं",
+  "recommendations": {
+    "title": "यह भी आजमाएं"
+  },
   "setup": {
     "customInput": "कस्टम (मिनट)",
     "motivation": "एक पल के लिए रुकें और वर्तमान पर ध्यान दें।",

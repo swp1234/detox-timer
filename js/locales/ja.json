@@ -14,6 +14,7 @@
       "message": "大丈夫です。もう一度試してください！",
       "title": "あともう少し"
     },
+    "premiumBtn": "🧠 AI詳細分析",
     "restartBtn": "🔄 リスタート",
     "result": {
       "streak": "連続記録",
@@ -55,7 +56,9 @@
   "premium": {
     "title": "🧠 AI詳細分析"
   },
-  "recommendations": "これも試してみてください",
+  "recommendations": {
+    "title": "これも試してみてください"
+  },
   "setup": {
     "customInput": "カスタム（分）",
     "motivation": "一瞬立ち止まって、今に集中しましょう。",

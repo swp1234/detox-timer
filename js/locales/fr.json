@@ -14,6 +14,7 @@
       "message": "C'est d'accord. Essaie à nouveau!",
       "title": "Pas tout à fait"
     },
+    "premiumBtn": "🧠 Analyse Profonde par IA",
     "restartBtn": "🔄 Recommencer",
     "result": {
       "streak": "Série",
@@ -55,7 +56,9 @@
   "premium": {
     "title": "🧠 Analyse Profonde par IA"
   },
-  "recommendations": "Essaie aussi",
+  "recommendations": {
+    "title": "Essaie aussi"
+  },
   "setup": {
     "customInput": "Personnalisé (minutes)",
     "motivation": "Fais une pause et concentre-toi sur le présent.",
