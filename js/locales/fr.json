@@ -90,5 +90,39 @@
     "message": "Tu te concentres! Tu fais du bon travail.",
     "pauseBtn": "⏸ Pause",
     "whiteNoiseLink": "Écouter bruit blanc"
+  },
+  "motivation": {
+    "messages": [
+      "Fais une pause et concentre-toi sur le présent.",
+      "Tu peux être heureux sans ton smartphone.",
+      "La vraie connexion commence par le contact visuel.",
+      "Prends du temps aujourd'hui pour te concentrer sur toi-même.",
+      "Éloigne-toi du monde numérique et ressens la nature.",
+      "Le repos n'est pas de la paresse, c'est se ressourcer.",
+      "Ce moment est le plus précieux.",
+      "La paix de l'esprit se trouve au-delà du bruit des notifications.",
+      "Découvre le monde au-delà de l'écran.",
+      "Ton temps est précieux."
+    ]
+  },
+  "messages": {
+    "timer": [
+      "Tu te concentres! Tu fais du bon travail.",
+      "Excellent! Continue comme ça.",
+      "Sans smartphone tu fais du bon travail!",
+      "Ton esprit devient-il plus paisible?",
+      "Prends une profonde respiration.",
+      "Savoure ce moment.",
+      "Presque terminé! Encore un peu!",
+      "Tu peux le faire!"
+    ]
+  },
+  "breath": {
+    "texts": [
+      "Prends une profonde respiration...",
+      "Fais une pause pour un moment...",
+      "Expire lentement...",
+      "Inspire à nouveau..."
+    ]
   }
 }

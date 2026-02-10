@@ -90,5 +90,39 @@
     "message": "¡Estás enfocado! Lo estás haciendo muy bien.",
     "pauseBtn": "⏸ Pausar",
     "whiteNoiseLink": "Escuchar ruido blanco"
+  },
+  "motivation": {
+    "messages": [
+      "Pausa un momento y enfócate en el presente.",
+      "Puedes ser feliz sin tu teléfono inteligente.",
+      "La verdadera conexión comienza con el contacto visual.",
+      "Tómate un tiempo hoy para enfocarte en ti mismo.",
+      "Aléjate del mundo digital y siente la naturaleza.",
+      "El descanso no es pereza, es recarga.",
+      "Este momento es el más precioso.",
+      "La paz mental está más allá de los sonidos de notificación.",
+      "Descubre el mundo más allá de la pantalla.",
+      "Tu tiempo es precioso."
+    ]
+  },
+  "messages": {
+    "timer": [
+      "¡Estás enfocado! Lo estás haciendo muy bien.",
+      "¡Excelente! Sigue adelante.",
+      "¡Sin teléfono inteligente lo estás haciendo bien!",
+      "¿Tu mente se vuelve más pacífica?",
+      "Respira profundamente.",
+      "Disfruta este momento.",
+      "¡Casi llegamos! ¡Un poco más!",
+      "¡Tú puedes!"
+    ]
+  },
+  "breath": {
+    "texts": [
+      "Respira profundamente...",
+      "Pausa por un momento...",
+      "Exhala lentamente...",
+      "Vuelve a inhalar..."
+    ]
   }
 }

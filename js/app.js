@@ -12,39 +12,10 @@ class DetoxTimer {
         this.history = this.loadHistory();
         this.badges = this.loadBadges();
 
-        // 동기부여 명언 (폴백용)
-        this.motivationMessages = [
-            "잠시 멈추고, 현재에 집중하세요.",
-            "스마트폰 없이도 충분히 행복할 수 있어요.",
-            "진정한 연결은 눈을 마주칠 때 시작됩니다.",
-            "오늘 하루, 나에게 집중하는 시간을 가져보세요.",
-            "디지털 세상에서 벗어나 자연을 느껴보세요.",
-            "휴식은 게으름이 아니라 재충전입니다.",
-            "지금 이 순간이 가장 소중합니다.",
-            "마음의 평화는 알림 소리 밖에 있습니다.",
-            "스크린 너머의 세상을 발견해보세요.",
-            "당신의 시간은 소중합니다."
-        ];
-        
-        // 타이머 중 메시지
-        this.timerMessages = [
-            "집중하고 있어요! 잘하고 있습니다.",
-            "훌륭해요! 계속 유지하세요.",
-            "스마트폰 없이도 잘 하고 있어요!",
-            "마음이 편안해지고 있나요?",
-            "깊은 호흡을 해보세요.",
-            "지금 이 순간을 즐기세요.",
-            "거의 다 왔어요! 조금만 더!",
-            "당신은 할 수 있습니다!"
-        ];
-        
-        // 호흡 가이드 텍스트
-        this.breathTexts = [
-            "숨을 깊게 들이쉬세요...",
-            "잠시 멈추세요...",
-            "천천히 내쉬세요...",
-            "다시 들이쉬세요..."
-        ];
+        // 동기부여 명언, 타이머 메시지, 호흡 텍스트를 i18n으로 로드
+        this.motivationMessages = [];
+        this.timerMessages = [];
+        this.breathTexts = [];
         this.breathIndex = 0;
         
         this.init();
@@ -117,12 +88,42 @@ class DetoxTimer {
             const loaded = await i18n.loadTranslations(currentLang);
             if (loaded) {
                 i18n.updateUI();
+                // i18n 로드 후 다국어 콘텐츠 배열 초기화
+                this.loadI18nMessages();
                 return true;
             }
             return false;
         } catch (e) {
             console.error('Failed to load i18n translations:', e);
             return false;
+        }
+    }
+
+    loadI18nMessages() {
+        try {
+            if (typeof i18n === 'undefined') {
+                console.warn('i18n not available for messages');
+                return;
+            }
+            // 동기부여 명언 배열 로드
+            const motivationMessages = i18n.t('motivation.messages');
+            if (Array.isArray(motivationMessages)) {
+                this.motivationMessages = motivationMessages;
+            }
+
+            // 타이머 메시지 배열 로드
+            const timerMessages = i18n.t('messages.timer');
+            if (Array.isArray(timerMessages)) {
+                this.timerMessages = timerMessages;
+            }
+
+            // 호흡 텍스트 배열 로드
+            const breathTexts = i18n.t('breath.texts');
+            if (Array.isArray(breathTexts)) {
+                this.breathTexts = breathTexts;
+            }
+        } catch (e) {
+            console.warn('Failed to load i18n messages:', e.message);
         }
     }
 
@@ -145,6 +146,8 @@ class DetoxTimer {
             option.addEventListener('click', async () => {
                 const lang = option.getAttribute('data-lang');
                 await i18n.setLanguage(lang);
+                // 언어 변경 후 메시지 배열도 리로드
+                this.loadI18nMessages();
                 langOptions.forEach(opt => opt.classList.remove('active'));
                 option.classList.add('active');
                 langMenu.classList.add('hidden');

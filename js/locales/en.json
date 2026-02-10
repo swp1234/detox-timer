@@ -90,5 +90,39 @@
     "message": "You're focusing! Doing great.",
     "pauseBtn": "⏸ Pause",
     "whiteNoiseLink": "Listen to Focus White Noise"
+  },
+  "motivation": {
+    "messages": [
+      "Take a pause and focus on the present.",
+      "You can be happy without your smartphone.",
+      "True connection starts when you make eye contact.",
+      "Take time to focus on yourself today.",
+      "Step away from the digital world and feel nature.",
+      "Rest is not laziness, it's recharging.",
+      "This very moment is the most precious.",
+      "Peace of mind lies beyond notification sounds.",
+      "Discover the world beyond the screen.",
+      "Your time is precious."
+    ]
+  },
+  "messages": {
+    "timer": [
+      "You're focused! You're doing great.",
+      "Excellent! Keep it up.",
+      "You're doing well without your smartphone!",
+      "Is your mind becoming more peaceful?",
+      "Take a deep breath.",
+      "Enjoy this present moment.",
+      "Almost there! Just a bit more!",
+      "You can do it!"
+    ]
+  },
+  "breath": {
+    "texts": [
+      "Take a deep breath...",
+      "Pause for a moment...",
+      "Breathe out slowly...",
+      "Breathe in again..."
+    ]
   }
 }

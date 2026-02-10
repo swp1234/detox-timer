@@ -90,5 +90,39 @@
     "message": "Odaklanıyorsun! Harika gidiyorsun.",
     "pauseBtn": "⏸ Duraklat",
     "whiteNoiseLink": "Beyaz sesi dinle"
+  },
+  "motivation": {
+    "messages": [
+      "Bir an dur ve şu ana odaklan.",
+      "Akıllı telefonunuz olmadan mutlu olabilirsiniz.",
+      "Gerçek bağlantı göz teması ile başlar.",
+      "Bugün kendinize odaklanmak için zaman ayırın.",
+      "Dijital dünyadan uzaklaşın ve doğayı hissedin.",
+      "Dinlenme tembellık değil, yeniden şarj etmektir.",
+      "Bu an en değerli olanıdır.",
+      "Zihinsel barış bildirim seslerinin ötesindedir.",
+      "Ekranın ötesindeki dünyayı keşfedin.",
+      "Zaman ünlüdür."
+    ]
+  },
+  "messages": {
+    "timer": [
+      "Odaklanıyorsun! Harika yapıyorsun.",
+      "Mükemmel! Böyle devam et.",
+      "Akıllı telefon olmadan da iyi yapıyorsun!",
+      "Zihniniz daha sakin mi oluyor?",
+      "Derin bir nefes al.",
+      "Bu anı tadını çıkar.",
+      "Neredeyse bitti! Biraz daha!",
+      "Bunu yapabilirsin!"
+    ]
+  },
+  "breath": {
+    "texts": [
+      "Derin bir nefes al...",
+      "Bir an dur...",
+      "Yavaşça nefes ver...",
+      "Tekrar nefes al..."
+    ]
   }
 }

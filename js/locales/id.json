@@ -90,5 +90,39 @@
     "message": "Anda sedang fokus! Hebat sekali.",
     "pauseBtn": "⏸ Jeda",
     "whiteNoiseLink": "Dengarkan white noise"
+  },
+  "motivation": {
+    "messages": [
+      "Berhenti sejenak dan fokus pada saat ini.",
+      "Anda bisa bahagia tanpa smartphone Anda.",
+      "Koneksi sejati dimulai dengan kontak mata.",
+      "Luangkan waktu hari ini untuk fokus pada diri sendiri.",
+      "Menjauh dari dunia digital dan rasakan alam.",
+      "Istirahat bukan kemalasan, tetapi pengisian ulang.",
+      "Momen ini adalah yang paling berharga.",
+      "Ketenangan pikiran terletak di luar suara notifikasi.",
+      "Temukan dunia di luar layar.",
+      "Waktu Anda berharga."
+    ]
+  },
+  "messages": {
+    "timer": [
+      "Anda fokus! Anda melakukan dengan baik.",
+      "Luar biasa! Terus begini.",
+      "Tanpa smartphone Anda melakukan dengan baik!",
+      "Apakah pikiran Anda menjadi lebih tenang?",
+      "Ambil napas dalam-dalam.",
+      "Nikmati momen ini.",
+      "Hampir sampai! Sedikit lagi!",
+      "Anda bisa melakukannya!"
+    ]
+  },
+  "breath": {
+    "texts": [
+      "Ambil napas dalam-dalam...",
+      "Berhenti sejenak...",
+      "Hembuskan secara perlahan...",
+      "Hirup lagi..."
+    ]
   }
 }

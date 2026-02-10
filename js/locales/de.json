@@ -90,5 +90,39 @@
     "message": "Du konzentrierst dich! Machst es sehr gut.",
     "pauseBtn": "⏸ Pausieren",
     "whiteNoiseLink": "Weißes Rauschen anhören"
+  },
+  "motivation": {
+    "messages": [
+      "Halten Sie an und konzentrieren Sie sich auf die Gegenwart.",
+      "Sie können ohne Smartphone glücklich sein.",
+      "Wahre Verbindung beginnt mit Augenkontakt.",
+      "Nehmen Sie sich heute Zeit, um sich auf sich selbst zu konzentrieren.",
+      "Treten Sie aus der digitalen Welt zurück und fühlen Sie die Natur.",
+      "Ruhe ist nicht Faulheit, es ist Aufladen.",
+      "Dieser Moment ist der wertvollste.",
+      "Innerer Frieden liegt jenseits von Benachrichtigungstönen.",
+      "Entdecken Sie die Welt jenseits des Bildschirms.",
+      "Ihre Zeit ist wertvoll."
+    ]
+  },
+  "messages": {
+    "timer": [
+      "Du konzentrierst dich! Machst es sehr gut.",
+      "Hervorragend! Bleib dabei.",
+      "Ohne Smartphone machst du es gut!",
+      "Wird dein Verstand ruhiger?",
+      "Atme tief durch.",
+      "Genieße diesen Moment.",
+      "Bald geschafft! Noch ein bisschen!",
+      "Du schaffst das!"
+    ]
+  },
+  "breath": {
+    "texts": [
+      "Atme tief durch...",
+      "Halte für einen Moment an...",
+      "Atme langsam aus...",
+      "Atme wieder ein..."
+    ]
   }
 }
