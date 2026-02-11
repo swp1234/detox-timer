@@ -23,6 +23,9 @@ class DetoxTimer {
     
     async init() {
         try {
+            // 테마 초기화
+            this.initTheme();
+            
             // i18n 초기화 먼저 수행 (동기적으로)
             await this.initI18nSync();
 
@@ -41,6 +44,15 @@ class DetoxTimer {
             console.error('Initialization error:', error);
             // 에러 발생해도 로딩 화면은 제거
             this.hideLoadingScreen();
+        }
+    }
+
+    initTheme() {
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+        const themeToggle = document.getElementById('theme-toggle');
+        if (themeToggle) {
+            themeToggle.textContent = savedTheme === 'light' ? '🌙' : '☀️';
         }
     }
 
@@ -203,6 +215,18 @@ class DetoxTimer {
         const premiumBtn = document.getElementById('premium-analysis-btn');
         if (premiumBtn) {
             premiumBtn.addEventListener('click', () => this.showPremiumAnalysis());
+        }
+
+        // 테마 토글 버튼
+        const themeToggle = document.getElementById('theme-toggle');
+        if (themeToggle) {
+            themeToggle.addEventListener('click', () => {
+                const current = document.documentElement.getAttribute('data-theme');
+                const next = current === 'light' ? 'dark' : 'light';
+                document.documentElement.setAttribute('data-theme', next);
+                localStorage.setItem('theme', next);
+                themeToggle.textContent = next === 'light' ? '🌙' : '☀️';
+            });
         }
 
         // 프리미엄 모달 닫기

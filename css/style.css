@@ -101,6 +101,23 @@ input[type="text"], textarea {
     --danger: #fab1a0;
 }
 
+/* Light Mode Override */
+[data-theme="light"] {
+    --primary: #00b894;
+    --primary-light: #55efc4;
+    --primary-dark: #00a885;
+    --accent: #81ecec;
+    --background-start: #f5f5fa;
+    --background-end: #e8e8f0;
+    --surface: rgba(0, 0, 0, 0.04);
+    --surface-light: rgba(0, 0, 0, 0.06);
+    --text: #1a1a2e;
+    --text-muted: #5a5a70;
+    --success: #00b894;
+    --warning: #f39c12;
+    --danger: #e74c3c;
+}
+
 body {
     font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     background: linear-gradient(180deg, var(--background-start) 0%, var(--background-end) 100%);
@@ -111,6 +128,39 @@ body {
 }
 
 /* 배경 파티클 효과 */
+/* 테마 토글 - 언어 선택기 옆 */
+.theme-toggle {
+    position: fixed;
+    top: 12px;
+    right: 56px;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+[data-theme="light"] .theme-toggle {
+    background: rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.theme-toggle:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+}
+
+[data-theme="light"] .theme-toggle:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+
 /* 언어 선택 - 우측 상단 고정 */
 .language-selector {
     position: fixed;
@@ -154,6 +204,12 @@ body {
     animation: slideDown 0.3s ease;
 }
 
+[data-theme="light"] .lang-menu {
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(0, 184, 148, 0.2);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
 .lang-menu.hidden {
     display: none;
 }
@@ -186,9 +242,17 @@ body {
     background: rgba(0, 184, 148, 0.2);
 }
 
+[data-theme="light"] .lang-option:hover {
+    background: rgba(0, 184, 148, 0.1);
+}
+
 .lang-option.active {
     background: rgba(0, 184, 148, 0.3);
     font-weight: 600;
+}
+
+[data-theme="light"] .lang-option.active {
+    background: rgba(0, 184, 148, 0.15);
 }
 
 body::before {
@@ -209,6 +273,16 @@ body::before {
     opacity: 0.3;
     pointer-events: none;
     z-index: 0;
+}
+
+[data-theme="light"] body::before {
+    opacity: 0.15;
+    background-image:
+        radial-gradient(2px 2px at 20px 30px, var(--primary), transparent),
+        radial-gradient(2px 2px at 40px 70px, var(--accent), transparent),
+        radial-gradient(1px 1px at 90px 40px, rgba(0, 0, 0, 0.1), transparent),
+        radial-gradient(2px 2px at 130px 80px, var(--primary-light), transparent),
+        radial-gradient(1px 1px at 160px 120px, rgba(0, 0, 0, 0.1), transparent);
 }
 
 @keyframes twinkle {
@@ -236,6 +310,10 @@ body::before {
     border-radius: 16px;
     margin: 10px;
     border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="light"] .ad-banner {
+    border: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .ad-placeholder {
@@ -359,6 +437,13 @@ main {
     overflow: hidden;
 }
 
+[data-theme="light"] .motivation-card {
+    background: linear-gradient(135deg, 
+        rgba(0, 184, 148, 0.1) 0%, 
+        rgba(129, 236, 236, 0.05) 100%);
+    border: 1px solid rgba(0, 184, 148, 0.2);
+}
+
 .motivation-card::before {
     content: '🍃';
     position: absolute;
@@ -427,6 +512,14 @@ main {
     overflow: hidden;
 }
 
+[data-theme="light"] .time-btn {
+    border: 1px solid rgba(0, 184, 148, 0.15);
+}
+
+[data-theme="light"] .time-btn:hover {
+    background: rgba(0, 184, 148, 0.08);
+}
+
 .time-btn::before {
     content: '';
     position: absolute;
@@ -478,6 +571,10 @@ main {
     max-width: 180px;
     text-align: center;
     transition: all 0.3s ease;
+}
+
+[data-theme="light"] .custom-time input {
+    border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .custom-time input:focus {
@@ -609,6 +706,10 @@ main {
     padding: 25px 15px;
     border-radius: 24px;
     border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+[data-theme="light"] .stats-review {
+    border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .stat-item {
@@ -785,6 +886,10 @@ main {
     border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
+[data-theme="light"] .session-result {
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
 .result-item {
     text-align: center;
 }
@@ -925,6 +1030,10 @@ main {
     position: relative;
 }
 
+[data-theme="light"] .modal-content {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
 .modal-header {
     padding: 25px 30px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -994,6 +1103,10 @@ main {
     transition: all 0.3s ease;
 }
 
+[data-theme="light"] .badge {
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
 .badge.unlocked {
     border-color: rgba(255, 215, 0, 0.3);
     background: linear-gradient(135deg, rgba(255, 215, 0, 0.1) 0%, rgba(255, 193, 7, 0.05) 100%);
@@ -1047,6 +1160,10 @@ main {
     gap: 15px;
     border: 1px solid rgba(255, 255, 255, 0.05);
     transition: all 0.3s ease;
+}
+
+[data-theme="light"] .history-item {
+    border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .history-item:hover {
@@ -1334,6 +1451,10 @@ main {
     border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
+[data-theme="light"] .weekly-heatmap {
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
 .heatmap-title {
     font-size: 0.85rem;
     color: var(--text-muted);
@@ -1462,6 +1583,12 @@ main {
   min-height: 56px;
   font-weight: 600;
   letter-spacing: 0.5px;
+}
+
+[data-theme="light"] .rec-link {
+  background: linear-gradient(135deg, rgba(85, 239, 196, 0.08) 0%, rgba(0, 184, 148, 0.05) 100%);
+  border: 2px solid rgba(0, 184, 148, 0.2);
+  color: var(--primary-dark);
 }
 
 .rec-link:hover {
