@@ -278,7 +278,17 @@
                     <span data-i18n="complete.shareBtn">📤 결과 공유</span>
                 </button>
 
-                
+                <!-- Social Share Buttons -->
+                <div class="share-section" id="share-section">
+                    <button class="share-btn share-twitter" id="shareTwitterBtn" aria-label="Share on Twitter">
+                        <span>𝕏</span> Twitter
+                    </button>
+                    <button class="share-btn share-url" id="shareUrlBtn" aria-label="Copy URL">
+                        📋 Copy URL
+                    </button>
+                </div>
+
+
             </section>
 
     <!-- 프리미엄 분석 모달 -->
@@ -305,6 +315,19 @@
                     .catch(error => console.log('Service Worker registration failed:', error));
             });
         }
+    </script>
+    <!-- Social Share Buttons CSS & JS -->
+    <style>
+        .share-section{display:flex;gap:8px;justify-content:center;margin-top:16px;flex-wrap:wrap}
+        .share-btn{min-height:44px;padding:10px 20px;border:none;border-radius:12px;font-size:14px;font-weight:600;cursor:pointer;transition:all .2s;display:inline-flex;align-items:center;gap:6px;font-family:inherit}
+        .share-btn:hover{transform:translateY(-1px)}
+        .share-twitter{background:#000;color:#fff}
+        .share-url{background:rgba(255,255,255,.1);color:rgba(255,255,255,.8);border:1px solid rgba(255,255,255,.15)}
+        [data-theme="light"] .share-url{background:rgba(0,0,0,.05);color:#333;border-color:rgba(0,0,0,.1)}
+    </style>
+    <script>
+        document.getElementById('shareTwitterBtn')?.addEventListener('click',function(){var t=document.title+' '+window.location.href;window.open('https://twitter.com/intent/tweet?text='+encodeURIComponent(t),'_blank');if(typeof gtag!=='undefined')gtag('event','share',{method:'twitter'})});
+        document.getElementById('shareUrlBtn')?.addEventListener('click',function(){var b=this;navigator.clipboard.writeText(window.location.href).then(function(){b.textContent='✅ Copied!';setTimeout(function(){b.innerHTML='📋 Copy URL'},2000)});if(typeof gtag!=='undefined')gtag('event','share',{method:'url_copy'})});
     </script>
     <script src="/portal/js/cross-promo.js" defer></script>
 </body>
