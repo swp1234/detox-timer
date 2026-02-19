@@ -6,7 +6,9 @@
   "app": {
     "description": "Digital Detox Timer - Reduce smartphone usage and improve focus",
     "loading": "Loading...",
-    "title": "Digital Detox Timer"
+    "title": "Digital Detox Timer",
+    "socialProof": "🔥 50,000+ users practicing",
+    "heroBadge": "⏱️ Focus Boost"
   },
   "complete": {
     "failed": {
@@ -124,5 +126,13 @@
       "Breathe out slowly...",
       "Breathe in again..."
     ]
+  },
+  "accessibility": {
+    "skipMain": "Skip to main content"
+  },
+  "share": {
+    "twitter": "𝕏 Twitter",
+    "copyUrl": "📋 Copy URL",
+    "copied": "✅ Copied!"
   }
 }

@@ -6,7 +6,9 @@
   "app": {
     "description": "数字排毒计时器 - 减少智能手机使用时间，提高注意力",
     "loading": "Loading...",
-    "title": "数字排毒计时器"
+    "title": "数字排毒计时器",
+    "socialProof": "🔥 50,000+ 用户正在实践",
+    "heroBadge": "⏱️ 提高专注力"
   },
   "complete": {
     "failed": {
@@ -124,5 +126,13 @@
       "慢慢呼气...",
       "再次吸气..."
     ]
+  },
+  "accessibility": {
+    "skipMain": "跳转到主要内容"
+  },
+  "share": {
+    "twitter": "𝕏 Twitter",
+    "copyUrl": "📋 复制链接",
+    "copied": "✅ 已复制！"
   }
 }

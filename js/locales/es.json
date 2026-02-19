@@ -6,7 +6,9 @@
   "app": {
     "description": "Temporizador de Desintoxicación Digital - Reduce el uso del teléfono inteligente y mejora el enfoque",
     "loading": "Loading...",
-    "title": "Temporizador de Desintoxicación Digital"
+    "title": "Temporizador de Desintoxicación Digital",
+    "socialProof": "🔥 50,000+ usuarios practicando",
+    "heroBadge": "⏱️ Mejora tu concentración"
   },
   "complete": {
     "failed": {
@@ -124,5 +126,13 @@
       "Exhala lentamente...",
       "Vuelve a inhalar..."
     ]
+  },
+  "accessibility": {
+    "skipMain": "Ir al contenido principal"
+  },
+  "share": {
+    "twitter": "𝕏 Twitter",
+    "copyUrl": "📋 Copiar URL",
+    "copied": "✅ ¡Copiado!"
   }
 }

@@ -6,7 +6,9 @@
   "app": {
     "description": "Digital Detox Timer - Reduziere die Smartphone-Nutzung und verbessere die Konzentration",
     "loading": "Loading...",
-    "title": "Digital Detox Timer"
+    "title": "Digital Detox Timer",
+    "socialProof": "🔥 50.000+ Nutzer praktizieren",
+    "heroBadge": "⏱️ Fokus steigern"
   },
   "complete": {
     "failed": {
@@ -124,5 +126,13 @@
       "Atme langsam aus...",
       "Atme wieder ein..."
     ]
+  },
+  "accessibility": {
+    "skipMain": "Zum Hauptinhalt springen"
+  },
+  "share": {
+    "twitter": "𝕏 Twitter",
+    "copyUrl": "📋 URL kopieren",
+    "copied": "✅ Kopiert!"
   }
 }

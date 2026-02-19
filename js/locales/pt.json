@@ -6,7 +6,9 @@
   "app": {
     "description": "Cronômetro de Desintoxicação Digital - Reduza o uso de smartphone e melhore o foco",
     "loading": "Loading...",
-    "title": "Cronômetro de Desintoxicação Digital"
+    "title": "Cronômetro de Desintoxicação Digital",
+    "socialProof": "🔥 50.000+ usuários praticando",
+    "heroBadge": "⏱️ Aumente o foco"
   },
   "complete": {
     "failed": {
@@ -124,5 +126,13 @@
       "Expire lentamente...",
       "Inspire novamente..."
     ]
+  },
+  "accessibility": {
+    "skipMain": "Ir para o conteúdo principal"
+  },
+  "share": {
+    "twitter": "𝕏 Twitter",
+    "copyUrl": "📋 Copiar URL",
+    "copied": "✅ Copiado!"
   }
 }

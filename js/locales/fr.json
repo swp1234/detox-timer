@@ -6,7 +6,9 @@
   "app": {
     "description": "Minuteur de Détoxification Numérique - Réduis l'utilisation du smartphone et améliore la concentration",
     "loading": "Loading...",
-    "title": "Minuteur de Détoxification Numérique"
+    "title": "Minuteur de Détoxification Numérique",
+    "socialProof": "🔥 50 000+ utilisateurs pratiquent",
+    "heroBadge": "⏱️ Améliorer la concentration"
   },
   "complete": {
     "failed": {
@@ -124,5 +126,13 @@
       "Expire lentement...",
       "Inspire à nouveau..."
     ]
+  },
+  "accessibility": {
+    "skipMain": "Aller au contenu principal"
+  },
+  "share": {
+    "twitter": "𝕏 Twitter",
+    "copyUrl": "📋 Copier l'URL",
+    "copied": "✅ Copié !"
   }
 }

@@ -6,7 +6,9 @@
   "app": {
     "description": "Dijital Detoks Sayacı - Akıllı telefon kullanımını azalt ve odaklanmayı artır",
     "loading": "Loading...",
-    "title": "Dijital Detoks Sayacı"
+    "title": "Dijital Detoks Sayacı",
+    "socialProof": "🔥 50.000+ kullanıcı uyguluyor",
+    "heroBadge": "⏱️ Odaklanmayı Artır"
   },
   "complete": {
     "failed": {
@@ -124,5 +126,13 @@
       "Yavaşça nefes ver...",
       "Tekrar nefes al..."
     ]
+  },
+  "accessibility": {
+    "skipMain": "Ana içeriğe geç"
+  },
+  "share": {
+    "twitter": "𝕏 Twitter",
+    "copyUrl": "📋 URL Kopyala",
+    "copied": "✅ Kopyalandı!"
   }
 }

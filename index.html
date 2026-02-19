@@ -132,7 +132,7 @@
         <header>
             <h1 data-i18n="header.title"><span aria-label="Meditation icon">🧘</span> 디지털 디톡스</h1>
             <p class="subtitle" data-i18n="header.subtitle">스마트폰에서 잠시 벗어나세요</p>
-            <div class="social-proof-badge" style="margin-top: 12px; display: inline-block; background: rgba(0, 184, 148, 0.15); border: 1px solid rgba(0, 184, 148, 0.3); color: #55efc4; padding: 6px 14px; border-radius: 20px; font-size: 0.8rem; font-weight: 600;"><span aria-label="Fire icon">🔥</span> 50,000+ 사용자가 실천중</div>
+            <div class="social-proof-badge" style="margin-top: 12px; display: inline-block; background: rgba(0, 184, 148, 0.15); border: 1px solid rgba(0, 184, 148, 0.3); color: #55efc4; padding: 6px 14px; border-radius: 20px; font-size: 0.8rem; font-weight: 600;" data-i18n="app.socialProof"><span aria-label="Fire icon">🔥</span> 50,000+ 사용자가 실천중</div>
         </header>
 
         <main id="main-content">
@@ -140,7 +140,7 @@
             <section id="setup-screen" class="screen active">
                 <!-- 히어로 영역 -->
                 <div class="hero-section">
-                    <div class="hero-badge"><span aria-label="Timer icon">⏱️</span> 집중력 향상</div>
+                    <div class="hero-badge" data-i18n="app.heroBadge"><span aria-label="Timer icon">⏱️</span> 집중력 향상</div>
                     <h2 data-i18n="hero.title">스마트폰 없이도 충분해요</h2>
                     <p class="hero-subtitle" data-i18n="hero.subtitle">짧은 시간이라도 매일의 실천이 변화를 만듭니다</p>
                 </div>
@@ -285,17 +285,17 @@
 
                 <!-- Social Share Buttons -->
                 <div class="share-section" id="share-section">
-                    <button class="share-btn share-twitter" id="shareTwitterBtn" aria-label="Share on Twitter">
+                    <button class="share-btn share-twitter" id="shareTwitterBtn" aria-label="Share on Twitter" data-i18n="share.twitter">
                         <span>𝕏</span> Twitter
                     </button>
-                    <button class="share-btn share-url" id="shareUrlBtn" aria-label="Copy URL">
+                    <button class="share-btn share-url" id="shareUrlBtn" aria-label="Copy URL" data-i18n="share.copyUrl">
                         📋 Copy URL
                     </button>
                 </div>
 
                 <!-- Related Apps -->
                 <section class="related-apps" style="margin:24px 0;padding:20px;background:rgba(255,255,255,0.05);border-radius:16px;border:1px solid rgba(255,255,255,0.1);">
-                  <h3 style="font-size:16px;font-weight:700;margin-bottom:14px;color:#aaa;">🌿 관련 도구</h3>
+                  <h3 style="font-size:16px;font-weight:700;margin-bottom:14px;color:#aaa;" data-i18n="recommendations.title">🌿 관련 도구</h3>
                   <div style="display:flex;gap:10px;flex-wrap:wrap;">
                     <a href="/todo-list/" style="display:inline-flex;align-items:center;gap:6px;padding:8px 14px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:10px;text-decoration:none;color:inherit;font-size:13px;font-weight:600;">✅ Todo List</a>
                     <a href="/routine-planner/" style="display:inline-flex;align-items:center;gap:6px;padding:8px 14px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:10px;text-decoration:none;color:inherit;font-size:13px;font-weight:600;">🌅 Routine Planner</a>
@@ -341,7 +341,7 @@
     </style>
     <script>
         document.getElementById('shareTwitterBtn')?.addEventListener('click',function(){var t=document.title+' '+window.location.href;window.open('https://twitter.com/intent/tweet?text='+encodeURIComponent(t),'_blank');if(typeof gtag!=='undefined')gtag('event','share',{method:'twitter'})});
-        document.getElementById('shareUrlBtn')?.addEventListener('click',function(){var b=this;navigator.clipboard.writeText(window.location.href).then(function(){b.textContent='✅ Copied!';setTimeout(function(){b.innerHTML='📋 Copy URL'},2000)});if(typeof gtag!=='undefined')gtag('event','share',{method:'url_copy'})});
+        document.getElementById('shareUrlBtn')?.addEventListener('click',function(){var b=this;navigator.clipboard.writeText(window.location.href).then(function(){b.textContent=(window.i18n&&window.i18n.t('share.copied')!=='share.copied')?window.i18n.t('share.copied'):'✅ Copied!';setTimeout(function(){b.textContent=(window.i18n&&window.i18n.t('share.copyUrl')!=='share.copyUrl')?window.i18n.t('share.copyUrl'):'📋 Copy URL'},2000)});if(typeof gtag!=='undefined')gtag('event','share',{method:'url_copy'})});
     </script>
     <script src="/portal/js/cross-promo.js" defer></script>
 </body>

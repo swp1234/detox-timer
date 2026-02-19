@@ -6,7 +6,9 @@
   "app": {
     "description": "スマートフォンの使用を減らし、集中力を高めてください。",
     "loading": "Loading...",
-    "title": "デジタルデトックスタイマー"
+    "title": "デジタルデトックスタイマー",
+    "socialProof": "🔥 50,000人以上が実践中",
+    "heroBadge": "⏱️ 集中力アップ"
   },
   "complete": {
     "failed": {
@@ -124,5 +126,13 @@
       "ゆっくり息を吐いて...",
       "もう一度吸ってください..."
     ]
+  },
+  "accessibility": {
+    "skipMain": "メインコンテンツへ"
+  },
+  "share": {
+    "twitter": "𝕏 Twitter",
+    "copyUrl": "📋 URLをコピー",
+    "copied": "✅ コピーしました！"
   }
 }
