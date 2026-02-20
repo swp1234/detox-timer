@@ -1798,3 +1798,37 @@ input[type="submit"],
     outline: 3px solid #00b894;
     outline-offset: 4px;
 }
+
+/* Light mode - recommendations & footer */
+[data-theme="light"] .rec-card {
+    background: rgba(0,0,0,0.03);
+    border-color: rgba(0,0,0,0.08);
+}
+
+[data-theme="light"] .rec-card:hover {
+    background: rgba(0,0,0,0.06);
+}
+
+[data-theme="light"] .rec-title {
+    color: rgba(26,26,46,0.5);
+}
+
+[data-theme="light"] .rec-name {
+    color: #1a1a2e;
+}
+
+[data-theme="light"] .rec-desc {
+    color: #555;
+}
+
+[data-theme="light"] .back-link {
+    color: rgba(26,26,46,0.4);
+}
+
+[data-theme="light"] .back-link:hover {
+    color: rgba(26,26,46,0.7);
+}
+
+[data-theme="light"] .loader-text {
+    color: #333;
+}
