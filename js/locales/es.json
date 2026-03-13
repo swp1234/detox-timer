@@ -134,5 +134,12 @@
     "twitter": "𝕏 Twitter",
     "copyUrl": "📋 Copiar URL",
     "copied": "✅ ¡Copiado!"
+  },
+  "related": {
+    "title": "Explora más",
+    "pomodoroTimer": "Temporizador Pomodoro",
+    "whiteNoise": "Ruido blanco",
+    "affirmation": "Afirmaciones",
+    "stressCheck": "Test de estrés"
   }
 }

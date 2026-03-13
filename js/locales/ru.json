@@ -134,5 +134,12 @@
     "twitter": "𝕏 Twitter",
     "copyUrl": "📋 Копировать URL",
     "copied": "✅ Скопировано!"
+  },
+  "related": {
+    "title": "Ещё интересное",
+    "pomodoroTimer": "Таймер Помодоро",
+    "whiteNoise": "Белый шум",
+    "affirmation": "Аффирмации",
+    "stressCheck": "Тест на стресс"
   }
 }

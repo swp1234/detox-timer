@@ -134,5 +134,12 @@
     "twitter": "𝕏 Twitter",
     "copyUrl": "📋 URL 복사",
     "copied": "✅ 복사됨!"
+  },
+  "related": {
+    "title": "더 많은 콘텐츠",
+    "pomodoroTimer": "뽀모도로 타이머",
+    "whiteNoise": "백색소음",
+    "affirmation": "긍정 확언",
+    "stressCheck": "스트레스 체크"
   }
 }

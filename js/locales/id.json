@@ -134,5 +134,12 @@
     "twitter": "𝕏 Twitter",
     "copyUrl": "📋 Salin URL",
     "copied": "✅ Tersalin!"
+  },
+  "related": {
+    "title": "Jelajahi lainnya",
+    "pomodoroTimer": "Timer Pomodoro",
+    "whiteNoise": "White noise",
+    "affirmation": "Afirmasi",
+    "stressCheck": "Cek stres"
   }
 }

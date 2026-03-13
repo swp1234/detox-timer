@@ -134,5 +134,12 @@
     "twitter": "𝕏 Twitter",
     "copyUrl": "📋 URL Kopyala",
     "copied": "✅ Kopyalandı!"
+  },
+  "related": {
+    "title": "Daha fazla keşfet",
+    "pomodoroTimer": "Pomodoro zamanlayıcı",
+    "whiteNoise": "Beyaz gürültü",
+    "affirmation": "Olumlamalar",
+    "stressCheck": "Stres testi"
   }
 }

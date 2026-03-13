@@ -134,5 +134,12 @@
     "twitter": "𝕏 Twitter",
     "copyUrl": "📋 URLをコピー",
     "copied": "✅ コピーしました！"
+  },
+  "related": {
+    "title": "もっと楽しむ",
+    "pomodoroTimer": "ポモドーロタイマー",
+    "whiteNoise": "ホワイトノイズ",
+    "affirmation": "アファメーション",
+    "stressCheck": "ストレスチェック"
   }
 }

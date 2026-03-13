@@ -134,5 +134,12 @@
     "twitter": "𝕏 Twitter",
     "copyUrl": "📋 URL कॉपी करें",
     "copied": "✅ कॉपी किया गया!"
+  },
+  "related": {
+    "title": "और खोजें",
+    "pomodoroTimer": "पोमोडोरो टाइमर",
+    "whiteNoise": "व्हाइट नॉइज़",
+    "affirmation": "सकारात्मक पुष्टि",
+    "stressCheck": "स्ट्रेस चेक"
   }
 }

@@ -134,5 +134,12 @@
     "twitter": "𝕏 Twitter",
     "copyUrl": "📋 复制链接",
     "copied": "✅ 已复制！"
+  },
+  "related": {
+    "title": "探索更多",
+    "pomodoroTimer": "番茄钟",
+    "whiteNoise": "白噪音",
+    "affirmation": "正念肯定",
+    "stressCheck": "压力检测"
   }
 }
