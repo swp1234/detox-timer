@@ -5,16 +5,23 @@ class I18n {
         this.supportedLanguages = ['ko', 'en', 'ja', 'es', 'pt', 'zh', 'id', 'tr', 'de', 'fr', 'hi', 'ru'];
         this.translations = {};
         this.currentLang = this.detectLanguage();
+        document.documentElement.lang = this.currentLang;
     }
 
     detectLanguage() {
-        const browserLang = navigator.language || navigator.userLanguage;
-        const langCode = browserLang.split('-')[0];
+        try {
+            const params = new URLSearchParams(window.location.search || '');
+            const urlLang = params.get('lang');
+            if (urlLang && this.supportedLanguages.includes(urlLang)) return urlLang;
+        } catch (error) {}
 
         const savedLang = localStorage.getItem('app_language');
         if (savedLang && this.supportedLanguages.includes(savedLang)) {
             return savedLang;
         }
+
+        const browserLang = navigator.language || navigator.userLanguage || 'en';
+        const langCode = browserLang.split('-')[0];
 
         if (this.supportedLanguages.includes(langCode)) {
             return langCode;

@@ -197,7 +197,7 @@ class DetoxTimer {
         document.getElementById('share-btn').addEventListener('click', () => this.shareResult());
         
         // 광고 닫기 버튼
-        document.getElementById('close-ad-btn').addEventListener('click', () => this.closeInterstitialAd());
+        document.getElementById('close-ad-btn')?.addEventListener('click', () => this.closeInterstitialAd());
 
         // 히스토리 보기 버튼
         const historyBtn = document.getElementById('view-history-btn');
