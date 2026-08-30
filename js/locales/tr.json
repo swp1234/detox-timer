@@ -7,7 +7,6 @@
     "description": "Dijital Detoks Sayacı - Akıllı telefon kullanımını azalt ve odaklanmayı artır",
     "loading": "Loading...",
     "title": "Dijital Detoks Sayacı",
-    "socialProof": "🔥 50.000+ kullanıcı uyguluyor",
     "heroBadge": "⏱️ Odaklanmayı Artır"
   },
   "complete": {
@@ -16,7 +15,6 @@
       "message": "Sorun yok. Tekrar dene!",
       "title": "Tam olmadı"
     },
-    "premiumBtn": "🧠 AI Derin Analizi",
     "restartBtn": "🔄 Yeniden Başlat",
     "result": {
       "streak": "Seri",
@@ -54,9 +52,6 @@
   },
   "language": {
     "select": "Dil Seç"
-  },
-  "premium": {
-    "title": "🧠 AI Derin Analizi"
   },
   "recommendations": {
     "title": "Bunları da Dene"

@@ -7,7 +7,6 @@
     "description": "Cronômetro de Desintoxicação Digital - Reduza o uso de smartphone e melhore o foco",
     "loading": "Loading...",
     "title": "Cronômetro de Desintoxicação Digital",
-    "socialProof": "🔥 50.000+ usuários praticando",
     "heroBadge": "⏱️ Aumente o foco"
   },
   "complete": {
@@ -16,7 +15,6 @@
       "message": "Tudo bem. Tente novamente!",
       "title": "Quase"
     },
-    "premiumBtn": "🧠 Análise Profunda de IA",
     "restartBtn": "🔄 Reiniciar",
     "result": {
       "streak": "Sequência",
@@ -54,9 +52,6 @@
   },
   "language": {
     "select": "Selecionar Idioma"
-  },
-  "premium": {
-    "title": "🧠 Análise Profunda de IA"
   },
   "recommendations": {
     "title": "Experimente Também"

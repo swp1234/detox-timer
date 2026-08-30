@@ -7,7 +7,6 @@
     "description": "Digital Detox Timer - Reduziere die Smartphone-Nutzung und verbessere die Konzentration",
     "loading": "Loading...",
     "title": "Digital Detox Timer",
-    "socialProof": "🔥 50.000+ Nutzer praktizieren",
     "heroBadge": "⏱️ Fokus steigern"
   },
   "complete": {
@@ -16,7 +15,6 @@
       "message": "Das ist okay. Versuche es noch mal!",
       "title": "Nicht ganz"
     },
-    "premiumBtn": "🧠 KI-Tiefenanalyse",
     "restartBtn": "🔄 Neu starten",
     "result": {
       "streak": "Serie",
@@ -54,9 +52,6 @@
   },
   "language": {
     "select": "Sprache auswählen"
-  },
-  "premium": {
-    "title": "🧠 KI-Tiefenanalyse"
   },
   "recommendations": {
     "title": "Probiere auch diese"

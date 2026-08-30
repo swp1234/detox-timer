@@ -1,5 +1,5 @@
 // 디지털 디톡스 타이머 - Service Worker
-const CACHE_NAME = 'detox-timer-v1';
+const CACHE_NAME = 'detox-timer-v2';
 const urlsToCache = [
     './',
     './index.html',
@@ -34,13 +34,15 @@ self.addEventListener('install', (event) => {
 
 // 요청 시 캐시 우선
 self.addEventListener('fetch', (event) => {
+    const requestUrl = new URL(event.request.url);
+    if (event.request.method !== 'GET' || requestUrl.origin !== self.location.origin) return;
     event.respondWith(
         caches.match(event.request)
             .then((response) => {
                 if (response) {
                     // Cache hit - return cached version, but also fetch update
                     fetch(event.request).then(fetchResponse => {
-                        if (fetchResponse && fetchResponse.status === 200) {
+                        if (fetchResponse && fetchResponse.ok) {
                             caches.open(CACHE_NAME).then(cache => {
                                 cache.put(event.request, fetchResponse);
                             });

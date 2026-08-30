@@ -4,11 +4,10 @@
     "closeBtn": "Cerrar Publicidad"
   },
   "app": {
-    "description": "Temporizador de Desintoxicación Digital - Reduce el uso del teléfono inteligente y mejora el enfoque",
+    "description": "Temporizador para una pausa de pantalla con sesiones guardadas en este navegador",
     "loading": "Loading...",
     "title": "Temporizador de Desintoxicación Digital",
-    "socialProof": "🔥 50,000+ usuarios practicando",
-    "heroBadge": "⏱️ Mejora tu concentración"
+    "heroBadge": "⏱️ Temporizador de pausa"
   },
   "complete": {
     "failed": {
@@ -16,7 +15,6 @@
       "message": "¡Está bien! ¡Intenta de nuevo!",
       "title": "No del todo"
     },
-    "premiumBtn": "🧠 Análisis Profundo de IA",
     "restartBtn": "🔄 Reiniciar",
     "result": {
       "streak": "Racha",
@@ -34,8 +32,8 @@
     "title": "🧘 Desintoxicación Digital"
   },
   "hero": {
-    "subtitle": "Small daily actions create big changes",
-    "title": "You're enough without your phone"
+    "subtitle": "Elige una duración que encaje con este momento",
+    "title": "Haz una pausa de la pantalla"
   },
   "history": {
     "badgeNames": {
@@ -54,9 +52,6 @@
   },
   "language": {
     "select": "Seleccionar Idioma"
-  },
-  "premium": {
-    "title": "🧠 Análisis Profundo de IA"
   },
   "recommendations": {
     "title": "Prueba Estas También"

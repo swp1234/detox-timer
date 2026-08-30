@@ -7,7 +7,6 @@
     "description": "Digital Detox Timer - Reduce smartphone usage and improve focus",
     "loading": "Loading...",
     "title": "Digital Detox Timer",
-    "socialProof": "🔥 50,000+ users practicing",
     "heroBadge": "⏱️ Focus Boost"
   },
   "complete": {
@@ -16,7 +15,6 @@
       "message": "That's okay. Try again!",
       "title": "Not quite"
     },
-    "premiumBtn": "🧠 AI Deep Analysis",
     "restartBtn": "🔄 Restart",
     "result": {
       "streak": "Streak",
@@ -54,9 +52,6 @@
   },
   "language": {
     "select": "Select Language"
-  },
-  "premium": {
-    "title": "🧠 AI Deep Analysis"
   },
   "recommendations": {
     "title": "Try These Too"

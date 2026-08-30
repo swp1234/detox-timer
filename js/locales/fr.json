@@ -7,7 +7,6 @@
     "description": "Minuteur de Détoxification Numérique - Réduis l'utilisation du smartphone et améliore la concentration",
     "loading": "Loading...",
     "title": "Minuteur de Détoxification Numérique",
-    "socialProof": "🔥 50 000+ utilisateurs pratiquent",
     "heroBadge": "⏱️ Améliorer la concentration"
   },
   "complete": {
@@ -16,7 +15,6 @@
       "message": "C'est d'accord. Essaie à nouveau!",
       "title": "Pas tout à fait"
     },
-    "premiumBtn": "🧠 Analyse Profonde par IA",
     "restartBtn": "🔄 Recommencer",
     "result": {
       "streak": "Série",
@@ -54,9 +52,6 @@
   },
   "language": {
     "select": "Sélectionner la Langue"
-  },
-  "premium": {
-    "title": "🧠 Analyse Profonde par IA"
   },
   "recommendations": {
     "title": "Essaie aussi"

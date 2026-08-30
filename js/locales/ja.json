@@ -7,7 +7,6 @@
     "description": "スマートフォンの使用を減らし、集中力を高めてください。",
     "loading": "Loading...",
     "title": "デジタルデトックスタイマー",
-    "socialProof": "🔥 50,000人以上が実践中",
     "heroBadge": "⏱️ 集中力アップ"
   },
   "complete": {
@@ -16,7 +15,6 @@
       "message": "大丈夫です。もう一度試してください！",
       "title": "あともう少し"
     },
-    "premiumBtn": "🧠 AI詳細分析",
     "restartBtn": "🔄 リスタート",
     "result": {
       "streak": "連続記録",
@@ -54,9 +52,6 @@
   },
   "language": {
     "select": "言語を選択"
-  },
-  "premium": {
-    "title": "🧠 AI詳細分析"
   },
   "recommendations": {
     "title": "これも試してみてください"

@@ -7,7 +7,6 @@
     "description": "Timer Detoks Digital - Kurangi penggunaan smartphone dan tingkatkan fokus",
     "loading": "Loading...",
     "title": "Timer Detoks Digital",
-    "socialProof": "🔥 50.000+ pengguna berlatih",
     "heroBadge": "⏱️ Tingkatkan Fokus"
   },
   "complete": {
@@ -16,7 +15,6 @@
       "message": "Tidak apa-apa. Coba lagi!",
       "title": "Hampir saja"
     },
-    "premiumBtn": "🧠 Analisis Mendalam AI",
     "restartBtn": "🔄 Mulai Lagi",
     "result": {
       "streak": "Hari Berturut-turut",
@@ -54,9 +52,6 @@
   },
   "language": {
     "select": "Pilih Bahasa"
-  },
-  "premium": {
-    "title": "🧠 Analisis Mendalam AI"
   },
   "recommendations": {
     "title": "Coba Juga"
