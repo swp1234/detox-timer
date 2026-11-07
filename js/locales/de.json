@@ -136,5 +136,32 @@
     "whiteNoise": "Weißes Rauschen",
     "affirmation": "Affirmationen",
     "stressCheck": "Stresstest"
+  },
+  "about": {
+    "toggle": "Über Digital Detox & die Neurobiologie der Konzentration",
+    "heading1": "Neurobiologie der Bildschirmzeit & Aufmerksamkeitserschöpfung",
+    "text1": "Moderne Benutzeroberflächen nutzen intermittierende Belohnungsreize, die den präfrontalen Kortex dauerhaft beanspruchen. Regelmäßige Bildschirmpausen ermöglichen dem Gehirn den Übergang in das Default Mode Network (DMN), was die kognitiven Ressourcen regeneriert.",
+    "boundary": "Wohlbefinden-Hinweis: Dieser Timer dient der Unterstützung gesunder Alltagsroutinen und ist keine klinische Therapie bei pathologischer Mediensucht.",
+    "heading2": "Vier Säulen erholsamer Bildschirmruhe",
+    "pPillar1": "Ultradiane Rhythmusabstimmung:",
+    "dPillar1": "Pausen im Einklang mit dem natürlichen 90-Minuten-Aufmerksamkeitszyklus verhindern geistige Erschöpfung.",
+    "pPillar2": "20-20-20 Sehregeneration:",
+    "dPillar2": "Der Blick in die Ferne entlastet den Ziliarmuskel und beugt digitaler Augenmüdigkeit vor.",
+    "pPillar3": "Vagusnerv-Stimulation:",
+    "dPillar3": "Tiefes, gleichmäßiges Atmen senkt den Puls und schaltet das vegetative Nervensystem auf Erholung.",
+    "pPillar4": "Vollständige lokale Datenspeicherung:",
+    "dPillar4": "Sämtliche Statistiken und Timer laufen zu 100 % in deinem lokalen Browser ohne externes Tracking.",
+    "faqTitle": "Häufig gestellte Fragen (FAQ)",
+    "faq1Q": "Wie fördert Digital Detox die Dopamin-Balance?",
+    "faq1A": "Der Verzicht auf ständige Push-Benachrichtigungen beruhigt das Belohnungssystem und stellt die exekutive Kontrolle wieder her.",
+    "faq2Q": "Welche Dauer ist für Bildschirmpausen ideal?",
+    "faq2A": "5 bis 15 Minuten erfrischen Kurzzeitgedächtnis und Augen; 30 bis 60 Minuten ermöglichen eine tiefgehende mentale Regeneration.",
+    "faq3Q": "Werden meine Timer-Daten an Server gesendet?",
+    "faq3A": "Nein. Alle Daten verbleiben ausschließlich im lokalen Speicher (localStorage) deines Geräts.",
+    "reviewDate": "Redaktionelle Prüfung: November 2026",
+    "reviewTeam": "DopaBrain Digital Wellbeing"
+  },
+  "nav": {
+    "back": "DopaBrain Startseite"
   }
 }

@@ -136,5 +136,32 @@
     "whiteNoise": "White Noise",
     "affirmation": "Affirmation",
     "stressCheck": "Stress Check"
+  },
+  "about": {
+    "toggle": "About Digital Detox & Neurobiology of Focus",
+    "heading1": "Neurobiology of Screen Time & Attention Fatigue",
+    "text1": "Modern digital interfaces leverage variable reward loops, conditioning the brain to expect unpredictable stimulation. This constant micro-arousal overworks the prefrontal cortex and depletes directed attention capacity (Kaplan & Kaplan, Attention Restoration Theory). Stepping away from screens allows cognitive neural circuits to enter the Default Mode Network (DMN), facilitating creative consolidation and mental reset.",
+    "boundary": "Mindful Wellbeing Boundary: This timer and breathing guide are designed for educational habits and productivity wellness. They are not a clinical intervention for compulsive technology addiction disorders.",
+    "heading2": "Four Pillars of Restorative Detox",
+    "pPillar1": "Ultradian Rhythm Alignment:",
+    "dPillar1": "Aligning focus intervals with natural 90-to-120 minute biological alertness cycles prevents chronic mental burnout.",
+    "pPillar2": "20-20-20 Visual Reset:",
+    "dPillar2": "Gazing at an object 20 feet away relieves ciliary muscle spasms and counters digital eye strain.",
+    "pPillar3": "Vagal Nerve Stimulation:",
+    "dPillar3": "Deep paced diaphragmatic breathing shifts autonomic tone from sympathetic arousal to parasympathetic restoration.",
+    "pPillar4": "Zero Telemetry Privacy:",
+    "dPillar4": "Session logs, streaks, and timers exist solely on your local device with zero cloud tracking.",
+    "faqTitle": "Frequently Asked Questions",
+    "faq1Q": "How does a digital detox break restore focus and dopamine balance?",
+    "faq1A": "Frequent smartphone notifications trigger intermittent dopamine spikes that fatigue prefrontal executive control. Taking 5-to-30 minute screen-free breaks reduces mental clutter, lowers cortisol, and replenishes directed attention capacity.",
+    "faq2Q": "What is the recommended screen break duration?",
+    "faq2A": "Short 5-to-15 minute micro-breaks alleviate eye strain and refresh working memory. Longer 30-to-60 minute intervals align with biological ultradian cycles, providing deep restorative breaks that support sustainable focus and flow states.",
+    "faq3Q": "Are my detox session times or records stored externally?",
+    "faq3A": "Never. All timer countdowns, streaks, and session analytics are processed 100% locally within your device browser via localStorage. No personal logs or telemetry are transmitted to external servers.",
+    "reviewDate": "Editorial Review: November 2026",
+    "reviewTeam": "DopaBrain Digital Wellbeing Series"
+  },
+  "nav": {
+    "back": "DopaBrain Home"
   }
 }

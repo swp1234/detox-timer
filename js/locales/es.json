@@ -136,5 +136,32 @@
     "whiteNoise": "Ruido blanco",
     "affirmation": "Afirmaciones",
     "stressCheck": "Test de estrés"
+  },
+  "about": {
+    "toggle": "Sobre la Desconexión Digital y la Neurobiología del Enfoque",
+    "heading1": "Neurobiología del Tiempo en Pantalla y Fatiga Atencional",
+    "text1": "Los dispositivos digitales aprovechan programas de recompensa intermitente, sobrecargando la corteza prefrontal y agotando la atención dirigida (Teoría de Restauración de la Atención). Desconectarse permite que el cerebro active la Red Neuronal por Defecto (DMN), restaurando la claridad mental y la creatividad.",
+    "boundary": "Límite de Bienestar: Este temporizador y guía de respiración son recursos educativos de bienestar y productividad. No sustituyen el tratamiento médico ni psicológico de adicciones tecnológicas.",
+    "heading2": "Cuatro Pilares del Detox Restaurativo",
+    "pPillar1": "Sincronización con Ritmos Ultradianos:",
+    "dPillar1": "Descansar en intervalos biológicos de 90 a 120 minutos previene el agotamiento cognitivo crónico.",
+    "pPillar2": "Regla 20-20-20 para la Salud Visual:",
+    "dPillar2": "Mirar a la distancia relaja el músculo ciliar y previene la fatiga ocular digital.",
+    "pPillar3": "Estimulación del Nervio Vago:",
+    "dPillar3": "La respiración diafragmática pausada activa el sistema parasimpático, calmando el estrés.",
+    "pPillar4": "Privacidad Local Sin Telemetría:",
+    "dPillar4": "Tus tiempos y rachas se almacenan estrictamente en tu navegador sin rastreo remoto.",
+    "faqTitle": "Preguntas Frecuentes (FAQ)",
+    "faq1Q": "¿Cómo restaura la desconexión digital los niveles de dopamina?",
+    "faq1A": "Pausar las notificaciones constantes alivia los receptores dopaminérgicos sobreestimulados y devuelve el control a la corteza prefrontal.",
+    "faq2Q": "¿Cuál es la duración ideal para una pausa digital?",
+    "faq2A": "Micropausas de 5 a 15 minutos alivian la fatiga ocular; pausas de 30 a 60 minutos proporcionan un reinicio cognitivo profundo.",
+    "faq3Q": "¿Se envían mis tiempos o estadísticas a servidores externos?",
+    "faq3A": "Nunca. Todos los cálculos y registros se gestionan al 100% en el almacenamiento local de tu navegador.",
+    "reviewDate": "Revisión Editorial: Noviembre 2026",
+    "reviewTeam": "DopaBrain Bienestar Digital"
+  },
+  "nav": {
+    "back": "Inicio de DopaBrain"
   }
 }

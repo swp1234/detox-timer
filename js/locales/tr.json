@@ -136,5 +136,32 @@
     "whiteNoise": "Beyaz gürültü",
     "affirmation": "Olumlamalar",
     "stressCheck": "Stres testi"
+  },
+  "about": {
+    "toggle": "Dijital Detoks ve Odaklanmanın Nörobiyolojisi Hakkında",
+    "heading1": "Ekran Süresi ve Dikkat Yorgunluğunun Nörobiyolojisi",
+    "text1": "Akıllı telefon arayüzleri, prefrontal korteksi sürekli uyararak dikkat kapasitesini tüketen aralıklı ödül döngülerini kullanır. Ekrandan uzaklaşmak, beynin Varsayılan Mod Şebekesini (DMN) etkinleştirerek zihinsel yenilenme sağlar.",
+    "boundary": "Farkındalık Sınırı: Bu zamanlayıcı sağlıklı rutinler oluşturmak içindir; klinik teknoloji bağımlılığı tedavisinin yerine geçmez.",
+    "heading2": "Yenileyici Detoksun Dört Temel Taşı",
+    "pPillar1": "Ultradiyen Ritim Uyumu:",
+    "dPillar1": "90-120 dakikalık biyolojik dikkat döngülerine uygun molalar kronik tükenmişliği önler.",
+    "pPillar2": "20-20-20 Görsel Dinlenme Kuralı:",
+    "dPillar2": "Uzağa bakmak göz kaslarını gevşetir ve ekran kaynaklı göz yorgunluğunu hafifletir.",
+    "pPillar3": "Vagus Siniri Uyarımı ve Nefes:",
+    "dPillar3": "Düzenli diyafram nefesi parasempatik sistemi devreye sokarak stres seviyesini düşürür.",
+    "pPillar4": "Sıfır Telemetri Yerel Gizlilik:",
+    "dPillar4": "Sayaç geçmişi ve istatistikler yalnızca tarayıcınızın yerel hafızasında saklanır.",
+    "faqTitle": "Sıkça Sorulan Sorular (SSS)",
+    "faq1Q": "Dijital detoks odaklanmayı ve dopamin dengesini nasıl sağlar?",
+    "faq1A": "Sürekli bildirim akışını kesmek dopamin reseptörlerini dinlendirir ve yürütücü kontrol işlevlerini yeniler.",
+    "faq2Q": "Önerilen ekran molası süresi ne kadardır?",
+    "faq2A": "Göz sağlığı için 5-15 dakikalık mikro molalar, derin zihinsel dinlenme içinse 30-60 dakikalık aralar idealdir.",
+    "faq3Q": "Kullanım verilerim harici sunucularda saklanıyor mu?",
+    "faq3A": "Asla. Tüm veriler yalnızca cihazınızın tarayıcısında (%100 yerel) tutulur.",
+    "reviewDate": "Editöryal İnceleme: Kasım 2026",
+    "reviewTeam": "DopaBrain Dijital Sağlık Serisi"
+  },
+  "nav": {
+    "back": "DopaBrain Ana Sayfa"
   }
 }

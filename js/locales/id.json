@@ -136,5 +136,32 @@
     "whiteNoise": "White noise",
     "affirmation": "Afirmasi",
     "stressCheck": "Cek stres"
+  },
+  "about": {
+    "toggle": "Tentang Detoks Digital & Neurobiologi Fokus",
+    "heading1": "Neurobiologi Layar & Kelelahan Atensi",
+    "text1": "Antarmuka digital memanfaatkan sistem penguatan intermiten yang membebani korteks prefrontal. Menjauh sejenak dari layar memungkinkan jaringan Default Mode Network (DMN) otak beristirahat dan memulihkan energi mental.",
+    "boundary": "Batasan Kebugaran: Pengatur waktu ini dirancang untuk membangun kebiasaan produktif harian, bukan pengganti penanganan klinis kecanduan gawai.",
+    "heading2": "Empat Pilar Detoks Pemulihan",
+    "pPillar1": "Penyelarasan Ritme Ultradian:",
+    "dPillar1": "Menyesuaikan jeda istirahat dengan siklus biologis 90-120 menit mencegah kejenuhan mental.",
+    "pPillar2": "Aturan Visual 20-20-20:",
+    "dPillar2": "Memandang kejauhan merelaksasi otot mata dan mengurangi kelelahan akibat paparan layar.",
+    "pPillar3": "Stimulasi Saraf Vagus:",
+    "dPillar3": "Latihan pernapasan dalam menstimulasi sistem parasimpatis untuk meredakan ketegangan fisik.",
+    "pPillar4": "Privasi Tanpa Telemetri:",
+    "dPillar4": "Semua riwayat dan data pengatur waktu tersimpan aman di peramban perangkat Anda.",
+    "faqTitle": "Pertanyaan yang Sering Diajukan (FAQ)",
+    "faq1Q": "Bagaimana detoks digital mengembalikan fokus dan dopamin?",
+    "faq1A": "Menghentikan notifikasi terus-menerus mengistirahatkan reseptor dopamin dan memulihkan kapasitas atensi sadar.",
+    "faq2Q": "Berapa durasi jeda layar yang dianjurkan?",
+    "faq2A": "Jeda singkat 5-15 menit untuk kesegaran mata, dan sesi 30-60 menit untuk pemulihan kognitif mendalam.",
+    "faq3Q": "Apakah catatan sesi saya disimpan di server luar?",
+    "faq3A": "Tidak pernah. Seluruh data diproses secara lokal di browser perangkat Anda.",
+    "reviewDate": "Tinjauan Editorial: November 2026",
+    "reviewTeam": "Seri Kebugaran Digital DopaBrain"
+  },
+  "nav": {
+    "back": "Beranda DopaBrain"
   }
 }

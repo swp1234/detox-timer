@@ -136,5 +136,32 @@
     "whiteNoise": "Ruído branco",
     "affirmation": "Afirmações",
     "stressCheck": "Teste de estresse"
+  },
+  "about": {
+    "toggle": "Sobre Detox Digital e Neurobiologia do Foco",
+    "heading1": "Neurobiologia do Tempo de Tela e Fadiga de Atenção",
+    "text1": "Os dispositivos modernos utilizam loops de recompensa intermitente que sobrecarregam o córtex pré-frontal. Fazer intervalos sem telas ativa a Rede de Modo Padrão (DMN) do cérebro, facilitando a recuperação cognitiva e a clareza mental.",
+    "boundary": "Aviso de Bem-Estar: Este cronômetro é uma ferramenta educativa de produtividade e equilíbrio, não sendo um tratamento clínico para vícios digitais.",
+    "heading2": "Quatro Pilares do Detox Restaurativo",
+    "pPillar1": "Sincronização com Ritmos Ultradianos:",
+    "dPillar1": "Fazer pausas alinhadas aos ciclos biológicos de 90 a 120 minutos evita o esgotamento mental.",
+    "pPillar2": "Regra 20-20-20 de Alívio Ocular:",
+    "dPillar2": "Olhar para longe alivia a tensão nos músculos oculares e combate o cansaço visual.",
+    "pPillar3": "Estímulo do Nervo Vago:",
+    "dPillar3": "A respiração pausada ativa o sistema parassimpático, reduzindo o estresse e a ansiedade.",
+    "pPillar4": "Privacidade 100% Local:",
+    "dPillar4": "Suas contagens e estatísticas permanecem apenas no seu navegador sem envio para servidores.",
+    "faqTitle": "Perguntas Frecuentes (FAQ)",
+    "faq1Q": "Como o detox digital auxilia no equilíbrio da dopamina?",
+    "faq1A": "Suspender os alertas constantes descansa os circuitos de recompensa e restaura o foco executivo.",
+    "faq2Q": "Qual é o tempo de pausa recomendado?",
+    "faq2A": "Micropausas de 5 a 15 minutos aliviam os olhos; períodos de 30 a 60 minutos proporcionam profundo descanso mental.",
+    "faq3Q": "Meus dados de uso são compartilhados com servidores externos?",
+    "faq3A": "De forma alguma. Todos os registros ficam salvos unicamente no localStorage do seu navegador.",
+    "reviewDate": "Revisão Editorial: Novembro de 2026",
+    "reviewTeam": "DopaBrain Bem-Estar Digital"
+  },
+  "nav": {
+    "back": "Início DopaBrain"
   }
 }

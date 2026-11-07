@@ -136,5 +136,32 @@
     "whiteNoise": "Bruit blanc",
     "affirmation": "Affirmations",
     "stressCheck": "Test de stress"
+  },
+  "about": {
+    "toggle": "À propos de la Détox Numérique & Neurobiologie de la Concentration",
+    "heading1": "Neurobiologie du Temps d'Écran et Fatigue Attentionnelle",
+    "text1": "Les interfaces connectées exploitent des mécanismes de renforcement variable qui sursollicitent le cortex préfrontal. Prendre une pause loin des écrans permet au cerveau d'activer le réseau du mode par défaut (DMN), favorisant la consolidation cognitive et le repos mental.",
+    "boundary": "Limite de bien-être : Cet outil est conçu pour le bien-être et la productivité au quotidien. Il ne constitue pas un protocole médical pour les addictions sévères.",
+    "heading2": "Les Quatre Piliers d'une Détox Réparatrice",
+    "pPillar1": "Alignement sur les Rythmes Ultradiens :",
+    "dPillar1": "Structurer ses sessions selon les cycles naturels de 90 à 120 minutes évite l'épuisement mental.",
+    "pPillar2": "Règle Visuelle 20-20-20 :",
+    "dPillar2": "Regarder au loin détend les muscles oculaires et combat la fatigue visuelle numérique.",
+    "pPillar3": "Stimulation du Nerf Vague :",
+    "dPillar3": "La respiration guidée et profonde active le système parasympathique et régule le stress.",
+    "pPillar4": "Confidentialité Locale Garantie :",
+    "dPillar4": "Vos statistiques et sessions sont conservées uniquement sur votre appareil sans suivi distant.",
+    "faqTitle": "Foire Aux Questions (FAQ)",
+    "faq1Q": "En quoi la détox numérique rétablit-elle l'attention et la dopamine ?",
+    "faq1A": "Éloigner les notifications intempestives repose les récepteurs de dopamine et permet de récupérer une attention soutenue.",
+    "faq2Q": "Quelle est la durée recommandée pour une pause d'écran ?",
+    "faq2A": "Des micro-pauses de 5 à 15 minutes soulagent les yeux ; des pauses de 30 à 60 minutes restaurent l'énergie cognitive.",
+    "faq3Q": "Mes données d'utilisation sont-elles transmises à des serveurs ?",
+    "faq3A": "Jamais. Tout fonctionne à 100 % localement dans votre navigateur sans aucune télémétrie.",
+    "reviewDate": "Revue Éditoriale : Novembre 2026",
+    "reviewTeam": "DopaBrain Bien-être Numérique"
+  },
+  "nav": {
+    "back": "Accueil DopaBrain"
   }
 }
