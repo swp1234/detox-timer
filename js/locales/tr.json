@@ -128,7 +128,9 @@
   "share": {
     "twitter": "𝕏 Twitter",
     "copyUrl": "📋 URL Kopyala",
-    "copied": "✅ Kopyalandı!"
+    "copied": "✅ Kopyalandı!",
+    "saveCard": "Hikaye Kartını Kaydet",
+    "saved": "Hikaye kartı kaydedildi (1080×1920)!"
   },
   "related": {
     "title": "Daha fazla keşfet",
@@ -163,5 +165,15 @@
   },
   "nav": {
     "back": "DopaBrain Ana Sayfa"
+  },
+  "curated": {
+    "title": "Önerilen Dijital Detoks ve Odaklanma Kitapları",
+    "disclosure": "Satış ortaklığı bağlantıları",
+    "subtitle": "Ekran molalarınızı dikkat yenilenmesi ve zihinsel denge üzerine kanıta dayalı rehberlerle pekiştirin.",
+    "cta": "Kitabı İncele ->",
+    "newportTitle": "Dijital Minimalizm — Cal Newport",
+    "newportDesc": "Teknolojiyi bilinçli kullanmak ve derin odaklanmayı geri kazanmak için pratik ilkeler.",
+    "priceTitle": "Telefonla Nasıl Ayrılırsın? — Catherine Price",
+    "priceDesc": "Dikkat kapasitesini yenilemek için bilime dayalı 30 günlük adım adım uygulama planı."
   }
 }

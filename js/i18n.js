@@ -89,12 +89,18 @@ class I18n {
     updateUI() {
         document.querySelectorAll('[data-i18n]').forEach(element => {
             const key = element.getAttribute('data-i18n');
-            element.textContent = this.t(key);
+            const val = this.t(key);
+            if (val && val !== key) {
+                element.textContent = val;
+            }
         });
 
         document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
             const key = element.getAttribute('data-i18n-placeholder');
-            element.placeholder = this.t(key);
+            const val = this.t(key);
+            if (val && val !== key) {
+                element.placeholder = val;
+            }
         });
 
         document.title = this.t('app.title');
@@ -136,3 +142,4 @@ class I18n {
 }
 
 const i18n = new I18n();
+window.i18n = i18n;

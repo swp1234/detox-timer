@@ -41,6 +41,7 @@ class DetoxTimer {
             this.registerServiceWorker();
             this.checkAndAwardBadges();
             this.showRandomMotivation();
+            this.preserveLanguageLinks();
             this.track('detox_timer_view');
 
             // 모든 초기화 완료 후 로딩 화면 제거
@@ -101,9 +102,10 @@ class DetoxTimer {
             // hidden 클래스를 추가하여 CSS 전환 효과 적용
             loader.classList.add('hidden');
             // 전환 완료 후 완전히 제거
+            const delay = (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) ? 10 : 300;
             setTimeout(() => {
                 loader.style.display = 'none';
-            }, 300);
+            }, delay);
         }
     }
 
@@ -199,6 +201,10 @@ class DetoxTimer {
                 await i18n.setLanguage(lang);
                 // 언어 변경 후 메시지 배열도 리로드
                 this.loadI18nMessages();
+                this.preserveLanguageLinks();
+                if (document.getElementById('complete-screen')?.classList.contains('active')) {
+                    this.renderCuratedResources(this.lastSuccess);
+                }
                 langOptions.forEach(opt => opt.classList.remove('active'));
                 option.classList.add('active');
                 langMenu.classList.add('hidden');
@@ -231,6 +237,10 @@ class DetoxTimer {
         
         // 다시 시작 버튼
         document.getElementById('restart-btn').addEventListener('click', () => this.restart());
+
+        // 스토리 카드 저장
+        const saveBtn = document.getElementById('saveCardBtn');
+        if (saveBtn) saveBtn.addEventListener('click', () => this.saveStoryCard());
         
         // 테마 토글 버튼
         const themeToggle = document.getElementById('theme-toggle');
@@ -425,9 +435,212 @@ class DetoxTimer {
 
         resultTime.textContent = `${success ? this.selectedMinutes : minutes} ${minuteUnit}`;
         resultStreak.textContent = `${this.stats.streak} ${countUnit}`;
+        this.lastSuccess = Boolean(success);
+        this.renderCuratedResources(Boolean(success));
+        this.preserveLanguageLinks();
+    }
+
+    preserveLanguageLinks() {
+        try {
+            const lang = (typeof i18n !== 'undefined' && i18n.getCurrentLanguage()) || 'en';
+            document.querySelectorAll('.related-grid a').forEach(link => {
+                const baseHref = link.getAttribute('data-base-href') || link.getAttribute('href');
+                if (!baseHref || baseHref.startsWith('http') || baseHref.startsWith('#')) return;
+                const url = new URL(baseHref, window.location.origin);
+                url.searchParams.set('lang', lang);
+                if (!url.searchParams.has('source')) url.searchParams.set('source', 'detox_timer_result');
+                link.setAttribute('href', url.pathname + url.search);
+                if (!link.dataset.ctaBound) {
+                    link.dataset.ctaBound = 'true';
+                    link.addEventListener('click', () => {
+                        this.track('content_cta_click', {
+                            cta_surface: 'related_tools',
+                            destination: link.getAttribute('href'),
+                            source: 'detox_timer_result'
+                        });
+                    });
+                }
+            });
+        } catch (e) {}
+    }
+
+    getAmazonDomain(lang) {
+        const map = { ja: 'amazon.co.jp', de: 'amazon.de', fr: 'amazon.fr', es: 'amazon.es', hi: 'amazon.in' };
+        return map[lang] || 'amazon.com';
+    }
+
+    showDetoxToast(msg) {
+        let toast = document.getElementById('detoxToast');
+        if (!toast) {
+            toast = document.createElement('div');
+            toast.id = 'detoxToast';
+            toast.className = 'detox-toast';
+            toast.setAttribute('role', 'status');
+            toast.setAttribute('aria-live', 'polite');
+            document.body.appendChild(toast);
+        }
+        toast.textContent = msg;
+        toast.classList.add('show');
+        clearTimeout(toast._hideTimer);
+        toast._hideTimer = setTimeout(() => toast.classList.remove('show'), 2200);
+    }
+
+    renderCuratedResources(success) {
+        const container = document.getElementById('curated-resources-card');
+        if (!container) return;
+        const tr = (key, fb) => {
+            if (typeof i18n === 'undefined') return fb;
+            const val = i18n.t(key);
+            return val && val !== key ? val : fb;
+        };
+        const lang = (typeof i18n !== 'undefined' && i18n.getCurrentLanguage()) || 'en';
+        const domain = this.getAmazonDomain(lang);
+        const items = [
+            {
+                key: 'digitalMinimalism',
+                asin: '0525536515',
+                title: tr('curated.newportTitle', 'Digital Minimalism — Cal Newport'),
+                desc: tr('curated.newportDesc', 'Practical philosophy for intentional tech use and rebuilding deep, distraction-free focus.')
+            },
+            {
+                key: 'breakUpPhone',
+                asin: '039958112X',
+                title: tr('curated.priceTitle', 'How to Break Up with Your Phone — Catherine Price'),
+                desc: tr('curated.priceDesc', 'A step-by-step, science-backed 30-day plan to reset your attention and reclaim your calm.')
+            }
+        ];
+        container.innerHTML = `
+            <div class="curated-resources-header">
+                <h3 class="curated-resources-title">${tr('curated.title', 'Recommended Focus & Digital Wellbeing Books')}</h3>
+                <span class="curated-disclosure">${tr('curated.disclosure', 'Affiliate links')}</span>
+            </div>
+            <p class="curated-resources-subtitle">${tr('curated.subtitle', 'Build lasting focus habits with evidence-backed guides on attention restoration and screen boundaries.')}</p>
+            <div class="curated-list">
+                ${items.map(item => `
+                    <a class="curated-item" href="https://www.${domain}/dp/${item.asin}?tag=dopabrain-20" target="_blank" rel="noopener sponsored nofollow" data-resource-key="${item.key}">
+                        <div class="curated-item-top">
+                            <span class="curated-item-title">${item.title}</span>
+                            <span class="curated-item-cta">${tr('curated.cta', 'View Book ->')}</span>
+                        </div>
+                        <span class="curated-item-desc">${item.desc}</span>
+                    </a>
+                `).join('')}
+            </div>`;
+        container.style.display = 'block';
+        container.querySelectorAll('.curated-item').forEach(link => {
+            link.addEventListener('click', () => {
+                this.track('curated_resource_click', {
+                    app_name: 'detox-timer',
+                    resource_key: link.getAttribute('data-resource-key'),
+                    result_outcome: success ? 'completed' : 'stopped',
+                    cta_surface: 'curated_resources'
+                });
+                if (typeof gtag === 'function') {
+                    gtag('event', 'content_cta_click', {
+                        cta_type: 'curated_book',
+                        destination: link.getAttribute('href'),
+                        source: 'detox-timer'
+                    });
+                }
+            });
+        });
+    }
+
+    saveStoryCard() {
+        const canvas = document.getElementById('shareCanvas');
+        if (!canvas) return;
+        const tr = (key, fb) => {
+            if (typeof i18n === 'undefined') return fb;
+            const val = i18n.t(key);
+            return val && val !== key ? val : fb;
+        };
+        const lang = (typeof i18n !== 'undefined' && i18n.getCurrentLanguage()) || 'en';
+        canvas.width = 1080;
+        canvas.height = 1920;
+        const ctx = canvas.getContext('2d');
+
+        const grad = ctx.createLinearGradient(0, 0, 1080, 1920);
+        grad.addColorStop(0, '#071a16');
+        grad.addColorStop(0.5, '#0b2b24');
+        grad.addColorStop(1, '#0f2036');
+        ctx.fillStyle = grad;
+        ctx.fillRect(0, 0, 1080, 1920);
+
+        ctx.fillStyle = 'rgba(0, 184, 148, 0.16)';
+        ctx.beginPath();
+        ctx.arc(880, 260, 260, 0, Math.PI * 2);
+        ctx.fill();
+
+        ctx.fillStyle = 'rgba(255, 255, 255, 0.05)';
+        ctx.strokeStyle = 'rgba(0, 184, 148, 0.35)';
+        ctx.lineWidth = 3;
+        ctx.beginPath();
+        ctx.roundRect(72, 120, 936, 1680, 44);
+        ctx.fill();
+        ctx.stroke();
+
+        ctx.textAlign = 'center';
+        ctx.fillStyle = '#55efc4';
+        ctx.font = '700 32px Inter, sans-serif';
+        ctx.fillText('DOPABRAIN SCREEN BREAK', 540, 235);
+
+        ctx.fillStyle = '#ffffff';
+        ctx.font = '700 54px Inter, sans-serif';
+        ctx.fillText(tr('app.title', 'Digital Detox Timer'), 540, 330);
+
+        const iconEl = document.getElementById('complete-icon');
+        const titleEl = document.getElementById('complete-title');
+        const msgEl = document.getElementById('complete-message');
+        const timeEl = document.getElementById('result-time');
+        const streakEl = document.getElementById('result-streak');
+
+        ctx.font = '700 130px Inter, sans-serif';
+        ctx.fillText(iconEl?.textContent || '🎉', 540, 560);
+
+        ctx.fillStyle = '#ffffff';
+        ctx.font = '700 56px Inter, sans-serif';
+        ctx.fillText(titleEl?.textContent || tr('complete.success.title', 'Completed'), 540, 720);
+
+        ctx.fillStyle = '#cbd5e1';
+        ctx.font = '500 32px Inter, sans-serif';
+        ctx.fillText(msgEl?.textContent || '', 540, 810);
+
+        ctx.fillStyle = 'rgba(0, 184, 148, 0.14)';
+        ctx.beginPath();
+        ctx.roundRect(140, 960, 800, 260, 28);
+        ctx.fill();
+
+        ctx.fillStyle = '#94a3b8';
+        ctx.font = '600 28px Inter, sans-serif';
+        ctx.fillText(tr('complete.result.time', 'Detox Time'), 340, 1050);
+        ctx.fillText(tr('complete.result.streak', 'Streak'), 740, 1050);
+
+        ctx.fillStyle = '#55efc4';
+        ctx.font = '800 52px Inter, sans-serif';
+        ctx.fillText(timeEl?.textContent || '', 340, 1140);
+        ctx.fillText(streakEl?.textContent || '', 740, 1140);
+
+        ctx.fillStyle = '#94a3b8';
+        ctx.font = '600 30px Inter, sans-serif';
+        ctx.fillText('dopabrain.com/detox-timer/', 540, 1700);
+
+        try {
+            const link = document.createElement('a');
+            link.download = 'detox-timer-card-' + lang + '.png';
+            link.href = canvas.toDataURL('image/png');
+            link.click();
+        } catch (e) {}
+
+        this.showDetoxToast(tr('share.saved', 'Story card saved (1080×1920)!'));
+        this.track('save_image', {
+            app_name: 'detox-timer',
+            result_outcome: this.lastSuccess ? 'completed' : 'stopped',
+            save_surface: 'result_story_1080x1920'
+        });
     }
 
     createConfetti() {
+        if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
         const confettiCount = 50;
         const colors = ['#ffd700', '#ffeb99', '#00b894', '#55efc4', '#ff6b6b', '#4ecdc4'];
 

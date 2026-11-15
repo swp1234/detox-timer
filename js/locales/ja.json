@@ -127,8 +127,10 @@
   },
   "share": {
     "twitter": "𝕏 Twitter",
-    "copyUrl": "📋 URLをコピー",
-    "copied": "✅ コピーしました！"
+    "copyUrl": "📋 URLコピー",
+    "copied": "✅ コピー完了!",
+    "saveCard": "ストーリーカードを保存",
+    "saved": "ストーリーカードを保存しました (1080×1920)!"
   },
   "related": {
     "title": "もっと楽しむ",
@@ -163,5 +165,15 @@
   },
   "nav": {
     "back": "DopaBrain ホーム"
+  },
+  "curated": {
+    "title": "デジタルデトックス＆集中力おすすめ書籍",
+    "disclosure": "アフィリエイトリンク",
+    "subtitle": "スクリーン休息と注意力の回復を深める、科学に基づいたデジタルウェルビーイング本。",
+    "cta": "詳細を見る ->",
+    "newportTitle": "デジタル・ミニマリスト — カル・ニューポート",
+    "newportDesc": "テクノロジーを主体的に使いこなし、深い集中力と穏やかな時間を取り戻す実践法。",
+    "priceTitle": "スマホ脳を休める30日間（How to Break Up with Your Phone） — キャサリン・プライス",
+    "priceDesc": "脳科学に基づきスマホとの健全な境界線を作るステップバイステップの30日間計画。"
   }
 }

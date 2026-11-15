@@ -128,7 +128,9 @@
   "share": {
     "twitter": "𝕏 Twitter",
     "copyUrl": "📋 Salin URL",
-    "copied": "✅ Tersalin!"
+    "copied": "✅ Tersalin!",
+    "saveCard": "Simpan Kartu Story",
+    "saved": "Kartu story tersimpan (1080×1920)!"
   },
   "related": {
     "title": "Jelajahi lainnya",
@@ -163,5 +165,15 @@
   },
   "nav": {
     "back": "Beranda DopaBrain"
+  },
+  "curated": {
+    "title": "Buku Rekomendasi Detoks Digital & Fokus",
+    "disclosure": "Tautan afiliasi",
+    "subtitle": "Bangun kebiasaan jeda layar yang sehat dengan panduan ilmiah pemulihan fokus dan ketenangan.",
+    "cta": "Lihat Buku ->",
+    "newportTitle": "Digital Minimalism — Cal Newport",
+    "newportDesc": "Strategi praktis menata batas teknologi demi mengembalikan fokus mendalam.",
+    "priceTitle": "How to Break Up with Your Phone — Catherine Price",
+    "priceDesc": "Panduan 30 hari berbasis sains untuk menyegarkan kembali kendali perhatian Anda."
   }
 }

@@ -127,8 +127,10 @@
   },
   "share": {
     "twitter": "𝕏 Twitter",
-    "copyUrl": "📋 Copier l'URL",
-    "copied": "✅ Copié !"
+    "copyUrl": "📋 Copier le lien",
+    "copied": "✅ Copié !",
+    "saveCard": "Enregistrer la carte",
+    "saved": "Carte enregistrée (1080×1920) !"
   },
   "related": {
     "title": "À découvrir",
@@ -163,5 +165,15 @@
   },
   "nav": {
     "back": "Accueil DopaBrain"
+  },
+  "curated": {
+    "title": "Livres recommandés sur la détox numérique et l’attention",
+    "disclosure": "Liens affiliés",
+    "subtitle": "Prolongez vos pauses d’écran avec des guides scientifiques sur la concentration.",
+    "cta": "Voir le livre ->",
+    "newportTitle": "Minimalisme digital — Cal Newport",
+    "newportDesc": "Méthode concrète pour reprendre le contrôle de son attention face aux notifications.",
+    "priceTitle": "Rompre avec son smartphone — Catherine Price",
+    "priceDesc": "Un programme scientifique de 30 jours pour rééquilibrer votre rapport aux écrans."
   }
 }

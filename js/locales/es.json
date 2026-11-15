@@ -128,7 +128,9 @@
   "share": {
     "twitter": "𝕏 Twitter",
     "copyUrl": "📋 Copiar URL",
-    "copied": "✅ ¡Copiado!"
+    "copied": "✅ ¡Copiado!",
+    "saveCard": "Guardar tarjeta",
+    "saved": "¡Tarjeta guardada (1080×1920)!"
   },
   "related": {
     "title": "Explora más",
@@ -163,5 +165,15 @@
   },
   "nav": {
     "back": "Inicio de DopaBrain"
+  },
+  "curated": {
+    "title": "Libros recomendados de descanso digital y enfoque",
+    "disclosure": "Enlaces de afiliado",
+    "subtitle": "Refuerza tus pausas de pantalla con guías científicas sobre atención profunda y calma.",
+    "cta": "Ver libro ->",
+    "newportTitle": "Minimalismo digital — Cal Newport",
+    "newportDesc": "Filosofía práctica para usar la tecnología con propósito y recuperar la concentración.",
+    "priceTitle": "Cómo romper con tu teléfono — Catherine Price",
+    "priceDesc": "Plan de 30 días basado en neurociencia para reducir la fatiga digital y ganar claridad."
   }
 }

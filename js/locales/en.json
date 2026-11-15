@@ -128,7 +128,9 @@
   "share": {
     "twitter": "𝕏 Twitter",
     "copyUrl": "📋 Copy URL",
-    "copied": "✅ Copied!"
+    "copied": "✅ Copied!",
+    "saveCard": "Save Story Card",
+    "saved": "Story card saved (1080×1920)!"
   },
   "related": {
     "title": "More to Explore",
@@ -163,5 +165,15 @@
   },
   "nav": {
     "back": "DopaBrain Home"
+  },
+  "curated": {
+    "title": "Recommended Focus & Digital Wellbeing Books",
+    "disclosure": "Affiliate links",
+    "subtitle": "Build lasting focus habits with evidence-backed guides on attention restoration and screen boundaries.",
+    "cta": "View Book ->",
+    "newportTitle": "Digital Minimalism — Cal Newport",
+    "newportDesc": "Practical philosophy for intentional tech use and rebuilding deep, distraction-free focus.",
+    "priceTitle": "How to Break Up with Your Phone — Catherine Price",
+    "priceDesc": "A step-by-step, science-backed 30-day plan to reset your attention and reclaim your calm."
   }
 }

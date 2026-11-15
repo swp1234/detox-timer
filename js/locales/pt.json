@@ -128,7 +128,9 @@
   "share": {
     "twitter": "𝕏 Twitter",
     "copyUrl": "📋 Copiar URL",
-    "copied": "✅ Copiado!"
+    "copied": "✅ Copiado!",
+    "saveCard": "Salvar card (Story)",
+    "saved": "Card salvo (1080×1920)!"
   },
   "related": {
     "title": "Explore mais",
@@ -163,5 +165,15 @@
   },
   "nav": {
     "back": "Início DopaBrain"
+  },
+  "curated": {
+    "title": "Livros recomendados de bem-estar digital e foco",
+    "disclosure": "Links de afiliado",
+    "subtitle": "Fortaleça suas pausas das telas com guias científicos sobre atenção plena e equilíbrio.",
+    "cta": "Ver livro ->",
+    "newportTitle": "Minimalismo Digital — Cal Newport",
+    "newportDesc": "Filosofia prática para usar a tecnologia com intenção e recuperar a concentração profunda.",
+    "priceTitle": "Como Terminar com Seu Celular — Catherine Price",
+    "priceDesc": "Plano de 30 dias baseado em evidências para restaurar sua atenção e tranquilidade."
   }
 }

@@ -128,7 +128,9 @@
   "share": {
     "twitter": "𝕏 Twitter",
     "copyUrl": "📋 URL kopieren",
-    "copied": "✅ Kopiert!"
+    "copied": "✅ Kopiert!",
+    "saveCard": "Story-Karte speichern",
+    "saved": "Story-Karte gespeichert (1080×1920)!"
   },
   "related": {
     "title": "Mehr entdecken",
@@ -163,5 +165,15 @@
   },
   "nav": {
     "back": "DopaBrain Startseite"
+  },
+  "curated": {
+    "title": "Empfohlene Bücher zu Digital Detox & Fokus",
+    "disclosure": "Affiliate-Links",
+    "subtitle": "Fundierte Ratgeber für bewusste Bildschirmpausen, Regeneration und tiefe Konzentration.",
+    "cta": "Buch ansehen ->",
+    "newportTitle": "Digitaler Minimalismus — Cal Newport",
+    "newportDesc": "Praktische Methoden für bewussten Medienkonsum und echte geistige Leistungsfähigkeit.",
+    "priceTitle": "How to Break Up with Your Phone — Catherine Price",
+    "priceDesc": "Ein wissenschaftlich fundierter 30-Tage-Plan für gesunde Smartphone-Gewohnheiten."
   }
 }
